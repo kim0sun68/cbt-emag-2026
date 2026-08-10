@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init *)",
+      "Bash(printf '*.pdf\\\\n')",
+      "Bash(git add *)",
+      "Bash(git commit -m '전자기학 3회 기출 웹 문서 설계서 추가 *)",
+      "Bash(git commit -q -m 'docs: 구현 계획 추가 *)",
+      "Skill(watch:watch)",
+      "Skill(watch:watch:*)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(command -v git)",
+      "Read(//Users/kim-yeongseon/.config/**)",
+      "Bash(brew --version)",
+      "Bash(brew install *)",
+      "Bash(gh --version)",
+      "Bash(gh api *)",
+      "Bash(rm -rf /var/folders/1q/vjwk0gl559x1t_qb847s3n680000gn/T/watch-jqyjzyke && echo cleaned)",
+      "Bash(mkdir -p /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/kec/download)",
+      "Bash(yt-dlp --skip-download --write-auto-subs --sub-langs ko --sub-format vtt -o ko \"https://www.youtube.com/watch?v=yB5svjVqhEA\")",
+      "Bash(yt-dlp --print \"%\\(title\\)s | %\\(duration\\)s\" --skip-download \"https://www.youtube.com/watch?v=yB5svjVqhEA\")",
+      "Bash(python3 -)",
+      "Bash(yt-dlp -f \"bv*[height<=1080]\" -o download/video.mp4 \"https://www.youtube.com/watch?v=yB5svjVqhEA\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/kec.json'\\)\\);print\\(len\\(d['questions']\\)\\);assert all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('OK'\\)\")",
+      "Bash(python3 build.py)",
+      "Bash(git commit -q -m 'feat: 전기설비기술기준 3회 기출 페이지 추가 및 과목 간 링크 *)",
+      "Bash(git push *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://kim0sun68.github.io/cbt-emag-2026/kec.html)",
+      "Bash(mkdir -p /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/kikigi/download)",
+      "Bash(yt-dlp --skip-download --write-auto-subs --sub-langs ko --sub-format vtt -o ko \"https://www.youtube.com/watch?v=DtyIW6x2Xms\")",
+      "Bash(yt-dlp --print \"%\\(title\\)s | %\\(duration\\)s\" --skip-download \"https://www.youtube.com/watch?v=DtyIW6x2Xms\")",
+      "Bash(awk -F' ' '$1>=\"11:39\" && $1<=\"12:10\"' transcript.txt)",
+      "Bash(awk -F' ' '$1>=\"21:53\" && $1<=\"22:40\"' transcript.txt)",
+      "Bash(awk -F' ' '$1>=\"24:08\" && $1<=\"24:40\"' transcript.txt)",
+      "Bash(awk -F' ' '$1>=\"27:01\" && $1<=\"27:30\"' transcript.txt)",
+      "Bash(yt-dlp -f \"bv*[height<=1080]\" -o download/video.mp4 \"https://www.youtube.com/watch?v=DtyIW6x2Xms\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/kigi.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('OK'\\)\")",
+      "Bash(git commit -q -m 'feat: 전기기기 3회 기출 페이지 추가, 3과목 네비게이션 *)"
+    ]
+  }
+}

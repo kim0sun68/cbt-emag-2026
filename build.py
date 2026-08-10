@@ -7,10 +7,13 @@ root = pathlib.Path(__file__).parent
 PAGES = [
     {"json": "content.json", "out": "index.html",
      "video_label": "대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기자기학)",
-     "nav": '다른 과목: <a href="kec.html">전기설비기술기준 3회 기출 →</a>'},
+     "nav": '다른 과목: <a href="kigi.html">전기기기 →</a> · <a href="kec.html">전기설비기술기준 →</a>'},
+    {"json": "kigi.json", "out": "kigi.html",
+     "video_label": "대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기기기)",
+     "nav": '다른 과목: <a href="index.html">전기자기학 →</a> · <a href="kec.html">전기설비기술기준 →</a>'},
     {"json": "kec.json", "out": "kec.html",
      "video_label": "대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기설비기술기준)",
-     "nav": '다른 과목: <a href="index.html">전기자기학 3회 기출 →</a>'},
+     "nav": '다른 과목: <a href="index.html">전기자기학 →</a> · <a href="kigi.html">전기기기 →</a>'},
 ]
 
 TEMPLATE = r"""<!DOCTYPE html>

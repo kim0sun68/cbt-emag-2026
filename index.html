@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 전기기사 전자기학 3회 기출 핵심풀이</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+  :root { --green:#1a7f37; --red:#c62828; --blue:#1256a2; --bg:#f5f6f8; --card:#fff; --line:#e0e3e8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#222; line-height:1.65; }
+  .wrap { max-width:720px; margin:0 auto; padding:16px 14px 80px; }
+  header { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 18px; margin-bottom:18px; }
+  header h1 { font-size:1.25rem; margin:0 0 8px; }
+  header p { margin:4px 0; font-size:.9rem; color:#555; }
+  header a { color:var(--blue); }
+  #score { position:sticky; top:0; z-index:10; background:var(--blue); color:#fff; border-radius:0 0 10px 10px; padding:8px 14px; font-weight:700; text-align:center; margin:-16px -14px 16px; font-size:.95rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 16px; margin-bottom:16px; }
+  .qno { font-weight:800; color:var(--blue); margin-bottom:6px; }
+  .qtext { margin-bottom:12px; font-weight:600; }
+  .choice { display:block; width:100%; text-align:left; background:#fafbfc; border:1.5px solid var(--line); border-radius:9px; padding:10px 12px; margin:6px 0; font-size:.95rem; font-family:inherit; cursor:pointer; line-height:1.6; }
+  .choice:hover { border-color:var(--blue); }
+  .choice.correct { border-color:var(--green); background:#e8f5e9; font-weight:700; }
+  .choice.wrong { border-color:var(--red); background:#ffebee; }
+  .choice:disabled { cursor:default; opacity:1; color:inherit; }
+  .mark { float:right; font-weight:800; }
+  .mark.ok { color:var(--green); } .mark.no { color:var(--red); }
+  .toggle { margin-top:10px; background:none; border:1px solid var(--blue); color:var(--blue); border-radius:8px; padding:7px 14px; font-size:.88rem; cursor:pointer; font-family:inherit; }
+  .expl { display:none; margin-top:14px; border-top:1px dashed var(--line); padding-top:12px; font-size:.93rem; }
+  .expl.open { display:block; }
+  .answer-line { font-weight:800; color:var(--green); margin-bottom:8px; }
+  .sol { white-space:pre-wrap; margin-bottom:12px; }
+  .theory { background:#f2f7ff; border-left:4px solid var(--blue); border-radius:0 8px 8px 0; padding:10px 12px; white-space:pre-wrap; margin-bottom:12px; }
+  .ytlink { display:inline-block; background:#c4302b; color:#fff; text-decoration:none; border-radius:8px; padding:8px 14px; font-size:.88rem; font-weight:700; }
+  footer { text-align:center; color:#888; font-size:.8rem; margin-top:30px; }
+  @media (max-width:480px){ .wrap{padding:12px 10px 60px;} .card{padding:14px 12px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="score"></div>
+  <header>
+    <h1>2026 전기기사 전자기학 3회 기출 핵심풀이</h1>
+    <p>보기를 클릭하면 채점되고 해설이 열립니다. 채점 없이 보려면 [해설 보기]를 누르세요.</p>
+    <p>원본 강의: <a href="https://www.youtube.com/watch?v=BlGWW66ZRaY" target="_blank" rel="noopener">대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기자기학)</a></p>
+  </header>
+  <div id="app"></div>
+  <footer>출처: 대산전기학원 유튜브 강의 · 학습용 정리 자료</footer>
+</div>
+<script id="data" type="application/json">{"title": "2026 전기기사 전자기학 3회 기출 핵심풀이", "videoId": "BlGWW66ZRaY", "questions": [{"no": 1, "question": "점전하 $Q[\\mathrm{C}]$에 의한 무한 평면 도체의 영상 전하는?", "choices": ["① $-Q[\\mathrm{C}]$보다 작다.", "② $-Q[\\mathrm{C}]$과 같다.", "③ $Q[\\mathrm{C}]$보다 크다.", "④ $Q[\\mathrm{C}]$과 같다."], "answerIndex": 1, "solution": "무한 평면 도체(접지) 앞에 점전하 $Q$가 있으면, 도체면을 경계로 대칭인 위치에 크기가 같고 부호가 반대인 영상전하 $-Q[\\mathrm{C}]$를 놓은 것과 같은 전계 분포가 된다.\n따라서 영상전하는 $-Q[\\mathrm{C}]$과 같다.", "timestampSec": 51, "theory": "**핵심 공식**: 무한평면도체 영상전하 $Q' = -Q[\\mathrm{C}]$ (대칭 위치)\n**개념**: 접지 도체면은 등전위(0V)이므로, 도체를 제거하고 대칭점에 $-Q$를 놓으면 같은 경계조건을 만족한다(전기영상법).\n**함정 포인트**: 영상전하의 크기는 항상 $Q$와 같고 부호만 반대. '크다/작다'로 유도하는 보기에 속지 말 것. 영상전류 문제로 변형되면 마찬가지로 $-I$."}, {"no": 2, "question": "자극의 세기 $8\\times10^{-6}[\\mathrm{Wb}]$, 길이 $3[\\mathrm{cm}]$인 막대자석을 $120[\\mathrm{AT/m}]$의 평등 자계 내에 자계와 $30°$의 각도로 놓았다면 자석이 받는 회전력은 몇 $[\\mathrm{N\\cdot m}]$인가?", "choices": ["① $1.44\\times10^{-5}$", "② $2.49\\times10^{-5}$", "③ $1.44\\times10^{-4}$", "④ $2.49\\times10^{-4}$"], "answerIndex": 0, "solution": "막대자석의 회전력 $T = mlH\\sin\\theta[\\mathrm{N\\cdot m}]$\n$T = 8\\times10^{-6} \\times 0.03 \\times 120 \\times \\sin 30° = 1.44\\times10^{-5}[\\mathrm{N\\cdot m}]$", "timestampSec": 112, "theory": "**핵심 공식**: 막대자석의 회전력 $T = mlH\\sin\\theta = MH\\sin\\theta[\\mathrm{N\\cdot m}]$ ($M=ml$: 자기 모멘트)\n**개념**: 평등 자계 속 막대자석은 자계 방향으로 정렬하려는 토크를 받는다.\n**함정 포인트**: 길이 단위 변환($3[\\mathrm{cm}]=0.03[\\mathrm{m}]$)과 $\\sin 30°=0.5$ 대입 실수가 최다 오답 원인."}, {"no": 3, "question": "자유공간 중에서 전위 $V = 3x + y[\\mathrm{V}]$로 주어질 때 $0 \\le x \\le 1$, $0 \\le y \\le 1$, $0 \\le z \\le 1$인 입방체에 존재하는 정전에너지는 몇 $[\\mathrm{J}]$인가?", "choices": ["① $2.21\\times10^{-11}$", "② $2.21\\times10^{-10}$", "③ $4.43\\times10^{-11}$", "④ $4.43\\times10^{-10}$"], "answerIndex": 2, "solution": "전계 $E = -\\nabla V = -(3\\hat{x} + \\hat{y})$, $|E|^2 = 3^2 + 1^2 = 10$\n단위 체적당 정전에너지 $w = \\dfrac{1}{2}\\varepsilon_0 E^2[\\mathrm{J/m^3}]$이고 입방체 부피가 $1[\\mathrm{m^3}]$이므로\n$W = \\dfrac{1}{2} \\times 8.855\\times10^{-12} \\times 10 = 4.43\\times10^{-11}[\\mathrm{J}]$", "timestampSec": 180, "theory": "**핵심 공식**: 단위 체적당 정전에너지 $w = \\dfrac{1}{2}\\varepsilon_0 E^2 = \\dfrac{\\sigma^2}{2\\varepsilon_0} = \\dfrac{D^2}{2\\varepsilon_0}[\\mathrm{J/m^3}]$\n**개념**: $E = -\\nabla V$로 전계를 먼저 구하고, 체적을 곱해 전체 에너지를 얻는다.\n**함정 포인트**: $|E|^2$은 각 성분 제곱의 합($3^2+1^2=10$). 부피가 $1[\\mathrm{m^3}]$인 단위 입방체라 체적 곱이 생략된 것처럼 보이는 점에 유의."}, {"no": 4, "question": "자화율(magnetic susceptibility) $\\chi$는 상자성체에서 일반적으로 어떤 값을 갖는가?", "choices": ["① $\\chi = 0$", "② $\\chi = 1$", "③ $\\chi < 0$", "④ $\\chi > 0$"], "answerIndex": 3, "solution": "자화율 $\\chi = \\mu_0(\\mu_s - 1)$이다.\n상자성체는 $\\mu_s > 1$이므로 $\\chi > 0$이 된다. (자계와 같은 방향으로 약하게 자화되는 물질)", "timestampSec": 381, "theory": "**핵심 공식**: 자화율 $\\chi = \\mu_0(\\mu_s - 1)$\n**개념**: 상자성체 $\\mu_s>1 \\Rightarrow \\chi>0$, 반자성체 $\\mu_s<1 \\Rightarrow \\chi<0$, 진공 $\\mu_s=1 \\Rightarrow \\chi=0$.\n**함정 포인트**: 강자성체($\\mu_s\\gg1$)와 상자성체 모두 $\\chi>0$이다. '반자성체'로 바꿔 출제되면 정답이 $\\chi<0$으로 바뀐다."}, {"no": 5, "question": "그림과 같은 유전속의 분포에서 $\\varepsilon_1$과 $\\varepsilon_2$의 관계는? (전속선이 $\\varepsilon_2$ 영역으로 모이는 그림)", "choices": ["① $\\varepsilon_1 > \\varepsilon_2$", "② $\\varepsilon_1 = \\varepsilon_2$", "③ $\\varepsilon_1 < \\varepsilon_2$", "④ $\\varepsilon$과 무관"], "answerIndex": 2, "solution": "유전체 경계면 조건: 전속(선)은 유전율이 큰 쪽으로 모인다.\n그림에서 전속선이 $\\varepsilon_2$ 영역으로 모이고 있으므로 $\\varepsilon_2 > \\varepsilon_1$, 즉 $\\varepsilon_1 < \\varepsilon_2$이다.", "timestampSec": 504, "theory": "**핵심 공식**: 유전체 경계면 조건 — 전속은 유전율이 큰 쪽으로 모인다.\n**개념**: 경계면에서 $D$의 법선 성분 연속, $E$의 접선 성분 연속. 굴절각은 유전율이 큰 쪽에서 크다($\\tan\\theta_1/\\tan\\theta_2 = \\varepsilon_1/\\varepsilon_2$).\n**함정 포인트**: 그림에서 전속선이 '모이는 쪽'이 유전율 큰 쪽. 전기력선(E)은 반대로 유전율 작은 쪽에서 밀도가 크다는 점과 혼동 주의."}, {"no": 6, "question": "$4\\pi[\\mathrm{A}]$의 전류가 흐르고 있는 무한직선도체로부터 일정 거리 떨어진 자유공간 내 $P$점의 자계의 세기가 $4[\\mathrm{AT/m}]$이다. 떨어진 거리 $[\\mathrm{m}]$는?", "choices": ["① 2", "② 4", "③ 0.5", "④ 1"], "answerIndex": 2, "solution": "무한 직선전류에 의한 자계 $H = \\dfrac{I}{2\\pi r}[\\mathrm{AT/m}]$\n떨어진 거리 $r = \\dfrac{I}{2\\pi H} = \\dfrac{4\\pi}{2\\pi \\times 4} = 0.5[\\mathrm{m}]$", "timestampSec": 562, "theory": "**핵심 공식**: 무한 직선전류에 의한 자계 $H = \\dfrac{I}{2\\pi r}[\\mathrm{AT/m}]$\n**개념**: 암페어의 주회적분 법칙에서 유도. 거리 문제는 $r = \\dfrac{I}{2\\pi H}$로 역산.\n**함정 포인트**: 원형 코일 중심 자계 $H = \\dfrac{I}{2a}$와 혼동하지 말 것. $I=4\\pi$처럼 $\\pi$가 약분되도록 낸 문제가 많다."}, {"no": 7, "question": "저항 $10[\\Omega]$의 코일을 지나는 자속이 $5\\sin 10t[\\mathrm{Wb}]$일 때 코일에 흐르는 전류의 최대치 $[\\mathrm{A}]$는?", "choices": ["① 5", "② 15", "③ 10", "④ 12"], "answerIndex": 0, "solution": "정현파 자속에 의한 기전력 최대값 $e_m = \\omega N \\phi_m = 10 \\times 1 \\times 5 = 50[\\mathrm{V}]$\n전류 최대치 $I_m = \\dfrac{e_m}{R} = \\dfrac{50}{10} = 5[\\mathrm{A}]$", "timestampSec": 615, "theory": "**핵심 공식**: 유기 기전력 $e = -N\\dfrac{d\\phi}{dt}$, 정현파 자속이면 최대값 $e_m = \\omega N\\phi_m[\\mathrm{V}]$\n**개념**: $\\phi = \\phi_m\\sin\\omega t$를 미분하면 $\\omega\\phi_m\\cos\\omega t$ → 최대값은 $\\omega N\\phi_m$. 전류 최대치는 $I_m = e_m/R$.\n**함정 포인트**: $5\\sin 10t$에서 $\\omega=10$, $\\phi_m=5$를 정확히 분리할 것. $N$이 안 주어지면 1회로 본다."}, {"no": 8, "question": "반지름 $2[\\mathrm{mm}]$의 두 개의 무한히 긴 원통 도체가 중심 간격 $2[\\mathrm{m}]$ 간격으로 진공 중에 평행하게 놓여 있을 때 $1[\\mathrm{km}]$당 정전용량은 약 몇 $[\\mu\\mathrm{F}]$인가?", "choices": ["① $3\\times10^{-3}$", "② $6\\times10^{-3}$", "③ $5\\times10^{-3}$", "④ $4\\times10^{-3}$"], "answerIndex": 3, "solution": "평행도선 사이 단위 길이당 정전용량 $C = \\dfrac{\\pi\\varepsilon_0}{\\ln\\frac{d}{a}}[\\mathrm{F/m}]$\n길이 $l = 1[\\mathrm{km}] = 10^3[\\mathrm{m}]$에 대해\n$C' = \\dfrac{\\pi \\times 8.855\\times10^{-12} \\times 10^3}{\\ln\\frac{2}{2\\times10^{-3}}} \\approx 4.03\\times10^{-9}[\\mathrm{F}] = 4\\times10^{-3}[\\mu\\mathrm{F}]$", "timestampSec": 854, "theory": "**핵심 공식**: 평행 왕복도선 단위 길이당 정전용량 $C = \\dfrac{\\pi\\varepsilon_0}{\\ln\\frac{d}{a}}[\\mathrm{F/m}]$ ($d$: 선간거리, $a$: 도선 반지름)\n**개념**: 동축케이블 $C=\\dfrac{2\\pi\\varepsilon_0}{\\ln(b/a)}$와 형태 비교 — 평행도선은 $\\pi\\varepsilon_0$.\n**함정 포인트**: $[\\mathrm{F}] \\to [\\mu\\mathrm{F}]$ 변환($\\times10^6$)과 $1[\\mathrm{km}]=10^3[\\mathrm{m}]$ 곱을 빠뜨리기 쉽다. mm→m 단위 변환도 주의."}, {"no": 9, "question": "$x>0$인 영역에 비유전율 $\\varepsilon_{r1}=3$인 유전체, $x<0$인 영역에 비유전율 $\\varepsilon_{r2}=5$인 유전체가 있다. $x<0$인 영역에서 전계 $E_2 = 20a_x + 30a_y - 40a_z[\\mathrm{V/m}]$일 때 $x>0$인 영역에서의 전속밀도는 몇 $[\\mathrm{C/m^2}]$인가?", "choices": ["① $10(10a_x + 9a_y - 12a_z)\\varepsilon_0$", "② $20(5a_x - 10a_y + 6a_z)\\varepsilon_0$", "③ $50(5a_x - 10a_y + 6a_z)\\varepsilon_0$", "④ $50(2a_x - 3a_y + 4a_z)\\varepsilon_0$"], "answerIndex": 0, "solution": "경계면($x=0$ 평면)에서 전속밀도의 법선 성분과 전계의 접선 성분이 연속이다.\n법선($x$) 성분: $D_{1x} = D_{2x}$ → $\\varepsilon_{r1}E_{1x} = \\varepsilon_{r2}E_{2x}$ → $E_{1x} = \\dfrac{5}{3}\\times 20 = \\dfrac{100}{3}$\n접선($y,z$) 성분: $E_{1y} = 30$, $E_{1z} = -40$\n$E_1 = \\dfrac{100}{3}a_x + 30a_y - 40a_z[\\mathrm{V/m}]$\n$D_1 = \\varepsilon_0\\varepsilon_{r1}E_1 = \\varepsilon_0 \\times 3 \\times \\left(\\dfrac{100}{3}a_x + 30a_y - 40a_z\\right) = \\varepsilon_0(100a_x + 90a_y - 120a_z) = 10(10a_x + 9a_y - 12a_z)\\varepsilon_0[\\mathrm{C/m^2}]$", "timestampSec": 995, "theory": "**핵심 공식**: 경계조건 $D_{1n} = D_{2n}$ (법선), $E_{1t} = E_{2t}$ (접선)\n**개념**: 경계면이 $x=0$ 평면이면 $x$성분이 법선, $y,z$성분이 접선. 법선은 $D$가 연속이므로 $E$는 유전율 비율로 바뀌고, 접선은 $E$가 그대로 유지된다.\n**함정 포인트**: 최종 답이 $D_1 = \\varepsilon_0\\varepsilon_{r1}E_1$이라는 것 — 전계 $E_1$을 구한 뒤 전속밀도로 변환하는 마지막 단계를 잊지 말 것."}, {"no": 10, "question": "공기 중에서 무한 평면 도체 표면 아래의 $1[\\mathrm{m}]$ 떨어진 곳에 $4[\\mathrm{C}]$의 점전하가 있다. 전하가 받는 힘의 크기 $[\\mathrm{N}]$는?", "choices": ["① $3.6\\times10^{10}$", "② $4.6\\times10^{10}$", "③ $5.6\\times10^{10}$", "④ $6.6\\times10^{10}$"], "answerIndex": 0, "solution": "무한평면도체와 점전하 사이의 힘 $F = \\dfrac{-Q^2}{16\\pi\\varepsilon_0 a^2}[\\mathrm{N}]$ (흡인력)\n$|F| = \\dfrac{9}{4}\\times10^9 \\times \\dfrac{4^2}{1^2} = 3.6\\times10^{10}[\\mathrm{N}]$", "timestampSec": 1315, "theory": "**핵심 공식**: 무한평면도체와 점전하 사이 힘 $F = \\dfrac{-Q^2}{16\\pi\\varepsilon_0 a^2} = -\\dfrac{9}{4}\\times10^9\\dfrac{Q^2}{a^2}[\\mathrm{N}]$ (흡인력)\n**개념**: 영상전하 $-Q$가 거리 $2a$에 있는 것으로 계산한 쿨롱 힘이다: $\\dfrac{Q^2}{4\\pi\\varepsilon_0(2a)^2}$.\n**함정 포인트**: 분모가 $4\\pi$가 아니라 $16\\pi$ — 거리가 $2a$임을 놓치면 4배 큰 오답. 계수 $\\frac{9}{4}\\times10^9$를 암기해두면 빠르다."}, {"no": 11, "question": "내부도체 반지름이 $a$, 외부도체 내반지름이 $b$인 동축 케이블에서 내부 도체 표면에 전류가 흐르고 얇은 외부도체에는 크기는 같고 반대방향인 전류가 흐를 때 단위 길이당 외부 인덕턴스는 약 몇 $[\\mathrm{H/m}]$인가?", "choices": ["① $2\\times10^{-7}\\ln\\dfrac{b}{a}$", "② $2\\pi\\times10^{-7}\\ln\\dfrac{b}{a}$", "③ $\\dfrac{1}{2\\pi\\times10^{-7}}\\ln\\dfrac{b}{a}$", "④ $\\dfrac{1}{2\\times10^{-7}}\\ln\\dfrac{b}{a}$"], "answerIndex": 0, "solution": "동축 원통 사이 인덕턴스 $L = \\dfrac{\\mu_0}{2\\pi}\\ln\\dfrac{b}{a}[\\mathrm{H/m}]$\n$= \\dfrac{4\\pi\\times10^{-7}}{2\\pi}\\ln\\dfrac{b}{a} = 2\\times10^{-7}\\ln\\dfrac{b}{a}[\\mathrm{H/m}]$", "timestampSec": 1464, "theory": "**핵심 공식**: 동축(원통) 사이 인덕턴스 $L = \\dfrac{\\mu_0}{2\\pi}\\ln\\dfrac{b}{a}[\\mathrm{H/m}]$, $\\dfrac{\\mu_0}{2\\pi} = 2\\times10^{-7}$\n**개념**: 내외 도체 사이 자속쇄교로부터 유도되는 '외부 인덕턴스'다.\n**함정 포인트**: 평행 왕복도선 $L=\\dfrac{\\mu_0}{\\pi}\\ln\\dfrac{d}{a}$($=4\\times10^{-7}\\ln$)과 계수 혼동 주의. $\\mu_0=4\\pi\\times10^{-7}$에서 $2\\pi$ 약분 결과를 기억."}, {"no": 12, "question": "진공 중에서 점 $(0,1)[\\mathrm{m}]$의 위치에 $-2\\times10^{-9}[\\mathrm{C}]$의 점전하가 있을 때, 점 $(2,0)[\\mathrm{m}]$에 있는 $1[\\mathrm{C}]$의 점전하에 작용하는 힘은 몇 $[\\mathrm{N}]$인가? (단, $\\hat{x}$, $\\hat{y}$는 단위벡터이다.)", "choices": ["① $\\dfrac{36}{5\\sqrt{5}}\\hat{x} + \\dfrac{18}{5\\sqrt{5}}\\hat{y}$", "② $-\\dfrac{36}{5\\sqrt{5}}\\hat{x} + \\dfrac{18}{5\\sqrt{5}}\\hat{y}$", "③ $-\\dfrac{36}{3\\sqrt{5}}\\hat{x} + \\dfrac{18}{3\\sqrt{5}}\\hat{y}$", "④ $-\\dfrac{18}{3\\sqrt{5}}\\hat{x} + \\dfrac{36}{3\\sqrt{5}}\\hat{y}$"], "answerIndex": 1, "solution": "$(2,0)$에서 $(0,1)$을 향하는 거리벡터 $\\vec{r} = (-2, 1)$, $|\\vec{r}| = \\sqrt{5}$\n힘의 크기 $|F| = 9\\times10^9 \\times \\dfrac{2\\times10^{-9}\\times 1}{(\\sqrt{5})^2} = \\dfrac{18}{5}[\\mathrm{N}]$ (음전하이므로 흡인력, $(0,1)$ 방향)\n$\\vec{F} = \\dfrac{18}{5}\\times\\dfrac{-2\\hat{x}+\\hat{y}}{\\sqrt{5}} = -\\dfrac{36}{5\\sqrt{5}}\\hat{x} + \\dfrac{18}{5\\sqrt{5}}\\hat{y}[\\mathrm{N}]$", "timestampSec": 1557, "theory": "**핵심 공식**: 쿨롱의 법칙(벡터형) $\\vec{F} = 9\\times10^9\\dfrac{Q_1Q_2}{r^2}\\hat{r}[\\mathrm{N}]$\n**개념**: 크기를 먼저 구하고, 단위벡터 $\\hat{r} = \\vec{r}/|\\vec{r}|$를 곱해 방향을 붙인다. 음전하와의 힘은 흡인력이므로 상대 전하 쪽을 향한다.\n**함정 포인트**: 거리 제곱은 $(\\sqrt{5})^2 = 5$. 힘의 방향(흡인/반발)에 따라 부호가 결정되므로 단위벡터의 방향 설정을 신중히 할 것."}, {"no": 13, "question": "전계 $E[\\mathrm{V/m}]$, 전속밀도 $D[\\mathrm{C/m^2}]$, 유전율 $\\varepsilon = \\varepsilon_0\\varepsilon_s[\\mathrm{F/m}]$일 때 분극의 세기 $P[\\mathrm{C/m^2}]$ 사이 관계는?", "choices": ["① $P = D + \\varepsilon_0 E$", "② $P = D - \\varepsilon_0 E$", "③ $P = \\dfrac{D+E}{\\varepsilon_0}$", "④ $P = \\dfrac{D-E}{\\varepsilon_0}$"], "answerIndex": 1, "solution": "분극의 세기(분극전하밀도) $P = D - \\varepsilon_0 E = \\varepsilon_0(\\varepsilon_s - 1)E[\\mathrm{C/m^2}]$\n공식을 직접 묻는 문제로, 정답은 $P = D - \\varepsilon_0 E$이다.", "timestampSec": 1935, "theory": "**핵심 공식**: 분극의 세기 $P = D - \\varepsilon_0 E = \\varepsilon_0(\\varepsilon_s-1)E = \\chi E[\\mathrm{C/m^2}]$\n**개념**: 전속밀도 중 유전체의 분극이 담당하는 몫. $D = \\varepsilon_0 E + P$에서 이항한 형태.\n**함정 포인트**: 공식을 묻는 문제에서는 $D - \\varepsilon_0 E$ 형태가 정답일 가능성이 높다. 분극률 $\\chi = \\varepsilon_0(\\varepsilon_s-1)$도 함께 암기."}, {"no": 14, "question": "평등 자계 내 수직으로 돌입한 전자의 궤적은?", "choices": ["① 원운동을 하고 반지름은 자계의 세기에 비례한다.", "② 구면 위에서 회전하고 반지름은 자계의 세기에 비례한다.", "③ 원운동을 하고 반지름은 전자의 처음 속도에 반비례한다.", "④ 원운동을 하고 반지름은 자계의 세기에 반비례한다."], "answerIndex": 3, "solution": "평등 자계에 수직으로 입사한 전자는 로렌츠 힘 $F = qvB$가 구심력이 되어 원운동을 한다.\n$qvB = \\dfrac{mv^2}{r}$ → $r = \\dfrac{mv}{qB}$\n반지름은 자계의 세기($B$)에 반비례하고 속도에 비례한다.", "timestampSec": 2076, "theory": "**핵심 공식**: 원운동 반지름 $r = \\dfrac{mv}{qB}$, 각속도 $\\omega = \\dfrac{qB}{m}$\n**개념**: 자계에 수직 입사한 전하는 로렌츠 힘 $qvB$가 구심력이 되어 등속 원운동. 반지름은 속도에 비례, 자계 세기에 반비례.\n**함정 포인트**: '비례/반비례' 방향을 뒤집은 보기가 항상 함께 나온다. 평행 입사하면 직진, 비스듬히 입사하면 나선운동이 되는 변형도 출제됨."}, {"no": 15, "question": "진공 중 $4[\\mathrm{m}]$ 간격으로 두 개의 평행한 무한 평판 도체에 각각 $+4[\\mathrm{C/m^2}]$, $-4[\\mathrm{C/m^2}]$의 전하를 주었을 때, 두 도체 간의 전위차는 몇 $[\\mathrm{V}]$인가?", "choices": ["① $1.5\\times10^{12}$", "② $1.8\\times10^{12}$", "③ $1.5\\times10^{11}$", "④ $1.8\\times10^{11}$"], "answerIndex": 1, "solution": "평행판 사이 전위차 $V = \\dfrac{\\sigma}{\\varepsilon_0}d[\\mathrm{V}]$\n$V = \\dfrac{4}{8.855\\times10^{-12}}\\times 4 \\approx 1.8\\times10^{12}[\\mathrm{V}]$", "timestampSec": 2368, "theory": "**핵심 공식**: 평행판 사이 전위차 $V = Ed = \\dfrac{\\sigma}{\\varepsilon_0}d[\\mathrm{V}]$\n**개념**: 면전하밀도 $\\pm\\sigma$인 두 평판 사이 전계는 $E = \\sigma/\\varepsilon_0$(균일)이고, 전위차는 여기에 간격 $d$를 곱한다.\n**함정 포인트**: 단일 무한평면의 전계 $\\sigma/2\\varepsilon_0$와 혼동 주의 — 두 판 사이는 겹쳐져 $\\sigma/\\varepsilon_0$이다."}, {"no": 16, "question": "인덕턴스의 단위 $[\\mathrm{H}]$와 같지 않은 것은?", "choices": ["① $[\\Omega\\cdot\\mathrm{s}]$", "② $[\\mathrm{Wb/A}]$", "③ $[\\mathrm{J/A\\cdot s}]$", "④ $[\\mathrm{J/A^2}]$"], "answerIndex": 2, "solution": "인덕턴스의 단위 환산: $[\\mathrm{H}] = [\\mathrm{Wb/A}] = [\\mathrm{V\\cdot s/A}] = [\\Omega\\cdot\\mathrm{s}] = [\\mathrm{J/A^2}]$\n$[\\mathrm{J/A\\cdot s}]$는 인덕턴스의 단위가 아니다. (에너지 $W = \\frac{1}{2}LI^2$에서 $L = 2W/I^2$ → $[\\mathrm{J/A^2}]$)", "timestampSec": 2464, "theory": "**핵심 공식**: $[\\mathrm{H}] = [\\mathrm{Wb/A}] = [\\mathrm{V\\cdot s/A}] = [\\Omega\\cdot\\mathrm{s}] = [\\mathrm{J/A^2}]$\n**개념**: $LI = N\\phi$에서 Wb/A, $e = L\\frac{di}{dt}$에서 V·s/A, $W = \\frac{1}{2}LI^2$에서 J/A².\n**함정 포인트**: $[\\mathrm{J/A\\cdot s}]$처럼 그럴듯한 조합이 오답으로 나온다. 각 단위가 어느 공식에서 나오는지 유도 과정을 기억하면 헷갈리지 않는다."}, {"no": 17, "question": "무손실 매질에서 고유 임피던스 $\\eta = 60\\pi$, 비투자율 $\\mu_s = 1$, 위상정수 $\\beta = 1$일 때 각주파수 $[\\mathrm{rad/s}]$는?", "choices": ["① $6\\times10^8$", "② $3\\times10^8$", "③ $0.5\\times10^8$", "④ $1.5\\times10^8$"], "answerIndex": 3, "solution": "고유 임피던스 $\\eta = 120\\pi\\sqrt{\\dfrac{\\mu_s}{\\varepsilon_s}} = 60\\pi$ → $\\sqrt{\\dfrac{1}{\\varepsilon_s}} = \\dfrac{1}{2}$ → $\\varepsilon_s = 4$\n전파속도 $v = \\dfrac{\\omega}{\\beta} = \\dfrac{3\\times10^8}{\\sqrt{\\mu_s\\varepsilon_s}}[\\mathrm{m/s}]$\n$\\omega = \\beta\\cdot\\dfrac{3\\times10^8}{\\sqrt{1\\times4}} = \\dfrac{3\\times10^8}{2} = 1.5\\times10^8[\\mathrm{rad/s}]$", "timestampSec": 2565, "theory": "**핵심 공식**: 고유 임피던스 $\\eta = 120\\pi\\sqrt{\\dfrac{\\mu_s}{\\varepsilon_s}}[\\Omega]$, 전파속도 $v = \\dfrac{\\omega}{\\beta} = \\dfrac{3\\times10^8}{\\sqrt{\\mu_s\\varepsilon_s}}[\\mathrm{m/s}]$\n**개념**: $\\eta$에서 $\\varepsilon_s$를 역산한 뒤 $v = \\omega/\\beta$ 관계로 각주파수를 구한다.\n**함정 포인트**: 자유공간 고유 임피던스 $120\\pi \\approx 377[\\Omega]$ 기준으로 비율을 잡을 것. $60\\pi$는 절반이므로 $\\sqrt{\\varepsilon_s} = 2$, 즉 $\\varepsilon_s = 4$."}, {"no": 18, "question": "자계의 벡터 포텐셜(Vector potential)을 $A[\\mathrm{Wb/m}]$라 할 때 도체 주위에서 자계 $B[\\mathrm{Wb/m^2}]$가 시간적으로 변화하면 도체에 발생하는 전계의 세기 $E[\\mathrm{V/m}]$는?", "choices": ["① $\\mathrm{rot}\\,E = -\\dfrac{\\partial A}{\\partial t}$", "② $E = -\\dfrac{\\partial A}{\\partial t}$", "③ $\\mathrm{rot}\\,E = \\dfrac{\\partial B}{\\partial t}$", "④ $E = \\mathrm{rot}\\,B$"], "answerIndex": 1, "solution": "맥스웰의 전자방정식(패러데이 법칙): $\\mathrm{rot}\\,E = -\\dfrac{\\partial B}{\\partial t}$이고 $B = \\mathrm{rot}\\,A$이므로\n$\\mathrm{rot}\\,E = -\\dfrac{\\partial}{\\partial t}\\mathrm{rot}\\,A = \\mathrm{rot}\\left(-\\dfrac{\\partial A}{\\partial t}\\right)$\n$\\therefore E = -\\dfrac{\\partial A}{\\partial t}[\\mathrm{V/m}]$", "timestampSec": 2712, "theory": "**핵심 공식**: $B = \\mathrm{rot}\\,A$, $\\mathrm{rot}\\,E = -\\dfrac{\\partial B}{\\partial t}$ → $E = -\\dfrac{\\partial A}{\\partial t}$\n**개념**: 패러데이 법칙에 벡터 포텐셜 정의를 대입하면 rot가 양변에서 소거되어 전계가 벡터 포텐셜의 시간 미분으로 표현된다.\n**함정 포인트**: ①($\\mathrm{rot}\\,E = -\\partial A/\\partial t$)처럼 rot와 미분 대상을 섞은 보기에 주의. 맥스웰 방정식 4개의 미분형은 반드시 암기."}, {"no": 19, "question": "반지름 $a$인 접지된 구형도체와 점전하가 유전율 $\\varepsilon$인 공간에서 각각 원점과 $(d, 0, 0)$인 점에 있다. 구형도체를 제외한 공간의 전계를 구할 수 있도록 구형도체를 영상전하로 대치할 때의 영상점전하의 위치는?", "choices": ["① $\\left(-\\dfrac{a^2}{d}, 0, 0\\right)$", "② $\\left(\\dfrac{a^2}{d}, 0, 0\\right)$", "③ $\\left(0, +\\dfrac{a^2}{d}, 0\\right)$", "④ $\\left(\\dfrac{d^2}{4a}, 0, 0\\right)$"], "answerIndex": 1, "solution": "접지 구도체와 점전하: 영상 점전하의 위치는 구도체 중심에서 점전하 방향으로 $\\dfrac{a^2}{d}[\\mathrm{m}]$ 떨어진 점이다.\n점전하가 $+x$축 위 $(d,0,0)$에 있으므로 영상전하 위치는 $\\left(\\dfrac{a^2}{d}, 0, 0\\right)$ (영상전하 크기는 $-\\dfrac{a}{d}Q$)", "timestampSec": 2811, "theory": "**핵심 공식**: 접지 구도체 영상전하 — 위치: 중심에서 $\\dfrac{a^2}{d}$, 크기: $Q' = -\\dfrac{a}{d}Q$\n**개념**: 구 표면이 0 전위가 되도록 구 내부의 점전하 방향 선상에 영상전하를 놓는다.\n**함정 포인트**: 위치와 크기 공식을 세트로 암기할 것. 점전하가 $+x$축에 있으면 영상전하도 $+x$축 위($a^2/d$)에 있다 — 부호(방향) 보기에 주의."}, {"no": 20, "question": "그림과 같이 비투자율이 $\\mu_{s1}$, $\\mu_{s2}$인 각각 다른 자성체를 접하여 놓고 $\\theta_1$을 입사각이라 하고, $\\theta_2$를 굴절각이라 한다. 경계면에 자하가 없을 경우 미소 폐곡면을 취하여 이곳에 출입하는 자속수를 구하면?", "choices": ["① $\\displaystyle\\int B \\cdot n\\, ds = 0$", "② $\\displaystyle\\int B \\cdot n\\, dl = 0$", "③ $\\displaystyle\\int B \\cdot n \\sin\\theta\\, ds = 0$", "④ $\\displaystyle\\int B \\cdot ds = 0$"], "answerIndex": 0, "solution": "자속의 연속성(자계의 가우스 법칙): 자하(자기 홀극)는 존재하지 않으므로 폐곡면으로 들어온 자속은 반드시 나간다.\n$\\displaystyle\\oint B \\cdot n\\, ds = 0$ (면적분이므로 $ds$, 법선 성분이므로 $n$이 필요)", "timestampSec": 2938, "theory": "**핵심 공식**: 자속의 연속성 $\\oint_s B \\cdot n\\, ds = 0$ (맥스웰 방정식 $\\mathrm{div}\\,B = 0$의 적분형)\n**개념**: 자하(자기 홀극)가 존재하지 않으므로 임의의 폐곡면에서 들어오는 자속과 나가는 자속의 합은 항상 0이다.\n**함정 포인트**: 면적분이므로 $ds$(면적 요소)와 법선 $n$이 모두 필요 — $dl$(선적분)이나 $\\sin\\theta$가 들어간 보기는 오답. 전계의 가우스 법칙($\\oint D\\cdot ds = Q$)과 대비해 기억."}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const marks = ['①','②','③','④'];
+let answered = 0, correct = 0;
+
+function updateScore(){
+  document.getElementById('score').textContent =
+    `정답 ${correct} / 푼 문제 ${answered} / 전체 ${DATA.questions.length}`;
+}
+
+function mdBold(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')
+          .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+}
+
+const app = document.getElementById('app');
+DATA.questions.forEach(q => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const ts = q.timestampSec;
+  card.innerHTML = `
+    <div class="qno">문제 ${q.no}</div>
+    <div class="qtext">${mdBold(q.question)}</div>
+    <div class="choices"></div>
+    <button class="toggle">해설 보기</button>
+    <div class="expl">
+      <div class="answer-line">정답: ${marks[q.answerIndex]}</div>
+      <div class="sol">${mdBold(q.solution)}</div>
+      <div class="theory">${mdBold(q.theory)}</div>
+      <a class="ytlink" href="https://youtu.be/${DATA.videoId}?t=${ts}" target="_blank" rel="noopener">▶ 영상 해설 바로가기 (${Math.floor(ts/60)}:${String(ts%60).padStart(2,'0')})</a>
+    </div>`;
+  const choicesBox = card.querySelector('.choices');
+  const expl = card.querySelector('.expl');
+  let done = false;
+  q.choices.forEach((c, i) => {
+    const b = document.createElement('button');
+    b.className = 'choice';
+    b.innerHTML = mdBold(c);
+    b.addEventListener('click', () => {
+      if (done) return;
+      done = true;
+      answered++;
+      const btns = choicesBox.querySelectorAll('.choice');
+      btns.forEach(x => x.disabled = true);
+      if (i === q.answerIndex) {
+        correct++;
+        b.classList.add('correct');
+        b.insertAdjacentHTML('beforeend','<span class="mark ok">✓</span>');
+      } else {
+        b.classList.add('wrong');
+        b.insertAdjacentHTML('beforeend','<span class="mark no">✗</span>');
+        btns[q.answerIndex].classList.add('correct');
+      }
+      expl.classList.add('open');
+      updateScore();
+    });
+    choicesBox.appendChild(b);
+  });
+  card.querySelector('.toggle').addEventListener('click', () => {
+    expl.classList.toggle('open');
+  });
+  app.appendChild(card);
+});
+updateScore();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tryRender = () => {
+    if (window.renderMathInElement) {
+      renderMathInElement(document.body, {
+        delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],
+        throwOnError: false
+      });
+    } else setTimeout(tryRender, 100);
+  };
+  tryRender();
+});
+</script>
+</body>
+</html>

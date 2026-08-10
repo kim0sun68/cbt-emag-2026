@@ -3,7 +3,15 @@
 import json, pathlib
 
 root = pathlib.Path(__file__).parent
-data = json.loads((root / "content" / "content.json").read_text(encoding="utf-8"))
+
+PAGES = [
+    {"json": "content.json", "out": "index.html",
+     "video_label": "대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기자기학)",
+     "nav": '다른 과목: <a href="kec.html">전기설비기술기준 3회 기출 →</a>'},
+    {"json": "kec.json", "out": "kec.html",
+     "video_label": "대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기설비기술기준)",
+     "nav": '다른 과목: <a href="index.html">전기자기학 3회 기출 →</a>'},
+]
 
 TEMPLATE = r"""<!DOCTYPE html>
 <html lang="ko">
@@ -51,7 +59,8 @@ TEMPLATE = r"""<!DOCTYPE html>
   <header>
     <h1>__TITLE__</h1>
     <p>보기를 클릭하면 채점되고 해설이 열립니다. 채점 없이 보려면 [해설 보기]를 누르세요.</p>
-    <p>원본 강의: <a href="https://www.youtube.com/watch?v=__VIDEOID__" target="_blank" rel="noopener">대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기자기학)</a></p>
+    <p>원본 강의: <a href="https://www.youtube.com/watch?v=__VIDEOID__" target="_blank" rel="noopener">__VIDEOLABEL__</a></p>
+    <p>__NAV__</p>
   </header>
   <div id="app"></div>
   <footer>출처: 대산전기학원 유튜브 강의 · 학습용 정리 자료</footer>
@@ -138,9 +147,13 @@ document.addEventListener('DOMContentLoaded', () => {
 </html>
 """
 
-html = (TEMPLATE
-        .replace("__TITLE__", data["title"])
-        .replace("__VIDEOID__", data["videoId"])
-        .replace("__DATA__", json.dumps(data, ensure_ascii=False).replace("</", "<\\/")))
-(root / "index.html").write_text(html, encoding="utf-8")
-print("index.html written:", len(html), "bytes")
+for page in PAGES:
+    data = json.loads((root / "content" / page["json"]).read_text(encoding="utf-8"))
+    html = (TEMPLATE
+            .replace("__TITLE__", data["title"])
+            .replace("__VIDEOID__", data["videoId"])
+            .replace("__VIDEOLABEL__", page["video_label"])
+            .replace("__NAV__", page["nav"])
+            .replace("__DATA__", json.dumps(data, ensure_ascii=False).replace("</", "<\\/")))
+    (root / page["out"]).write_text(html, encoding="utf-8")
+    print(page["out"], "written:", len(html), "bytes")

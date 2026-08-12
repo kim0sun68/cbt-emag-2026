@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 전기기사 전력공학 3회 기출 핵심풀이</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+  :root { --green:#1a7f37; --red:#c62828; --blue:#1256a2; --bg:#f5f6f8; --card:#fff; --line:#e0e3e8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#222; line-height:1.65; }
+  .wrap { max-width:720px; margin:0 auto; padding:16px 14px 80px; }
+  header { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 18px; margin-bottom:18px; }
+  header h1 { font-size:1.25rem; margin:0 0 8px; }
+  header p { margin:4px 0; font-size:.9rem; color:#555; }
+  header a { color:var(--blue); }
+  #score { position:sticky; top:0; z-index:10; background:var(--blue); color:#fff; border-radius:0 0 10px 10px; padding:8px 14px; font-weight:700; text-align:center; margin:-16px -14px 16px; font-size:.95rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 16px; margin-bottom:16px; }
+  .qno { font-weight:800; color:var(--blue); margin-bottom:6px; }
+  .qtext { margin-bottom:12px; font-weight:600; }
+  .choice { display:block; width:100%; text-align:left; background:#fafbfc; border:1.5px solid var(--line); border-radius:9px; padding:10px 12px; margin:6px 0; font-size:.95rem; font-family:inherit; cursor:pointer; line-height:1.6; }
+  .choice:hover { border-color:var(--blue); }
+  .choice.correct { border-color:var(--green); background:#e8f5e9; font-weight:700; }
+  .choice.wrong { border-color:var(--red); background:#ffebee; }
+  .choice:disabled { cursor:default; opacity:1; color:inherit; }
+  .mark { float:right; font-weight:800; }
+  .mark.ok { color:var(--green); } .mark.no { color:var(--red); }
+  .toggle { margin-top:10px; background:none; border:1px solid var(--blue); color:var(--blue); border-radius:8px; padding:7px 14px; font-size:.88rem; cursor:pointer; font-family:inherit; }
+  .expl { display:none; margin-top:14px; border-top:1px dashed var(--line); padding-top:12px; font-size:.93rem; }
+  .expl.open { display:block; }
+  .answer-line { font-weight:800; color:var(--green); margin-bottom:8px; }
+  .sol { white-space:pre-wrap; margin-bottom:12px; }
+  .theory { background:#f2f7ff; border-left:4px solid var(--blue); border-radius:0 8px 8px 0; padding:10px 12px; white-space:pre-wrap; margin-bottom:12px; }
+  .ytlink { display:inline-block; background:#c4302b; color:#fff; text-decoration:none; border-radius:8px; padding:8px 14px; font-size:.88rem; font-weight:700; }
+  footer { text-align:center; color:#888; font-size:.8rem; margin-top:30px; }
+  @media (max-width:480px){ .wrap{padding:12px 10px 60px;} .card{padding:14px 12px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="score"></div>
+  <header>
+    <h1>2026 전기기사 전력공학 3회 기출 핵심풀이</h1>
+    <p>보기를 클릭하면 채점되고 해설이 열립니다. 채점 없이 보려면 [해설 보기]를 누르세요.</p>
+    <p>원본 강의: <a href="https://www.youtube.com/watch?v=9K5NkntBbto" target="_blank" rel="noopener">대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전력공학)</a></p>
+    <p>다른 과목: <a href="index.html">전기자기학 →</a> · <a href="kigi.html">전기기기 →</a> · <a href="kec.html">전기설비기술기준 →</a></p>
+  </header>
+  <div id="app"></div>
+  <footer>출처: 대산전기학원 유튜브 강의 · 학습용 정리 자료</footer>
+</div>
+<script id="data" type="application/json">{"title": "2026 전기기사 전력공학 3회 기출 핵심풀이", "videoId": "9K5NkntBbto", "questions": [{"no": 1, "question": "송전단 전압과 수전단 전압을 각각 $E_s$, $E_r$이라 하고, 4단자 정수를 $A, B, C, D$라 할 때 전력원선도의 반지름은?", "choices": ["① $E_s \\cdot E_r / A$", "② $E_s \\cdot E_r / B$", "③ $E_s \\cdot E_r / C$", "④ $E_s \\cdot E_r / D$"], "answerIndex": 1, "solution": "전력원선도의 반지름 $\\rho = \\dfrac{E_s E_r}{B}$이다. ($B$: 4단자 정수 중 임피던스 성분)\n가로축은 유효전력, 세로축은 무효전력을 나타낸다.", "timestampSec": 65, "theory": "**핵심 공식**: 전력원선도 반지름 $= \\dfrac{E_s E_r}{B}$, 가로축 유효전력 $P$ · 세로축 무효전력 $Q$\n**개념**: 전력원선도에서 알 수 있는 것 — 송·수전 전력, 조상설비 용량, 개선된 역률, 송전 손실, 송전 효율. 알 수 없는 것 — 과도 안정 극한전력, 코로나 손실.\n**함정 포인트**: 반지름 분모는 반드시 $B$. 가로/세로축이 무엇인지 묻는 변형도 함께 출제된다."}, {"no": 2, "question": "154[kV] 송전선로에서 지락 임피던스 $Z_{gf}$를 통해 1선 지락고장이 발생하였을 때, 고장점에서 본 영상 %임피던스는? (단, 모든 임피던스는 100[MVA] 기준으로 환산한 값이며, $Z_l$은 선로, $Z_t$는 변압기, $Z_G$는 발전기, $Z_{GN}$은 발전기 중성점 접지 임피던스이다.)", "choices": ["① $Z_0 = Z_0 + Z_t$", "② $Z_0 = Z_l + Z_t + Z_{gf}$", "③ $Z_0 = Z_l + Z_t + 3Z_{gf}$", "④ $Z_0 = Z_l + Z_t + Z_G + Z_{GN}$"], "answerIndex": 2, "solution": "영상회로에는 지락 임피던스가 **3배**($3Z_{gf}$)로 들어간다. 영상전류가 세 상에 같은 크기로 흐르고 지락점으로 $3I_0$가 흐르기 때문이다.\n발전기 측은 변압기(△결선)에서 영상분이 차단되므로 $Z_G$, $Z_{GN}$은 포함되지 않는다. $\\therefore Z_0 = Z_l + Z_t + 3Z_{gf}$", "timestampSec": 145, "theory": "**핵심 공식**: 1선 지락 시 영상 임피던스 — 지락(중성점) 임피던스는 3배로 반영 ($3Z_{gf}$, $3Z_n$)\n**개념**: 영상전류는 3상 동상이므로 중성점·지락점 경로에는 $3I_0$가 흘러 임피던스가 3배로 보인다. △권선은 영상분을 순환시켜 차단한다.\n**함정 포인트**: 발전기·중성점 접지 임피던스를 더한 보기(④)는 △결선 차단을 무시한 오답."}, {"no": 3, "question": "정격전압 6600[V], Y결선, 3상 발전기의 중성점을 1선 지락 시 지락전류를 100[A]로 제한하는 저항기로 접지하려고 한다. 저항기의 저항값은 약 몇 $[\\Omega]$인가?", "choices": ["① 44", "② 41", "③ 38", "④ 35"], "answerIndex": 2, "solution": "Y결선의 상전압 $= \\dfrac{6600}{\\sqrt{3}}[\\mathrm{V}]$, 1선 지락 시 이 전압이 저항기에 걸린다.\n$R = \\dfrac{6600/\\sqrt{3}}{100} = \\dfrac{3810}{100} \\approx 38[\\Omega]$", "timestampSec": 367, "theory": "**핵심 공식**: 중성점 접지저항 $R = \\dfrac{V/\\sqrt{3}}{I_g}$ ($V$: 선간전압, $I_g$: 제한할 지락전류)\n**개념**: 지락전류는 상전압(대지전압)이 접지저항을 통해 흐르는 전류다.\n**함정 포인트**: 선간전압 6600을 그대로 쓰면 66Ω 오답. 반드시 $\\sqrt{3}$으로 나눈 상전압 사용."}, {"no": 4, "question": "경간 200[m], 전선의 자체 무게 2[kg/m], 인장하중 5000[kg], 안전율 2인 가공 송전선로의 이도(Dip)는 몇 [m]인가?", "choices": ["① 2", "② 4", "③ 6", "④ 8"], "answerIndex": 1, "solution": "수평장력 $T = \\dfrac{\\text{인장하중}}{\\text{안전율}} = \\dfrac{5000}{2} = 2500[\\mathrm{kg}]$\n이도 $D = \\dfrac{WS^2}{8T} = \\dfrac{2\\times200^2}{8\\times2500} = 4[\\mathrm{m}]$", "timestampSec": 470, "theory": "**핵심 공식**: 이도 $D = \\dfrac{WS^2}{8T}$, $T = \\dfrac{\\text{인장하중}}{\\text{안전율}}$ / 전선 실제 길이 $L = S + \\dfrac{8D^2}{3S}$\n**개념**: 이도는 전선이 지지점보다 처지는 정도. 장력이 클수록 작고, 경간·무게가 클수록 크다.\n**함정 포인트**: 인장하중을 안전율로 나누지 않고 그대로 대입하면 2m(①) 오답이 나오도록 설계된 문제."}, {"no": 5, "question": "지중 케이블 선로에 지락 또는 단락 고장이 발생했을 때, 고장점까지의 거리를 탐지하는 방법 중 휘트스톤 브리지의 평형 조건을 이용하는 측정법은?", "choices": ["① 머레이 루프(Murray Loop)법", "② 정전용량 측정법", "③ 수색 코일법", "④ 펄스 레이더법"], "answerIndex": 0, "solution": "**머레이 루프법**은 휘트스톤 브리지의 평형 조건을 이용해 지중 케이블의 고장점까지 거리를 측정하는 방법이다.", "timestampSec": 525, "theory": "**핵심 분류**: 지중 케이블 고장점 탐지 — 머레이 루프법(휘트스톤 브리지), 펄스 레이더법(펄스 반사 시간), 정전용량법(단선 고장), 수색 코일법\n**개념**: 각 방법의 원리 키워드를 연결하는 문제가 반복 출제된다.\n**함정 포인트**: '휘트스톤 브리지'라는 키워드가 나오면 무조건 머레이 루프법."}, {"no": 6, "question": "초고압 송전선로에 단도체 대신 복도체를 사용할 경우 옳지 않은 것은?", "choices": ["① 전선로의 작용인덕턴스를 감소시킨다.", "② 선로의 작용정전용량을 증가시킨다.", "③ 전선 표면의 전위경도를 저감시킨다.", "④ 전선의 코로나 임계전압을 저감시킨다."], "answerIndex": 3, "solution": "복도체를 사용하면 등가 반지름이 커져 코로나 임계전압은 **상승**하고, 그 결과 코로나가 방지된다. '저감시킨다'는 ④가 틀린 설명이다.\n인덕턴스 감소, 정전용량 증가, 전위경도 저감은 모두 맞는 특징이다.", "timestampSec": 545, "theory": "**핵심 특징**: 복도체 — L 감소, C 증가, 송전용량 증가, 표면 전위경도 저감, 코로나 임계전압 상승(코로나 방지)\n**개념**: 임계전압이 높아진다는 것은 코로나가 잘 발생하지 않는다는 뜻 — 복도체의 최대 목적.\n**함정 포인트**: '임계전압 저감'과 '전위경도 저감'을 구분할 것. 전위경도는 저감(↓), 임계전압은 상승(↑)."}, {"no": 7, "question": "3상 3선식 가공 송전선로의 선간거리가 각각 $D_{12}$, $D_{23}$, $D_{31}$일 때, 등가 선간거리를 구하는 식은?", "choices": ["① $\\sqrt{D_{12}\\cdot D_{23} + D_{23}\\cdot D_{31} + D_{31}\\cdot D_{12}}$", "② $\\sqrt[3]{D_{12}\\cdot D_{23}\\cdot D_{31}}$", "③ $\\sqrt{D_{12}^2 + D_{23}^2 + D_{31}^2}$", "④ $\\sqrt[3]{D_{12}^3 + D_{23}^3 + D_{31}^3}$"], "answerIndex": 1, "solution": "등가 선간거리는 각 선간거리의 **기하 평균**이다.\n$D_e = \\sqrt[3]{D_{12}\\cdot D_{23}\\cdot D_{31}}$", "timestampSec": 698, "theory": "**핵심 공식**: 등가 선간거리 $D_e = \\sqrt[3]{D_{12} D_{23} D_{31}}$ (기하 평균)\n**개념**: 비대칭 배치 선로도 연가를 통해 평균적으로 등가 거리를 갖는 것으로 취급한다.\n**함정 포인트**: 산술 평균이나 제곱 합 형태의 보기에 속지 말 것. '기하 평균 = 곱해서 세제곱근'."}, {"no": 8, "question": "송전거리, 송전전력, 역률 및 선로 손실률이 동일하다고 할 때, 전선의 굵기(단면적 A)는 송전전압(V)과 어떤 관계를 가지는가?", "choices": ["① 전압에 비례한다.", "② 전압에 반비례한다.", "③ 전압의 제곱에 비례한다.", "④ 전압의 제곱에 반비례한다."], "answerIndex": 3, "solution": "전력 손실 $P_l = \\dfrac{P^2 R}{V^2\\cos^2\\theta}$에서 손실률이 일정하면 $R \\propto V^2$, 그리고 $R = \\rho\\dfrac{l}{A}$이므로 $A \\propto \\dfrac{1}{V^2}$.\n전선의 단면적은 **전압의 제곱에 반비례**한다.", "timestampSec": 765, "theory": "**핵심 관계(전압 $V$의 거듭제곱)**: 송전전력 $\\propto V^2$ / 전력손실·손실률·전압강하율 $\\propto \\dfrac{1}{V^2}$ / 전압강하 $\\propto \\dfrac{1}{V}$ / 전선 단면적 $\\propto \\dfrac{1}{V^2}$\n**개념**: 승압의 이점을 수식으로 정리한 대표 암기 세트다.\n**함정 포인트**: 전압강하(1/V)와 전압강하율(1/V²)을 구분할 것."}, {"no": 9, "question": "수전 변전소의 선간전압이 154[kV]이고 1상당의 계통 임피던스가 $j8[\\Omega]$일 때, 기준용량을 100[MVA]로 하면 퍼센트 임피던스(%Z)는 약 몇 [%]인가?", "choices": ["① 2.75", "② 3.15", "③ 3.37", "④ 4.25"], "answerIndex": 2, "solution": "$\\%Z = \\dfrac{P[\\mathrm{kVA}]\\cdot Z}{10\\,V^2[\\mathrm{kV}]} = \\dfrac{100\\times10^3 \\times 8}{10\\times154^2} = \\dfrac{800000}{237160} \\approx 3.37[\\%]$", "timestampSec": 855, "theory": "**핵심 공식**: $\\%Z = \\dfrac{PZ}{10V^2}$ ($P$: kVA, $V$: kV) — 유도: $\\%Z = \\dfrac{I_nZ}{E}\\times100$에서 정리\n**개념**: 퍼센트 임피던스는 기준용량에 비례하므로 기준용량 환산 문제와 함께 자주 나온다.\n**함정 포인트**: 단위 — $P$는 [kVA]($100[\\mathrm{MVA}]=10^5[\\mathrm{kVA}]$), $V$는 [kV]. MVA를 그대로 넣으면 1000배 오차."}, {"no": 10, "question": "우리나라 154[kV], 345[kV] 계통의 주축을 이루는 중성점 직접접지 방식에 대한 설명으로 틀린 것은?", "choices": ["① 지락사고 시 건전상의 전위 상승이 1.3배 이하로 낮아 기기의 절연 레벨을 낮출 수 있다.", "② 지락전류가 대단히 크게 흐르므로 인근 통신선에 대한 유도장해가 최소화된다.", "③ 보호계전기의 동작이 확실하고 신속하므로 고장 구간의 선택 차단이 수월하다.", "④ 대전류 지락 고장이 발생하므로 과도 안정도가 비교적 나쁜 편이다."], "answerIndex": 1, "solution": "직접접지 방식은 지락전류가 대단히 크기 때문에 인근 통신선에 대한 **유도장해가 크다**. '최소화된다'는 ②가 틀린 설명이다.\n전위 상승 1.3배 이하(절연 레벨 저감), 보호계전기 동작 확실, 과도 안정도 나쁨은 모두 맞다.", "timestampSec": 955, "theory": "**핵심 특징**: 직접접지 — 건전상 전위상승 1.3배 이하(유효접지), 절연 저감(단절연 가능), 보호계전 확실, 지락전류 큼 → 유도장해 큼·과도 안정도 나쁨\n**개념**: 장점(절연·보호)과 단점(유도장해·안정도)이 지락전류가 크다는 한 가지 사실에서 나온다.\n**함정 포인트**: 소호리액터 접지(유도장해 최소)와 특징을 바꿔치기하는 보기가 단골."}, {"no": 11, "question": "파동임피던스 $Z_1 = 500[\\Omega]$인 선로의 종단에 파동임피던스 $Z_2 = 1000[\\Omega]$의 변압기가 접속되어 있다. 선로에서 파고 $e_i = 600[\\mathrm{kV}]$의 전압이 진입할 경우, 접속점에서의 전압 반사파 파고는 몇 [kV]인가?", "choices": ["① 200", "② 300", "③ 400", "④ 500"], "answerIndex": 0, "solution": "반사파 $e_r = \\dfrac{Z_2 - Z_1}{Z_2 + Z_1}\\times e_i = \\dfrac{1000-500}{1000+500}\\times600 = \\dfrac{500}{1500}\\times600 = 200[\\mathrm{kV}]$", "timestampSec": 1080, "theory": "**핵심 공식**: 반사파 $= \\dfrac{Z_2-Z_1}{Z_2+Z_1}e_i$, 투과파 $= \\dfrac{2Z_2}{Z_1+Z_2}e_i$\n**개념**: 서지(진행파)가 임피던스가 다른 접속점을 만나면 일부는 반사, 일부는 투과한다.\n**함정 포인트**: 분자 순서는 '도착지($Z_2$) - 출발지($Z_1$)'. 투과파를 물으면 400kV가 답이 되므로 어느 파를 묻는지 확인."}, {"no": 12, "question": "송전 철탑에 직격뢰가 침입하여 철탑의 전위가 이상 상승함으로써, 철탑에서 전선로 방향으로 불꽃 방전이 일어나는 역섬락(Back Flashover)을 방지하기 위한 가장 확실한 방법은?", "choices": ["① 아킹혼 설치", "② 가공지선의 추가 설치", "③ 탑각 접지저항의 감소(매설지선 시설)", "④ 댐퍼의 설치"], "answerIndex": 2, "solution": "역섬락은 철탑의 탑각 접지저항이 커서 뇌전류에 의해 철탑 전위가 크게 상승할 때 발생한다.\n방지책은 **탑각 접지저항을 줄이는 것**이며, 이를 위해 **매설지선**을 시설한다.", "timestampSec": 1180, "theory": "**핵심 규칙**: 역섬락 방지 = 탑각 접지저항 감소 = 매설지선 시설 (두 표현 모두 출제됨)\n**개념**: 뇌전류 $I$가 접지저항 $R$을 통해 흐르면 철탑 전위가 $IR$만큼 상승 → 저항을 줄이면 전위 상승 억제.\n**함정 포인트**: 가공지선은 직격뢰 차폐용(역섬락 방지 아님), 아킹혼은 애자련 보호, 댐퍼는 전선 진동 방지 — 역할 구분."}, {"no": 13, "question": "이상전압 서지 내습 시 기기 보호를 위해 설치하는 피뢰기(LA)가 갖추어야 할 구비조건으로 틀린 것은?", "choices": ["① 제한전압이 낮을 것", "② 상용주파 방전개시 전압이 낮을 것", "③ 충격방전 개시전압이 낮을 것", "④ 속류 차단 능력이 우수하고 방전내량이 클 것"], "answerIndex": 1, "solution": "상용주파 방전개시 전압은 **높아야** 한다. 정상 운전 전압에서는 동작하지 않아야 하기 때문이다. 따라서 ②가 틀린 설명이다.\n제한전압·충격방전 개시전압은 낮을 것, 속류 차단 능력과 방전내량은 클 것 — 모두 맞는 조건.", "timestampSec": 1210, "theory": "**핵심 조건**: 피뢰기 구비조건 — 충격방전 개시전압 낮게, 제한전압 낮게, 상용주파 방전개시 전압 높게, 속류 차단 확실, 방전내량 크게\n**개념**: 서지(충격)에는 민감하게, 정상 전압(상용주파)에는 둔감하게 — 이 대비가 핵심이다.\n**함정 포인트**: '낮을 것' 셋 중 상용주파만 '높을 것'으로 뒤집힌다. 단골 중의 단골."}, {"no": 14, "question": "망상(Network) 배전방식의 특징 중 옳지 않은 것은?", "choices": ["① 방사상(수지상) 방식에 비해 무정전 공급 신뢰도가 대단히 우수하다.", "② 전압강하 및 전압변동이 적고 플리커 방지에 유리하다.", "③ 다중 급전 구조이므로 인축에 대한 감전사고의 우려가 존재한다.", "④ 보호설비 구성이 단순하여 건설비가 가장 저렴하다."], "answerIndex": 3, "solution": "망상(네트워크) 방식은 보호설비(네트워크 프로텍터 등) 구성이 **복잡하고 건설비가 비싸다**. ④가 틀린 설명이다.\n무정전 신뢰도 최고, 전압강하·변동 적음, 인축 감전 우려 존재는 모두 맞는 특징이다.", "timestampSec": 1358, "theory": "**핵심 특징**: 네트워크 배전 — 공급 신뢰도 최고, 전압변동 적음, 부하 증가 대응 우수 / 단점: 건설비 최고, 인축 감전사고 우려, 역류 개폐장치(네트워크 프로텍터) 필요\n**개념**: 대도시 부하밀집 지역에 채용되는 최고급 배전 방식이다.\n**함정 포인트**: '신뢰도 좋음'과 '싸다'는 양립하지 않는다 — 좋은 만큼 비싸다로 기억."}, {"no": 15, "question": "3상 배전선로의 말단에 지상 역률 80[%], 160[kW]인 평형 3상 부하가 있다. 부하점에 전력용 콘덴서를 접속하여 선로손실을 최소가 되게 하려면 콘덴서의 필요한 용량[kVA]은? (단, 부하단 전압은 변하지 않는 것으로 한다.)", "choices": ["① 100", "② 120", "③ 160", "④ 200"], "answerIndex": 1, "solution": "선로손실 최소 = 역률 1로 개선($\\cos\\theta_2 = 1$, $\\tan\\theta_2 = 0$)\n$Q_c = P(\\tan\\theta_1 - \\tan\\theta_2) = P\\tan\\theta_1 = 160\\times\\dfrac{0.6}{0.8} = 120[\\mathrm{kVA}]$", "timestampSec": 1400, "theory": "**핵심 공식**: 콘덴서 용량 $Q_c = P(\\tan\\theta_1 - \\tan\\theta_2)$; 손실 최소 조건은 $\\cos\\theta_2 = 1$ → $Q_c = P\\tan\\theta_1$\n**개념**: 선로손실 $P_l \\propto \\dfrac{1}{\\cos^2\\theta}$이므로 역률 1일 때 최소가 된다.\n**함정 포인트**: $\\tan\\theta = \\sin/\\cos = 0.6/0.8$. 부하 P는 kW, 콘덴서 용량은 kVA(무효전력)라는 단위 표기에 유의."}, {"no": 16, "question": "최근 국내 154[kV]급 이상 변전소에서 널리 채용되고 있는 가스절연 개폐설비(GIS)의 특징으로 틀린 것은?", "choices": ["① 대기 절연을 이용한 것에 비해 현저하게 소형화할 수 있으나 비교적 고가이다.", "② 소음이 적고 충전부가 완전 밀폐형으로 되어 있기 때문에 안전성이 높다.", "③ 가스 압력에 대한 엄중한 감시가 필요하며, 내부 점검 및 부품 교환이 번거롭다.", "④ 한랭지나 산악 지방에서도 액화 방지 및 산화 방지 대책이 필요 없다."], "answerIndex": 3, "solution": "GIS에 쓰이는 SF₆ 가스는 저온에서 액화될 수 있어 한랭지·산악 지방에서는 **액화 방지 대책이 필요하다**. '필요 없다'는 ④가 틀린 설명이다.", "timestampSec": 1538, "theory": "**핵심 특징**: GIS — 소형화 가능(고가), 밀폐형이라 안전·저소음, 가스압 감시 필요, 내부 점검 번거로움, 한랭지 액화 방지 대책 필요\n**개념**: SF₆ 가스는 절연내력이 공기의 2~3배(고압일수록 커짐), 소호능력 우수(공기의 약 100배), 무색·무취·무독·불연성.\n**함정 포인트**: '대책이 필요 없다'류의 단정 보기가 오답인 경우가 많다. SF₆ 저온 액화 성질을 기억."}, {"no": 17, "question": "보호계전기의 반한시 특성이란?", "choices": ["① 동작전류가 크면 동작시간은 짧아진다.", "② 동작전류가 클수록 동작시간이 길어진다.", "③ 동작전류가 흐르는 순간에 동작한다.", "④ 동작전류에 관계없이 동작시간은 일정하다."], "answerIndex": 0, "solution": "반한시 특성: **동작전류가 클수록 동작시간이 짧아지는** 특성이다.\n(정한시: 전류 크기와 무관하게 일정 시간, 순한시: 즉시 동작, 반한시성 정한시: 일정 전류까지는 반한시 그 이상은 정한시)", "timestampSec": 1615, "theory": "**핵심 분류**: 순한시(즉시) / 정한시(일정 시간) / 반한시(전류 클수록 빨리) / 반한시성 정한시(둘의 조합)\n**개념**: 반한시는 고장이 심할수록(전류가 클수록) 빨리 차단해 피해를 줄이는 특성이다.\n**함정 포인트**: ②는 반한시의 정반대 서술 — '반(反)한시 = 전류와 시간이 반비례'로 기억하면 헷갈리지 않는다."}, {"no": 18, "question": "특고압 변전소 점검 시 계기용 변성기의 안전을 위해 조치하여야 할 사항으로 옳은 것은?", "choices": ["① 변류기(CT) 점검 시에는 2차 측 전로를 반드시 개방하여야 한다.", "② 계기용 변압기(PT) 점검 시에는 2차 측 전로를 반드시 단락하여야 한다.", "③ 변류기(CT) 점검 시에는 2차 측 전로를 반드시 단락하여야 한다.", "④ 변성기 점검은 정격 부하를 모두 통전한 상태에서 시행한다."], "answerIndex": 2, "solution": "**CT(변류기) 점검 시 2차 측은 반드시 단락**해야 한다. 2차를 개방하면 1차 전류가 모두 여자전류가 되어 2차에 고전압이 유기되고 절연이 파괴될 수 있다.\n(반대로 PT 점검 시 2차 측은 개방 — 단락하면 큰 단락전류가 흐른다)", "timestampSec": 1685, "theory": "**핵심 규칙**: CT 2차 = 단락 (개방 금지: 고전압 유기) / PT 2차 = 개방 (단락 금지: 과전류)\n**개념**: CT는 전류원처럼, PT는 전압원처럼 동작하기 때문에 반대의 조치가 필요하다.\n**함정 포인트**: CT/PT를 서로 바꾼 보기(①②)가 항상 함께 나온다. 'CT는 단락, PT는 개방' 고정 암기."}, {"no": 19, "question": "수력발전소 계획 시 사용하는 하천 유량 기준 중, 1년 365일 가운데 185일은 이 양보다 내려가지 않는 유량을 무엇이라 하는가?", "choices": ["① 평수량", "② 풍수량", "③ 저수량", "④ 갈수량"], "answerIndex": 0, "solution": "185일 기준은 **평수량**이다.\n(풍수량 95일, 평수량 185일, 저수량 275일, 갈수량 355일)", "timestampSec": 1740, "theory": "**핵심 수치**: 하천 유량 — 풍수량 95일 / 평수량 185일 / 저수량 275일 / 갈수량 355일 ('이 양보다 내려가지 않는 일수')\n**개념**: 일수가 클수록 더 적은(더 자주 보장되는) 유량이다.\n**함정 포인트**: 95-185-275-355 네 숫자와 이름의 짝을 바꿔 출제 — '풍평저갈' 순서로 90일씩 증가로 암기."}, {"no": 20, "question": "화력발전소에서 발전효율을 저하시키는 원인으로 가장 큰 손실은 어느 것인가?", "choices": ["① 소내용 동력", "② 터빈 및 발전기의 손실", "③ 연돌 배출가스", "④ 복수기 냉각수 손실"], "answerIndex": 3, "solution": "화력발전소의 가장 큰 손실은 **복수기 냉각수 손실**이다. 터빈에서 일을 마친 증기가 복수기에서 응축될 때 잠열이 냉각수로 버려지며, 전체 입력 열량의 약 50%를 차지한다.", "timestampSec": 1905, "theory": "**핵심 사실**: 화력발전 최대 손실 = 복수기 손실(약 50%) — 발전소 열효율이 40% 수준에 머무는 주원인\n**개념**: 랭킨 사이클에서 응축 과정의 방출 열량은 회수가 어렵다.\n**함정 포인트**: 연돌(굴뚝) 배출가스 손실은 복수기보다 훨씬 작다. '가장 큰'을 물으면 무조건 복수기."}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const marks = ['①','②','③','④'];
+let answered = 0, correct = 0;
+
+function updateScore(){
+  document.getElementById('score').textContent =
+    `정답 ${correct} / 푼 문제 ${answered} / 전체 ${DATA.questions.length}`;
+}
+
+function mdBold(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')
+          .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+}
+
+const app = document.getElementById('app');
+DATA.questions.forEach(q => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const ts = q.timestampSec;
+  card.innerHTML = `
+    <div class="qno">문제 ${q.no}</div>
+    <div class="qtext">${mdBold(q.question)}</div>
+    <div class="choices"></div>
+    <button class="toggle">해설 보기</button>
+    <div class="expl">
+      <div class="answer-line">정답: ${marks[q.answerIndex]}</div>
+      <div class="sol">${mdBold(q.solution)}</div>
+      <div class="theory">${mdBold(q.theory)}</div>
+      <a class="ytlink" href="https://youtu.be/${DATA.videoId}?t=${ts}" target="_blank" rel="noopener">▶ 영상 해설 바로가기 (${Math.floor(ts/60)}:${String(ts%60).padStart(2,'0')})</a>
+    </div>`;
+  const choicesBox = card.querySelector('.choices');
+  const expl = card.querySelector('.expl');
+  let done = false;
+  q.choices.forEach((c, i) => {
+    const b = document.createElement('button');
+    b.className = 'choice';
+    b.innerHTML = mdBold(c);
+    b.addEventListener('click', () => {
+      if (done) return;
+      done = true;
+      answered++;
+      const btns = choicesBox.querySelectorAll('.choice');
+      btns.forEach(x => x.disabled = true);
+      if (i === q.answerIndex) {
+        correct++;
+        b.classList.add('correct');
+        b.insertAdjacentHTML('beforeend','<span class="mark ok">✓</span>');
+      } else {
+        b.classList.add('wrong');
+        b.insertAdjacentHTML('beforeend','<span class="mark no">✗</span>');
+        btns[q.answerIndex].classList.add('correct');
+      }
+      expl.classList.add('open');
+      updateScore();
+    });
+    choicesBox.appendChild(b);
+  });
+  card.querySelector('.toggle').addEventListener('click', () => {
+    expl.classList.toggle('open');
+  });
+  app.appendChild(card);
+});
+updateScore();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tryRender = () => {
+    if (window.renderMathInElement) {
+      renderMathInElement(document.body, {
+        delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],
+        throwOnError: false
+      });
+    } else setTimeout(tryRender, 100);
+  };
+  tryRender();
+});
+</script>
+</body>
+</html>

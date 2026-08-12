@@ -4,16 +4,18 @@ import json, pathlib
 
 root = pathlib.Path(__file__).parent
 
+SUBJECTS = [
+    ("content.json", "index.html", "전기자기학"),
+    ("power.json", "power.html", "전력공학"),
+    ("kigi.json", "kigi.html", "전기기기"),
+    ("kec.json", "kec.html", "전기설비기술기준"),
+]
 PAGES = [
-    {"json": "content.json", "out": "index.html",
-     "video_label": "대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기자기학)",
-     "nav": '다른 과목: <a href="kigi.html">전기기기 →</a> · <a href="kec.html">전기설비기술기준 →</a>'},
-    {"json": "kigi.json", "out": "kigi.html",
-     "video_label": "대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기기기)",
-     "nav": '다른 과목: <a href="index.html">전기자기학 →</a> · <a href="kec.html">전기설비기술기준 →</a>'},
-    {"json": "kec.json", "out": "kec.html",
-     "video_label": "대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기설비기술기준)",
-     "nav": '다른 과목: <a href="index.html">전기자기학 →</a> · <a href="kigi.html">전기기기 →</a>'},
+    {"json": j, "out": out,
+     "video_label": f"대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 ({name})",
+     "nav": "다른 과목: " + " · ".join(
+         f'<a href="{o}">{n} →</a>' for _, o, n in SUBJECTS if o != out)}
+    for j, out, name in SUBJECTS
 ]
 
 TEMPLATE = r"""<!DOCTYPE html>

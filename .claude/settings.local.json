@@ -70,7 +70,31 @@
       "Bash(awk '{printf \"%d:%02d \\(%ds\\)\\\\n\", $1/60, $1%60, $1}')",
       "Bash(mkdir -p scan)",
       "Bash(python3 -c \"import json;d=json.load\\(open\\('content/power.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('OK'\\)\")",
-      "Bash(git commit -q -m 'feat: 전력공학 3회 기출 페이지 추가, 4과목 네비게이션 *)"
+      "Bash(git commit -q -m 'feat: 전력공학 3회 기출 페이지 추가, 4과목 네비게이션 *)",
+      "Bash(yt-dlp --skip-download --write-auto-subs --sub-langs ko --sub-format vtt -o ko \"https://www.youtube.com/watch?v=4dN4Zd4RYcg\")",
+      "Bash(mkdir -p /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/download /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e2/download)",
+      "Bash(yt-dlp *)",
+      "Bash(ffmpeg *)",
+      "Bash(ffprobe *)",
+      "Bash(python3 *)",
+      "Bash(mkdir *)",
+      "Bash(cd *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(grep *)",
+      "Bash(awk *)",
+      "Bash(sed *)",
+      "Bash(curl *)",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(echo *)",
+      "Bash(file *)",
+      "Bash(wc *)",
+      "Bash(rm -rf /private/tmp/claude-501/*)",
+      "Bash(for *)",
+      "Bash(tr *)",
+      "Bash(ffmpeg -loglevel error -ss 1345 -i /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/frames/x14_1345.jpg)",
+      "Bash(ffmpeg -loglevel error -ss 852 -i /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/download/video.mp4 -frames:v 1 -vf crop=in_w/3:in_h/2:40:150,scale=800:-2 -y /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/frames/x08_zoom.jpg)"
     ]
   }
 }

@@ -10,6 +10,13 @@ SUBJECTS = [
     ("kigi.json", "kigi.html", "전기기기"),
     ("kec.json", "kec.html", "전기설비기술기준"),
 ]
+EMAG_ROUNDS = [("emag1.html", "1회"), ("emag2.html", "2회"), ("index.html", "3회")]
+
+def rounds_nav(current):
+    parts = [f"<strong>{label}(현재)</strong>" if out == current
+             else f'<a href="{out}">{label}</a>' for out, label in EMAG_ROUNDS]
+    return "전기자기학 회차: " + " · ".join(parts)
+
 PAGES = [
     {"json": j, "out": out,
      "video_label": f"대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 ({name})",
@@ -17,6 +24,14 @@ PAGES = [
          f'<a href="{o}">{n} →</a>' for _, o, n in SUBJECTS if o != out)}
     for j, out, name in SUBJECTS
 ]
+PAGES[0]["nav"] = rounds_nav("index.html") + "<br>" + PAGES[0]["nav"]
+for j, out, r in [("emag1.json", "emag1.html", "1회"), ("emag2.json", "emag2.html", "2회")]:
+    PAGES.append({
+        "json": j, "out": out,
+        "video_label": f"대산전기학원 — 2026년 {r} 전기기사 필기 CBT 기출적중 핵심풀이 (전기자기학)",
+        "nav": rounds_nav(out) + "<br>다른 과목: " + " · ".join(
+            f'<a href="{o}">{n} →</a>' for _, o, n in SUBJECTS[1:]),
+    })
 
 TEMPLATE = r"""<!DOCTYPE html>
 <html lang="ko">

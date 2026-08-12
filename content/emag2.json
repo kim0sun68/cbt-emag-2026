@@ -1,0 +1,186 @@
+{
+  "title": "2026 전기기사 전자기학 2회 기출 핵심풀이",
+  "videoId": "XPSPgQSLtOk",
+  "questions": [
+    {
+      "no": 1,
+      "question": "무한히 긴 원주도체의 내부 인덕턴스의 크기는 어떻게 결정되는가? (단위 길이당)",
+      "choices": ["① $\\dfrac{\\mu}{8\\pi}[\\mathrm{H/m}]$", "② $\\dfrac{\\mu}{4\\pi}[\\mathrm{H/m}]$", "③ $\\dfrac{\\mu}{2\\pi}[\\mathrm{H/m}]$", "④ $\\dfrac{\\mu}{\\pi}[\\mathrm{H/m}]$"],
+      "answerIndex": 0,
+      "solution": "원주(원통) 도체의 내부 인덕턴스 $L_i = \\dfrac{\\mu l}{8\\pi}[\\mathrm{H}]$\n단위 길이당 $L_i' = \\dfrac{\\mu}{8\\pi}[\\mathrm{H/m}]$ — 도체의 굵기(반지름)와는 무관하고 재질(투자율)에 의해 결정된다.",
+      "timestampSec": 81,
+      "theory": "**핵심 공식**: 원주도체 내부 인덕턴스 $L_i = \\dfrac{\\mu}{8\\pi}[\\mathrm{H/m}]$ — 반지름 무관!\n**개념**: 내부 자속쇄교를 적분하면 반지름이 약분되어 사라진다.\n**함정 포인트**: '굵기와 무관하다'는 성질 자체를 묻는 변형이 많다. 계수 $\\frac{1}{8\\pi}$도 암기."
+    },
+    {
+      "no": 2,
+      "question": "강자성체에 기자력을 가했을 때 발생하는 자계는 기자력이 증가하고 감소함에 따라 어떻게 되는가?",
+      "choices": ["① 기자력이 증가하면 자계는 감소하고 기자력이 감소하면 자계는 증가하여 포화된다.", "② 기자력이 증가하면 자계는 감소하고 기자력이 감소하면 자계는 증가한다.", "③ 기자력이 증가하면 자계는 증가하고 기자력이 감소하면 자계는 감소한다.", "④ 기자력이 증가하면 자계는 증가하여 포화되고 기자력이 감소하면 자계는 감소한다."],
+      "answerIndex": 3,
+      "solution": "강자성체는 기자력을 증가시키면 자계(자속밀도)가 증가하다가 일정 이상에서 더 이상 증가하지 않는 **자기포화** 현상을 보이고, 기자력이 감소하면 자계도 감소한다(히스테리시스를 그리며).",
+      "timestampSec": 151,
+      "theory": "**핵심 개념**: 자기포화 — 강자성체에 가한 기자력이 일정 이상 증가하면 자계가 더 이상 증가하지 않는[포화되는] 현상\n**개념**: B-H 곡선(히스테리시스 곡선)의 상승 구간과 포화 구간을 설명하는 문제다.\n**함정 포인트**: '증가하면 증가하여 포화'가 정답 포인트 — 포화 언급이 없는 ③은 부족한 답."
+    },
+    {
+      "no": 3,
+      "question": "그림에서 축전기를 $\\pm Q$로 대전한 후 스위치 $k$를 닫을 경우 축전기 두 판 사이의 변위전류는?",
+      "choices": ["① $+Q$판에서 $-Q$판 쪽으로 흐른다.", "② $-Q$판에서 $+Q$판 쪽으로 흐른다.", "③ 왼쪽에서 오른쪽으로 흐른다.", "④ 오른쪽에서 왼쪽으로 흐른다."],
+      "answerIndex": 1,
+      "solution": "변위전류밀도 $i_d = \\dfrac{\\partial D}{\\partial t}$ — 방전 시 $+Q$판에서 $-Q$판으로 향하던 전속밀도 $D$가 감소하므로, 변위전류는 그 반대 방향인 **$-Q$판에서 $+Q$판 쪽**으로 흐른다.",
+      "timestampSec": 255,
+      "theory": "**핵심 공식**: 변위전류밀도 $i_d = \\dfrac{\\partial D}{\\partial t}[\\mathrm{A/m^2}]$ — 전속밀도의 시간적 변화율\n**개념**: 변위전류의 방향은 전속밀도가 '변화하는' 방향(감소 시 반대 방향)이다.\n**함정 포인트**: 충전 시와 방전 시 방향이 반대다. 방전 문제에서는 $D$ 감소 → 변위전류는 $-$판→$+$판."
+    },
+    {
+      "no": 4,
+      "question": "평행판 콘덴서의 극판 사이에 유전율 $\\varepsilon$, 저항률 $\\rho$인 유전체를 삽입하였을 때, 두 전극간의 저항 $R$과 정전용량 $C$의 관계는?",
+      "choices": ["① $R = \\rho\\varepsilon C$", "② $RC = \\varepsilon/\\rho$", "③ $RC = \\rho\\varepsilon$", "④ $RC\\rho\\varepsilon = 1$"],
+      "answerIndex": 2,
+      "solution": "저항과 정전용량의 관계: $RC = \\rho\\varepsilon$\n(접지저항 계산 등에 활용: $R = \\dfrac{\\rho\\varepsilon}{C}$)",
+      "timestampSec": 372,
+      "theory": "**핵심 공식**: $RC = \\rho\\varepsilon = \\dfrac{\\varepsilon}{\\sigma}$ ($\\rho$: 저항률, $\\sigma$: 도전율)\n**개념**: 같은 전극 구조에서 저항과 정전용량은 반비례 — C를 알면 R를 바로 구할 수 있다.\n**함정 포인트**: 누설전류 $I = \\dfrac{V}{R} = \\dfrac{CV}{\\rho\\varepsilon}$ 형태로 응용 출제된다."
+    },
+    {
+      "no": 5,
+      "question": "철심부의 평균 길이가 $l_2$, 공극의 길이가 $l_1$, 단면적이 $S$인 자기회로이다. 자속밀도를 $B[\\mathrm{Wb/m^2}]$로 하기 위한 기자력 $[\\mathrm{AT}]$은?",
+      "choices": ["① $\\dfrac{\\mu_0}{B}\\left(l_1 + \\dfrac{\\mu_s}{l_2}\\right)$", "② $\\dfrac{B}{\\mu_0}\\left(l_2 + \\dfrac{l_1}{\\mu_s}\\right)$", "③ $\\dfrac{\\mu_0}{B}\\left(l_2 + \\dfrac{\\mu_s}{l_1}\\right)$", "④ $\\dfrac{B}{\\mu_0}\\left(l_1 + \\dfrac{l_2}{\\mu_s}\\right)$"],
+      "answerIndex": 3,
+      "solution": "공극이 있는 자기회로의 합성 자기저항 $R_m = \\dfrac{l_2}{\\mu S} + \\dfrac{l_1}{\\mu_0 S}$\n기자력 $F = R_m\\phi = \\left(\\dfrac{l_2}{\\mu_0\\mu_s S} + \\dfrac{l_1}{\\mu_0 S}\\right)BS = \\dfrac{B}{\\mu_0}\\left(l_1 + \\dfrac{l_2}{\\mu_s}\\right)[\\mathrm{AT}]$",
+      "timestampSec": 433,
+      "theory": "**핵심 공식**: 공극 자기회로 기자력 $F = \\dfrac{B}{\\mu_0}\\left(l_{공극} + \\dfrac{l_{철심}}{\\mu_s}\\right)$\n**개념**: 철심과 공극의 자기저항 직렬 합성. 공극은 $\\mu_0$라 자기저항이 훨씬 크다.\n**함정 포인트**: 어느 길이가 공극($l_1$)이고 철심($l_2$)인지 문제 조건을 정확히 대입할 것 — 첨자를 바꾼 보기(②)가 함정."
+    },
+    {
+      "no": 6,
+      "question": "공기 중 지름 $1[\\mathrm{m}]$의 도체구의 전위가 $10^6[\\mathrm{V}]$이며 이를 접지하여 $10^{-5}[\\mathrm{sec}]$에 방전시켰다고 하면 평균 전력은 몇 [kW]인가?",
+      "choices": ["① 1389", "② 2778", "③ 5556", "④ 700"],
+      "answerIndex": 1,
+      "solution": "정전 에너지 $W = \\dfrac{1}{2}CV^2 = \\dfrac{1}{2}\\cdot4\\pi\\varepsilon_0 a\\cdot V^2 = \\dfrac{1}{2}\\times\\dfrac{1}{9\\times10^9}\\times0.5\\times(10^6)^2 \\approx 27.8[\\mathrm{J}]$\n평균 전력 $P = \\dfrac{W}{t} = \\dfrac{27.8}{10^{-5}} = 2.78\\times10^6[\\mathrm{W}] = 2778[\\mathrm{kW}]$",
+      "timestampSec": 540,
+      "theory": "**핵심 공식**: 구도체 정전용량 $C = 4\\pi\\varepsilon_0 a$, 에너지 $W = \\frac{1}{2}CV^2$, 평균 전력 $P = W/t$\n**개념**: $4\\pi\\varepsilon_0 = \\dfrac{1}{9\\times10^9}$을 활용하면 계산이 빠르다.\n**함정 포인트**: '지름 1m' → 반지름 $a = 0.5$m. 지름을 그대로 대입하면 2배 오답. kW 변환($\\times10^{-3}$)도 잊지 말 것."
+    },
+    {
+      "no": 7,
+      "question": "정전용량 $0.3[\\mu\\mathrm{F}]$인 평행판 공기 콘덴서의 두 극판 사이에 절반 두께의 비유전율 5인 유리판을 극판과 평행하게 넣었다면 이 콘덴서의 정전용량은 약 몇 $[\\mu\\mathrm{F}]$이 되는가?",
+      "choices": ["① 5", "② 3", "③ 0.5", "④ 0.1"],
+      "answerIndex": 2,
+      "solution": "간격 절반 유전체 삽입(직렬 합성)\n$C = C_0\\times\\dfrac{2\\varepsilon_s}{1+\\varepsilon_s} = 0.3\\times\\dfrac{2\\times5}{1+5} = 0.5[\\mu\\mathrm{F}]$",
+      "timestampSec": 809,
+      "theory": "**핵심 공식**: 간격 절반 삽입 $C = \\dfrac{2\\varepsilon_s}{1+\\varepsilon_s}C_0$ (직렬) / 면적 절반 삽입 $C = \\dfrac{1+\\varepsilon_s}{2}C_0$ (병렬)\n**개념**: 공기층과 유전체층이 극판 간격 방향으로 나뉘면 두 콘덴서의 직렬 연결이다.\n**함정 포인트**: 1회 16번과 동일 유형 — 공식 하나로 반복 출제되는 단골 문제."
+    },
+    {
+      "no": 8,
+      "question": "높은 주파수의 전자파가 전파될 때 일기가 좋은 날보다 비 오는 날 전자파의 감쇄가 심한 원인은?",
+      "choices": ["① 도전율", "② 유전율", "③ 투자율", "④ 분극률"],
+      "answerIndex": 0,
+      "solution": "빗물(물방울)은 **도전율**이 있어 전자파 에너지가 도전 손실로 흡수·감쇄된다. 비 오는 날 감쇄가 심한 원인은 도전율 때문이다.",
+      "timestampSec": 884,
+      "theory": "**핵심 개념**: 매질의 도전율 $\\sigma$가 크면 전자파가 감쇄한다 (도체 내 전자파 감쇠).\n**개념**: 전자파는 전계와 자계가 동시에 존재하며 직각으로 진동하는 파동이다.\n**함정 포인트**: 유전율·투자율은 전파 속도·파장에 영향을 주지만 '감쇄'의 원인은 도전율이다."
+    },
+    {
+      "no": 9,
+      "question": "평행판 콘덴서 극판 사이에 비유전율 2의 유전체가 삽입되어 있다. 극판 사이의 유전체를 비유전율 4의 유전체로 교체한다면 콘덴서에 저장되는 전하량은 몇 배가 되는가? (단, 콘덴서에 가하는 전위차는 일정하다.)",
+      "choices": ["① 1", "② 2", "③ 3", "④ 4"],
+      "answerIndex": 1,
+      "solution": "$C = \\dfrac{\\varepsilon_0\\varepsilon_s S}{d} \\propto \\varepsilon_s$이므로 $C$는 $\\dfrac{4}{2} = 2$배.\n전위차가 일정하므로 $Q = CV \\propto C$ → 전하량도 **2배**가 된다.",
+      "timestampSec": 975,
+      "theory": "**핵심 공식**: $C = \\dfrac{\\varepsilon S}{d}$, $Q = CV$\n**개념**: 전압 일정 조건이면 $Q \\propto C \\propto \\varepsilon_s$. (전하 일정 조건이면 $V$가 반비례로 변한다)\n**함정 포인트**: '전위차 일정'인지 '전하량 일정'인지 조건을 먼저 확인하는 습관이 중요하다."
+    },
+    {
+      "no": 10,
+      "question": "구리선에 $10[\\mathrm{A}]$의 전류가 10초 동안 흐를 때 구리선의 단면을 통과하는 전자의 개수는? (단, 전자의 전하량 $e = 1.602\\times10^{-19}[\\mathrm{C}]$이다.)",
+      "choices": ["① $6.24\\times10^{18}$", "② $6.24\\times10^{19}$", "③ $6.24\\times10^{20}$", "④ $6.24\\times10^{21}$"],
+      "answerIndex": 2,
+      "solution": "$n = \\dfrac{It}{e} = \\dfrac{10\\times10}{1.602\\times10^{-19}} = 6.24\\times10^{20}$[개]",
+      "timestampSec": 1065,
+      "theory": "**핵심 공식**: $I = \\dfrac{ne}{t}$ → $n = \\dfrac{It}{e}$\n**개념**: 총 전하 $Q = It = 100[\\mathrm{C}]$을 전자 1개 전하로 나눈다.\n**함정 포인트**: $10^2/10^{-19} = 10^{21}$ 차수에서 $6.24\\times10^{20}$ — 1/1.602 ≈ 0.624 계산으로 지수가 하나 내려간다."
+    },
+    {
+      "no": 11,
+      "question": "두께 $\\delta[\\mathrm{m}]$, 반지름 $a[\\mathrm{m}]$의 원판 양면에 면전하밀도 $+\\sigma$, $-\\sigma$가 있을 때, 중심에서 $d[\\mathrm{m}]$의 거리에 있는 점 P(+전하측)의 전위는 몇 $[\\mathrm{V}]$인가?",
+      "choices": ["① $\\dfrac{\\sigma\\delta}{\\varepsilon_0}\\left(1 - \\dfrac{d}{\\sqrt{a^2+d^2}}\\right)$", "② $\\dfrac{\\sigma\\delta}{\\varepsilon_0}\\left(1 - \\dfrac{a}{\\sqrt{a^2+d^2}}\\right)$", "③ $\\dfrac{\\sigma\\delta}{2\\varepsilon_0}\\left(1 - \\dfrac{a}{\\sqrt{a^2+d^2}}\\right)$", "④ $\\dfrac{\\sigma\\delta}{2\\varepsilon_0}\\left(1 - \\dfrac{d}{\\sqrt{a^2+d^2}}\\right)$"],
+      "answerIndex": 3,
+      "solution": "판자석과 등가인 원판 전기 이중층의 축상 전위\n$V = \\dfrac{\\sigma\\delta}{2\\varepsilon_0}\\left(1 - \\dfrac{d}{\\sqrt{a^2+d^2}}\\right) = \\dfrac{\\sigma\\delta}{2\\varepsilon_0}(1-\\cos\\theta)[\\mathrm{V}]$",
+      "timestampSec": 1131,
+      "theory": "**핵심 공식**: 이중층(원판) 축상 전위 $V = \\dfrac{M}{2\\varepsilon_0}(1-\\cos\\theta)$, $M = \\sigma\\delta$, $\\cos\\theta = \\dfrac{d}{\\sqrt{a^2+d^2}}$\n**개념**: 판자석의 자위 공식과 완전히 대응되는 형태다(입체각 개념).\n**함정 포인트**: 분모 $2\\varepsilon_0$(①②는 2가 없음)와 $\\cos\\theta$의 분자가 $d$(③은 $a$)라는 것 — 두 가지를 모두 확인."
+    },
+    {
+      "no": 12,
+      "question": "단면적이 균일한 환상철심에 권수 100회인 A코일과 권수 300회인 B코일이 있을 때 A코일의 자기 인덕턴스가 $400[\\mathrm{mH}]$라면 두 코일의 상호 인덕턴스는 몇 [H]인가? (단, 누설자속은 0이다.)",
+      "choices": ["① 0.4", "② 0.8", "③ 1.6", "④ 1.2"],
+      "answerIndex": 3,
+      "solution": "누설자속이 0이면 결합계수 $k=1$:\n$M = L_A\\dfrac{N_B}{N_A} = 400\\times10^{-3}\\times\\dfrac{300}{100} = 1.2[\\mathrm{H}]$",
+      "timestampSec": 1334,
+      "theory": "**핵심 공식**: $k=1$일 때 $M = L_1\\dfrac{N_2}{N_1} = L_2\\dfrac{N_1}{N_2} = \\sqrt{L_1L_2}$\n**개념**: 같은 철심(같은 자로)을 공유하므로 인덕턴스는 권수 제곱에 비례: $L \\propto N^2$.\n**함정 포인트**: mH → H 단위 변환. $\\sqrt{L_1L_2}$로 풀려면 $L_B = L_A(N_B/N_A)^2 = 3.6$H를 먼저 구해도 된다."
+    },
+    {
+      "no": 13,
+      "question": "비투자율 $\\mu_r = 800$, 원형 단면적이 $S = 10[\\mathrm{cm^2}]$, 평균 자로 길이 $30[\\mathrm{cm}]$의 환상 철심에 600회의 코일을 감고 이 코일에 $1[\\mathrm{A}]$의 전류를 흘리면 환상 철심 내부의 자속은 몇 $[\\mathrm{Wb}]$인가?",
+      "choices": ["① $1\\times10^{-3}$", "② $1\\times10^{-4}$", "③ $2\\times10^{-3}$", "④ $2\\times10^{-4}$"],
+      "answerIndex": 2,
+      "solution": "$\\phi = BS = \\mu_0\\mu_r\\dfrac{NI}{l}S = 4\\pi\\times10^{-7}\\times800\\times\\dfrac{600\\times1}{0.3}\\times10\\times10^{-4} \\approx 2\\times10^{-3}[\\mathrm{Wb}]$",
+      "timestampSec": 1502,
+      "theory": "**핵심 공식**: 환상 솔레노이드 자속 $\\phi = \\dfrac{\\mu SNI}{l} = \\dfrac{F}{R_m}$ (기자력/자기저항)\n**개념**: $H = NI/l$ → $B = \\mu H$ → $\\phi = BS$ 순서로 계산한다.\n**함정 포인트**: cm² → m²($\\times10^{-4}$), cm → m 단위 변환 실수가 최다 오답 원인."
+    },
+    {
+      "no": 14,
+      "question": "무한장 직선도선에 흐르는 직류전류 $I$에 의해, 무한장 직선도선의 전류 상하에 존재하는 자침이 그림과 같이 자침중심축을 중심으로 회전하여 정지하였다. (ㄱ)(ㄴ)(ㄷ)(ㄹ)의 극을 순서적으로 잘 배열한 것은?",
+      "choices": ["① S, N, S, N", "② S, N, N, S", "③ N, S, N, S", "④ N, S, S, N"],
+      "answerIndex": 3,
+      "solution": "암페어의 오른나사 법칙으로 전류 주위 자계 방향을 정하면, 도선 위쪽과 아래쪽에서 자계 방향이 반대다.\n자침의 N극은 자계 방향을 향하므로 (ㄱ)N, (ㄴ)S, (ㄷ)S, (ㄹ)N이 된다.",
+      "timestampSec": 1659,
+      "theory": "**핵심 법칙**: 암페어의 오른나사 법칙 — 전류 방향으로 오른나사를 진행시키면 나사가 도는 방향이 자계 방향\n**개념**: 자침의 N극이 그 지점의 자계 방향을 가리킨다. 도선 위/아래는 자계 방향이 반대.\n**함정 포인트**: 그림의 자침 위치(위·아래)별로 자계 방향을 하나씩 판정할 것 — 급하게 하나만 보고 고르면 ①②로 실수."
+    },
+    {
+      "no": 15,
+      "question": "맥스웰의 전자방정식 중 패러데이의 법칙에서 유도된 식은? (단, $D$: 전속밀도, $\\rho_v$: 공간 전하밀도, $B$: 자속밀도, $E$: 전계의 세기, $J$: 전류밀도, $H$: 자계의 세기)",
+      "choices": ["① $div\\,D = \\rho_v$", "② $\\nabla\\times H = J + \\dfrac{\\partial D}{\\partial t}$", "③ $\\nabla\\times E = -\\dfrac{\\partial B}{\\partial t}$", "④ $div\\,B = 0$"],
+      "answerIndex": 2,
+      "solution": "패러데이의 법칙(전자유도법칙: 자속이 변화하면 기전력이 발생한다)에서 유도된 식은\n$\\nabla\\times E = -\\dfrac{\\partial B}{\\partial t}$",
+      "timestampSec": 1785,
+      "theory": "**핵심(맥스웰 4방정식)**: ①가우스 법칙 $\\nabla\\cdot D = \\rho$ ②암페어(변위전류 포함) $\\nabla\\times H = J + \\frac{\\partial D}{\\partial t}$ ③패러데이 $\\nabla\\times E = -\\frac{\\partial B}{\\partial t}$ ④자속 연속 $\\nabla\\cdot B = 0$\n**개념**: 각 식의 유래(법칙 이름)를 짝짓는 문제가 반복 출제된다.\n**함정 포인트**: 패러데이=E의 회전, 암페어=H의 회전 — 회전(rot) 대상이 누구인지로 구분."
+    },
+    {
+      "no": 16,
+      "question": "다음 정전계에 관한 식 중에서 틀린 것은? (단, $D$는 전속밀도, $V$는 전위, $\\rho$는 공간(체적)전하밀도, $\\varepsilon$은 유전율이다.)",
+      "choices": ["① 가우스의 정리: $div\\,D = \\rho$", "② 포아송의 방정식: $\\nabla^2 V = \\dfrac{\\rho}{\\varepsilon}$", "③ 라플라스의 방정식: $\\nabla^2 V = 0$", "④ 발산의 정리: $\\oint_s D\\cdot ds = \\int_v div\\,D\\,dv$"],
+      "answerIndex": 1,
+      "solution": "포아송의 방정식은 $\\nabla^2 V = -\\dfrac{\\rho}{\\varepsilon}$으로 **마이너스 부호**가 있어야 한다. ②가 틀린 식이다.",
+      "timestampSec": 1885,
+      "theory": "**핵심 공식**: 포아송 $\\nabla^2 V = -\\dfrac{\\rho}{\\varepsilon}$ / 라플라스 $\\nabla^2 V = 0$ (전하 없는 곳)\n**개념**: $E = -\\nabla V$와 $\\nabla\\cdot E = \\rho/\\varepsilon$을 결합하면 마이너스가 자연히 나온다.\n**함정 포인트**: 마이너스 부호 하나를 빼고 틀린 보기를 만드는 초단골 유형."
+    },
+    {
+      "no": 17,
+      "question": "변의 길이가 각각 $a[\\mathrm{m}]$, $b[\\mathrm{m}]$인 그림과 같은 직사각형 도체가 $X$축 방향으로 $v[\\mathrm{m/s}]$의 속도로 움직이고 있다. 이때 자속밀도는 $X-Y$ 평면에 수직이고 어느 곳에서든지 크기가 일정한 $B[\\mathrm{Wb/m^2}]$이다. 도체에 유기되는 기전력은 몇 $[\\mathrm{V}]$인가?",
+      "choices": ["① 0", "② $\\mu Habv$", "③ $\\mu Ha^2v$", "④ $\\mu Hav$"],
+      "answerIndex": 0,
+      "solution": "균일한 자계 내에서 폐회로가 평행 이동하면 양쪽 변에 유기되는 기전력이 서로 상쇄되어 회로 전체의 쇄교 자속 변화가 없다.\n$\\therefore$ 유기 기전력은 **0**이다.",
+      "timestampSec": 1970,
+      "theory": "**핵심 개념**: 유기 기전력은 쇄교 자속의 '변화'가 있어야 발생 — 균일 자계 + 평행 이동 = 자속 변화 0 → 기전력 0\n**개념**: 두 세로변에 생기는 운동 기전력 $Bav$가 크기 같고 방향이 반대라 상쇄된다.\n**함정 포인트**: 자계가 불균일하거나 회로가 자계 경계를 지나면 기전력이 생긴다 — '어디서든 일정한 B' 조건이 핵심."
+    },
+    {
+      "no": 18,
+      "question": "진공 중 반지름이 $a[\\mathrm{m}]$인 무한길이의 원통 도체 2개가 간격 $d[\\mathrm{m}]$로 평행하게 배치되어 있다. 두 도체 사이의 정전용량($C$)을 나타낸 것으로 옳은 것은?",
+      "choices": ["① $\\pi\\varepsilon_0\\ln\\dfrac{d}{a}$", "② $\\dfrac{\\pi\\varepsilon_0}{\\ln\\dfrac{d}{a}}$", "③ $\\pi\\varepsilon_0\\ln\\dfrac{a}{d}$", "④ $\\dfrac{\\pi\\varepsilon_0}{\\ln\\dfrac{a}{d}}$"],
+      "answerIndex": 1,
+      "solution": "평행 왕복도선(원통 도체) 사이의 단위 길이당 정전용량\n$C = \\dfrac{\\pi\\varepsilon_0}{\\ln\\dfrac{d}{a}}[\\mathrm{F/m}]$",
+      "timestampSec": 2142,
+      "theory": "**핵심 공식**: 평행도선 $C = \\dfrac{\\pi\\varepsilon_0}{\\ln(d/a)}$ / 동축케이블 $C = \\dfrac{2\\pi\\varepsilon_0}{\\ln(b/a)}$\n**개념**: ln이 분모에 있고, 평행도선은 $\\pi$, 동축은 $2\\pi$.\n**함정 포인트**: ln 안의 분자·분모($d/a$인지 $a/d$인지)와 ln의 위치(분모)를 뒤집은 보기가 함께 나온다."
+    },
+    {
+      "no": 19,
+      "question": "자기 쌍극자에 의한 자위 $U[\\mathrm{A}]$에 해당되는 것은? (단, 자기 쌍극자의 자기 모멘트 $M[\\mathrm{Wb\\cdot m}]$, 쌍극자의 중심으로부터의 거리 $r[\\mathrm{m}]$, 쌍극자의 정방향과의 각도는 $\\theta$라 한다.)",
+      "choices": ["① $6.33\\times10^4\\times\\dfrac{M\\sin\\theta}{r^3}$", "② $6.33\\times10^4\\times\\dfrac{M\\sin\\theta}{r^2}$", "③ $6.33\\times10^4\\times\\dfrac{M\\cos\\theta}{r^3}$", "④ $6.33\\times10^4\\times\\dfrac{M\\cos\\theta}{r^2}$"],
+      "answerIndex": 3,
+      "solution": "자기 쌍극자의 자위 $U = \\dfrac{M\\cos\\theta}{4\\pi\\mu_0 r^2} = 6.33\\times10^4\\times\\dfrac{M\\cos\\theta}{r^2}[\\mathrm{A}]$",
+      "timestampSec": 2195,
+      "theory": "**핵심 공식**: 자기 쌍극자 자위 $U \\propto \\dfrac{\\cos\\theta}{r^2}$ (전기 쌍극자 전위 $V \\propto \\dfrac{\\cos\\theta}{r^2}$와 대응), $\\dfrac{1}{4\\pi\\mu_0} = 6.33\\times10^4$\n**개념**: 쌍극자 '자위/전위'는 $r^2$ 반비례, '자계/전계'는 $r^3$ 반비례.\n**함정 포인트**: $\\sin/\\cos$과 $r^2/r^3$ 조합 4가지가 그대로 보기가 된다 — '위(전위·자위)는 코사인에 r²'로 암기."
+    },
+    {
+      "no": 20,
+      "question": "접지된 무한 평면도체 전방의 한 점 P에 있는 점전하 $Q[\\mathrm{C}]$의 평면도체에 대한 영상 전하는?",
+      "choices": ["① $-Q[\\mathrm{C}]$이고 평면도체 뒤쪽 대칭점에 있다.", "② $+Q[\\mathrm{C}]$이고 평면도체 뒤쪽 대칭점에 있다.", "③ $-2Q[\\mathrm{C}]$이고 평면도체 앞쪽에 있다.", "④ $+2Q[\\mathrm{C}]$이고 평면도체 앞쪽에 있다."],
+      "answerIndex": 0,
+      "solution": "접지 무한 평면도체에 대한 점전하 $Q$의 영상전하는 도체면 기준 **대칭 위치에 $-Q[\\mathrm{C}]$**이다.",
+      "timestampSec": 2328,
+      "theory": "**핵심 공식**: 무한평면도체 영상전하 $Q' = -Q$ (대칭점) — 점전하와 도체 사이 힘 $F = \\dfrac{-Q^2}{16\\pi\\varepsilon_0 a^2}$ (흡인)\n**개념**: 접지 도체면(0 전위) 경계조건을 만족시키는 등가 전하 배치가 영상전하다.\n**함정 포인트**: 접지 구도체의 영상전하($-\\frac{a}{d}Q$, 위치 $\\frac{a^2}{d}$)와 혼동하지 말 것."
+    }
+  ]
+}

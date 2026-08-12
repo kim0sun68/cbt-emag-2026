@@ -104,7 +104,11 @@
       "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/circuit.json'\\)\\);assert len\\(d['questions']\\)==20;print\\([q['no'] for q in d['questions']]\\);print\\([q['answerIndex']+1 for q in d['questions']]\\)\")",
       "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/sanup1.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 for q in d['questions']\\);print\\('OK',[q['answerIndex']+1 for q in d['questions']]\\)\")",
       "Bash(python3 -c \"import json;d=json.load\\(open\\('content/sanup1.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('sanup1 OK', d['videoId']\\)\")",
-      "Bash(git commit -q -m 'feat: 기사 회로이론및제어공학 2회, 산업기사 회로이론 1·2회 페이지 추가 *)"
+      "Bash(git commit -q -m 'feat: 기사 회로이론및제어공학 2회, 산업기사 회로이론 1·2회 페이지 추가 *)",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('kec.json'\\)\\);print\\(json.dumps\\(d['questions'][0],ensure_ascii=False,indent=1\\)[:1200]\\);print\\(list\\(d.keys\\(\\)\\)\\)\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/skec1.json'\\)\\);print\\(len\\(d['questions']\\), [q['answerIndex']+1 for q in d['questions']]\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/kec.json'\\)\\);print\\(list\\(d.keys\\(\\)\\)\\);print\\(list\\(d['questions'][0].keys\\(\\)\\)\\)\")"
     ]
   }
 }

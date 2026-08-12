@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 전기기사 전기설비기술기준 2회 기출 핵심풀이</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+  :root { --green:#1a7f37; --red:#c62828; --blue:#1256a2; --bg:#f5f6f8; --card:#fff; --line:#e0e3e8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#222; line-height:1.65; }
+  .wrap { max-width:720px; margin:0 auto; padding:16px 14px 80px; }
+  header { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 18px; margin-bottom:18px; }
+  header h1 { font-size:1.25rem; margin:0 0 8px; }
+  header p { margin:4px 0; font-size:.9rem; color:#555; }
+  header a { color:var(--blue); }
+  #score { position:sticky; top:0; z-index:10; background:var(--blue); color:#fff; border-radius:0 0 10px 10px; padding:8px 14px; font-weight:700; text-align:center; margin:-16px -14px 16px; font-size:.95rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 16px; margin-bottom:16px; }
+  .qno { font-weight:800; color:var(--blue); margin-bottom:6px; }
+  .qtext { margin-bottom:12px; font-weight:600; }
+  .choice { display:block; width:100%; text-align:left; background:#fafbfc; border:1.5px solid var(--line); border-radius:9px; padding:10px 12px; margin:6px 0; font-size:.95rem; font-family:inherit; cursor:pointer; line-height:1.6; }
+  .choice:hover { border-color:var(--blue); }
+  .choice.correct { border-color:var(--green); background:#e8f5e9; font-weight:700; }
+  .choice.wrong { border-color:var(--red); background:#ffebee; }
+  .choice:disabled { cursor:default; opacity:1; color:inherit; }
+  .mark { float:right; font-weight:800; }
+  .mark.ok { color:var(--green); } .mark.no { color:var(--red); }
+  .toggle { margin-top:10px; background:none; border:1px solid var(--blue); color:var(--blue); border-radius:8px; padding:7px 14px; font-size:.88rem; cursor:pointer; font-family:inherit; }
+  .expl { display:none; margin-top:14px; border-top:1px dashed var(--line); padding-top:12px; font-size:.93rem; }
+  .expl.open { display:block; }
+  .answer-line { font-weight:800; color:var(--green); margin-bottom:8px; }
+  .sol { white-space:pre-wrap; margin-bottom:12px; }
+  .theory { background:#f2f7ff; border-left:4px solid var(--blue); border-radius:0 8px 8px 0; padding:10px 12px; white-space:pre-wrap; margin-bottom:12px; }
+  .ytlink { display:inline-block; background:#c4302b; color:#fff; text-decoration:none; border-radius:8px; padding:8px 14px; font-size:.88rem; font-weight:700; }
+  footer { text-align:center; color:#888; font-size:.8rem; margin-top:30px; }
+  @media (max-width:480px){ .wrap{padding:12px 10px 60px;} .card{padding:14px 12px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="score"></div>
+  <header>
+    <h1>2026 전기기사 전기설비기술기준 2회 기출 핵심풀이</h1>
+    <p>보기를 클릭하면 채점되고 해설이 열립니다. 채점 없이 보려면 [해설 보기]를 누르세요.</p>
+    <p>원본 강의: <a href="https://www.youtube.com/watch?v=VDQpmq3tlSk" target="_blank" rel="noopener">대산전기학원 — 2026년 2회 전기기사 필기 CBT 기출적중 핵심풀이 (전기설비기술기준)</a></p>
+    <p>전기설비기술기준 회차: <a href="kec1.html">1회</a> · <strong>2회(현재)</strong> · <a href="kec.html">3회</a><br>다른 과목: <a href="index.html">전기자기학 →</a> · <a href="power.html">전력공학 →</a> · <a href="kigi.html">전기기기 →</a> · <a href="circuit.html">회로이론및제어공학 →</a></p>
+  </header>
+  <div id="app"></div>
+  <footer>출처: 대산전기학원 유튜브 강의 · 학습용 정리 자료</footer>
+</div>
+<script id="data" type="application/json">{"title": "2026 전기기사 전기설비기술기준 2회 기출 핵심풀이", "videoId": "VDQpmq3tlSk", "questions": [{"no": 1, "question": "방전등용 안정기로부터 방전관까지의 전로를 무엇이라 하는가?", "choices": ["① 가섭선", "② 가공인입선", "③ 관등회로", "④ 지중관로"], "answerIndex": 2, "solution": "방전등용 안정기(방전등용 변압기 포함)로부터 방전관까지의 전로를 **관등회로**라 한다.\n형광등에 전원이 직접 연결되지 않고 중간에 안정기가 끼어 있으며, 안정기~방전관(형광등) 구간만을 관등회로라고 부른다.", "timestampSec": 85, "theory": "**핵심 수치**: 없음(용어 정의 문제)\n**개념**: 관등회로 = 방전등용 안정기(변압기)로부터 방전관까지의 전로. 형광등이 대표적인 방전관.\n**함정 포인트**: '방'이 두 번(방전등용·방전관) 보이면 관등회로를 고르면 된다. 가섭선·가공인입선 등 다른 용어와 혼동 주의."}, {"no": 2, "question": "\"제2차 접근상태\"라 함은 가공 전선이 다른 시설물과 접근하는 경우에 그 가공전선이 다른 시설물의 위쪽 또는 옆쪽에서 수평거리로 몇 m 미만인 곳에 시설되는 상태를 말하는가?", "choices": ["① 1.2", "② 2", "③ 2.5", "④ 3"], "answerIndex": 3, "solution": "제2차 접근상태는 가공전선이 다른 시설물의 위쪽 또는 옆쪽에서 수평거리 **3m 미만**에 시설되는 상태를 말한다.\n전주가 넘어질 수 있는 반경을 접근상태라 하며, 그중 3m 미만의 매우 위험한 구간이 2차 접근상태이다.", "timestampSec": 186, "theory": "**핵심 수치**: 제2차 접근상태 = 수평거리 3m 미만\n**개념**: 지지물 도괴 시 가공전선이 다른 시설물에 닿을 수 있는 범위를 접근상태로 규정하며, 시험에서는 거의 항상 2차 접근상태(3m 미만)를 묻는다.\n**함정 포인트**: 1차 접근상태(3m 이상, 지지물 높이에 상당하는 거리 이내)와 혼동하지 말 것."}, {"no": 3, "question": "과부하 보호장치는 분기점으로부터 몇 m 까지 이동하여 설치할 수 있는가? (단, 다른 분기회로나 콘센트 회로가 접속되어 있지 않고, 단락의 위험과 화재 및 인체에 대한 위험성이 최소화되도록 시설된 경우)", "choices": ["① 1", "② 2", "③ 3", "④ 5"], "answerIndex": 2, "solution": "원칙은 분기점에 과부하 보호장치를 설치해야 하지만, 단락·화재·인체 위험이 최소화되도록 시설된 경우 분기점으로부터 **3m까지** 이동하여 설치할 수 있다.", "timestampSec": 247, "theory": "**핵심 수치**: 과부하 보호장치 이설 가능 거리 3m\n**개념**: 간선에서 분기한 분기회로에도 과부하 보호장치가 필요하며, 기본법은 분기점 설치이나 안전 조건 충족 시 3m 예외 규정이 있다.\n**함정 포인트**: '단락의 위험과 화재 및 인체에 대한 위험성이 최소화'라는 단서가 핵심 키워드. 필기·실기 모두 출제된다."}, {"no": 4, "question": "전개된 장소에서 저압 옥상전선로의 시설기준으로 적합하지 않은 것은?", "choices": ["① 전선은 지름 2.0mm의 경동선을 사용하였다.", "② 전선 지지점 간의 거리를 15m로 하였다.", "③ 전선은 절연전선을 사용하였다.", "④ 저압 절연전선과 그 저압 옥상 전선로를 시설하는 조영재와의 이격거리를 2m로 하였다."], "answerIndex": 0, "solution": "저압 옥상전선로의 전선은 절연전선을 사용하고 굵기는 지름 **2.6mm 이상**의 경동선이어야 한다. 2.0mm는 기준 미달이므로 ①이 틀렸다.\n지지점 간 거리 15m, 조영재와 이격거리 2m는 모두 적합하다.", "timestampSec": 323, "theory": "**핵심 수치**: 전선 2.6mm 이상 경동선 / 지지점 간 거리 15m 이하 / 조영재 이격 2m 이상\n**개념**: 옥상전선로는 사람이 접근하기 쉬우므로 절연전선 사용이 기본이며, 절연전선이면 2.6mm급 굵기를 적용한다.\n**함정 포인트**: 가공전선 굵기 2.6(절연전선)/3.2(나전선) 구분을 그대로 적용. 2.0mm로 낮춰 틀린 보기를 만든다."}, {"no": 5, "question": "금속덕트 공사에 의한 저압 옥내배선에서, 금속덕트에 넣은 전선의 단면적의 합계는 일반적으로 덕트 내부 단면적의 몇 % 이하이어야 하는가? (단, 전광표시 장치·출퇴표시등 기타 이와 유사한 장치 또는 제어회로 등의 배선만을 넣는 경우에는 제외)", "choices": ["① 20", "② 30", "③ 40", "④ 50"], "answerIndex": 0, "solution": "금속덕트에 넣는 전선 단면적 합계는 덕트 내부 단면적의 **20% 이하**가 원칙이다.\n문제 단서가 전광표시·출퇴표시등·제어회로를 '제외'한다고 했으므로 기본 규정 20%를 그대로 적용한다.", "timestampSec": 411, "theory": "**핵심 수치**: 덕트 내 전선 점유율 20% 이하 (전광표시·출퇴표시·제어회로만 넣는 경우 50% 이하) / 덕트 지지점 간 거리 3m (라이팅덕트는 2m)\n**개념**: 저전압·저전류 배선만 넣는 경우 완화 규정으로 50%까지 허용된다.\n**함정 포인트**: 단서가 '제어회로에 사용하는 경우'로 바뀌면 답이 50%로 바뀐다. '제외'인지 '사용'인지 반드시 확인."}, {"no": 6, "question": "진열장 내의 배선으로 사용전압 400V 이하에 사용하는 코드 또는 캡타이어 케이블의 최소 단면적은 몇 mm²인가?", "choices": ["① 1.25", "② 1.0", "③ 0.75", "④ 0.5"], "answerIndex": 2, "solution": "코드 또는 캡타이어 케이블 조합이 나오면 최소 단면적은 **0.75mm²**이다.\n저압 옥내배선 기본 굵기는 2.5mm², 전광표시·출퇴표시·제어회로 등은 1.5mm², 고무코드·캡타이어·아세틸렌(이동전선) 계열은 0.75mm²로 구분한다.", "timestampSec": 501, "theory": "**핵심 수치**: 저압 옥내배선 기본 2.5mm² / 전광·출퇴·제어회로 1.5mm² / 코드·캡타이어 케이블 0.75mm²\n**개념**: 진열장 내 배선처럼 이동성·유연성이 필요한 곳은 코드·캡타이어 케이블 0.75mm² 이상을 쓴다.\n**함정 포인트**: '진열장'이라는 장소에 속지 말고 '코드 또는 캡타이어 케이블'이라는 키워드로 0.75를 즉답할 것."}, {"no": 7, "question": "화약류 저장소의 전기설비의 시설기준으로 틀린 것은?", "choices": ["① 전로의 대지전압은 300V 이하일 것", "② 전기기계기구는 전폐형의 것일 것", "③ 전용 개폐기 및 과전류 차단기는 화약류 저장소 안에 설치할 것", "④ 케이블을 전기기계기구에 인입할 때에는 인입구에서 케이블이 손상될 우려가 없도록 시설할 것"], "answerIndex": 2, "solution": "전용 개폐기 및 과전류 차단기는 개폐 시 불꽃으로 폭발할 수 있으므로 화약류 저장소 **밖(외부)에** 시설해야 한다. 따라서 ③이 틀렸다.\n대지전압 300V 이하, 전기기계기구 전폐형은 맞는 규정이다.", "timestampSec": 578, "theory": "**핵심 수치**: 대지전압 300V 이하 (분산형전원 직류계통은 600V)\n**개념**: 화약류 저장소 내 전기설비는 폭발 방지를 위해 전폐형 기구를 쓰고, 개폐기·차단기는 저장소 외부에 둔다.\n**함정 포인트**: '전폐형'을 '반폐형'으로 바꾸거나, 개폐기·차단기 설치 위치를 '안'으로 바꿔 오답을 만든다."}, {"no": 8, "question": "다음 고압 가공전선에 대한 사항으로 잘못된 것은?", "choices": ["① 철도 또는 궤도를 횡단하는 경우에는 레일면상 6.5m 이상으로 시설하여야 한다.", "② 고압 가공전선을 수면 상에 시설하는 경우에는 전선의 수면상 높이를 선박의 항해 등에 위험을 주지 않도록 유지하여야 한다.", "③ 횡단보도교의 위에 시설하는 경우에는 그 노면상 5m 이상으로 시설하여야 한다.", "④ 고압 가공전선로를 빙설이 많은 지방에 시설하는 경우에는 전선의 적설상의 높이를 사람 또는 차량의 통행 등에 위험을 주지 않도록 유지하여야 한다."], "answerIndex": 2, "solution": "가공전선의 횡단보도교 위 높이는 저압·고압 모두 노면상 **3.5m 이상**이다. 5m로 쓴 ③이 틀렸다.\n가공전선 높이: 도로횡단 6m, 철도횡단 6.5m, 횡단보도교 3.5m, 일반(기타) 5m.", "timestampSec": 646, "theory": "**핵심 수치**: 가공전선 높이 — 도로횡단 6m / 철도횡단 6.5m / 횡단보도교 3.5m / 기타 5m (저압에서 절연전선 이상 사용 시 3m 감안 규정)\n**개념**: 저압·고압 가공전선의 높이는 통일되어 있다. 가공인입선은 도로 5m, 철도 6.5m, 횡단보도교 3m, 기타 4m로 완화된다.\n**함정 포인트**: '가공전선'이냐 '가공인입선'이냐, 저압이냐 고압이냐에 따라 수치가 달라진다. 철도횡단 6.5m는 공통 보너스 수치."}, {"no": 9, "question": "가공전선로의 지지물에 하중이 가하여지는 경우에 그 하중을 받는 지지물의 기초 안전율은 얼마 이상이어야 하는가? (단, 이상시 상정하중에 대한 철탑의 기초에 대하여는 무관)", "choices": ["① 1.5", "② 2.0", "③ 2.5", "④ 3.0"], "answerIndex": 1, "solution": "특별한 조건 없이 지지물의 기초 안전율을 물으면 **2.0 이상**이다.\n단서의 '이상시 상정하중에 대한 철탑의 기초'는 1.33이 적용되는 예외로, 이 문제에서는 제외됐다.", "timestampSec": 811, "theory": "**핵심 수치**: 안전율 — 1.33(이상시 상정하중 철탑 기초) / 1.5(안테나 설치 지지물, 케이블트레이) / 2.0(지지물 기초 일반) / 2.2(경동선·내열동합금선) / 2.5(지지선·ACSR 등)\n**개념**: 안전율 문제는 숫자 순서대로 키워드를 매칭해 암기한다. 목주 안전율은 저압 1.2, 고압 1.3, 특고압 1.5이며 보안공사 시 저·고압 1.5, 특고압 2.0으로 강화된다.\n**함정 포인트**: '이상시 상정하중' 단서가 붙으면 1.33, 조건 없는 기초 안전율은 2.0. 단서 유무로 답이 갈린다."}, {"no": 10, "question": "사용전압이 60kV 이하인 경우 전화선로의 길이 12km 마다 유도전류는 몇 μA를 넘지 않도록 하여야 하는가?", "choices": ["① 1", "② 2", "③ 3", "④ 5"], "answerIndex": 1, "solution": "사용전압 60kV 이하: 전화선로 길이 **12km마다 유도전류 2μA** 이하.\n60kV 초과: 전화선로 길이 40km마다 유도전류 3μA 이하. '1-2, 4-3' 다이얼 순서로 암기한다.", "timestampSec": 1003, "theory": "**핵심 수치**: 60kV 이하 → 12km당 2μA / 60kV 초과 → 40km당 3μA / 가공약전류전선과의 유도작용 이격거리 기본 2m\n**개념**: 가공전선로의 유도작용으로 통신상 장해가 생기지 않도록 유도전류 한도를 규정한다.\n**함정 포인트**: 유도장해 '이격거리(2m)' 문제와 '유도전류(μA)' 문제를 구분할 것. 12↔2, 40↔3 짝을 바꿔 출제한다."}, {"no": 11, "question": "제2종 특고압 보안공사의 기준으로 틀린 것은?", "choices": ["① 특고압 가공전선은 연선일 것", "② 지지물로 사용하는 목주의 풍압하중에 대한 안전율은 2 이상일 것", "③ 지지물이 A종 철주일 경우 그 경간은 150m 이하일 것", "④ 지지물이 목주일 경우 그 경간은 100m 이하일 것"], "answerIndex": 2, "solution": "제2종 특고압 보안공사에서 A종 철주(목주 포함)의 경간은 **100m 이하**이다. 150m는 표준 경간이므로 ③이 틀렸다.\n보안공사 경간: A종·목주 100m, B종 200m, 철탑 400m.", "timestampSec": 1105, "theory": "**핵심 수치**: 표준 경간 A종 150 / B종 250 / 철탑 600. 저·고압 보안공사 100/150/400. 제2·3종 특고압 보안공사 100/200/400 (B종이 200으로 강화)\n**개념**: 보안공사를 치면 경간이 줄어든다. 특고압 보안공사 시 목주 안전율은 2 이상.\n**함정 포인트**: 표준 경간 수치(150)를 보안공사 문제에 끼워 넣어 오답을 만든다. 보안공사 문제인지 표준 경간 문제인지 먼저 확인."}, {"no": 12, "question": "사용전압이 15kV 미만 특고압 가공전선과 그 지지물·완금류·지주 또는 지선 사이의 이격거리는 몇 cm 이상이어야 하는가?", "choices": ["① 15", "② 20", "③ 25", "④ 30"], "answerIndex": 0, "solution": "15kV 미만 특고압 가공전선과 지지물·완금류·지주·지선 사이의 이격거리는 **15cm 이상**이다.\n'15kV 미만 → 15cm'로 시작하여 전압이 올라갈수록 이격거리가 커진다.", "timestampSec": 1226, "theory": "**핵심 수치**: 15kV 미만 15cm / 15~25kV 20cm / 25~35kV 25cm ... (약 5cm씩 증가). 22.9kV는 20cm\n**개념**: 특고압 가공전선과 동일 지지물(한 가족) 내 부속물 간의 이격거리 규정. 시작점 '15-15'만 확실히 잡으면 계열로 풀 수 있다.\n**함정 포인트**: 22.9kV로 바꿔 출제되면 답은 20cm. 문제의 전압 구간을 반드시 확인."}, {"no": 13, "question": "가공전선로와 지중전선로가 접속되는 곳에 반드시 설치되어야 하는 기구는?", "choices": ["① 분로리액터", "② 전력용콘덴서", "③ 피뢰기", "④ 동기조상기"], "answerIndex": 2, "solution": "가공전선로와 지중전선로가 접속되는 곳에는 **피뢰기**를 시설해야 한다.\n피뢰기 시설 장소: 발전소·변전소의 인입구 및 인출구, 특고압 가공전선로에 접속하는 배전용 변압기의 고압측 및 특고압측, 수용장소의 인입구, 가공전선로와 지중전선로가 접속되는 곳.", "timestampSec": 1332, "theory": "**핵심 수치**: 피뢰기 접지저항 10Ω 이하 (고압 가공전선로에 시설 시 예외 30Ω)\n**개념**: 전력계통도(발전소→변전소→변압기→수용가)를 따라 들어오고 나가는 곳마다 피뢰기를 설치한다고 기억하면 된다.\n**함정 포인트**: 분로리액터·전력용콘덴서·동기조상기는 조상설비(무효전력 조정용)로 낙뢰 보호와 무관. '가공+지중 접속점=피뢰기' 세트 암기."}, {"no": 14, "question": "특고압 변전소에 울타리, 담 등을 시설하고자 할 때 울타리, 담 등의 높이는 몇 m 이상이어야 하는가?", "choices": ["① 1", "② 2", "③ 5", "④ 6"], "answerIndex": 1, "solution": "발전소·변전소 등의 울타리·담의 높이는 **2m 이상**이며, 지표면과 울타리 하단 사이의 간격은 15cm(0.15m) 이하이다.", "timestampSec": 1478, "theory": "**핵심 수치**: 울타리·담 높이 2m 이상 / 하단 간격 15cm 이하 / 울타리 높이+충전부까지 거리 합: 35kV 이하 5m, 35~160kV 6m, 160kV 초과 6m+1만V마다 12cm 가산\n**개념**: 발전소·변전소 등 개소의 울타리·담 시설 규정. 높이만 물으면 2m, '높이+거리의 합'을 물으면 전압 구간별 수치(3·4·5 → 5·6 계열)를 적용한다.\n**함정 포인트**: cm를 m로, m를 cm로 바꿔 출제한다(15cm=0.15m). '높이' 문제와 '높이+거리의 합' 문제를 구분할 것."}, {"no": 15, "question": "조상기에서 내부고장이 생긴 경우 자동적으로 차단되는 장치를 해야 하는 최소 뱅크용량은 몇 kVA인가?", "choices": ["① 10000", "② 12000", "③ 500", "④ 15000"], "answerIndex": 3, "solution": "조상기는 뱅크용량 **15,000kVA 이상**에서 내부고장 시 자동 차단장치를 시설해야 한다.\n'조상설비 15천'으로 암기.", "timestampSec": 1602, "theory": "**핵심 수치**: 조상기 내부고장 — 15,000kVA 이상 자동차단. 전력용 커패시터·분로리액터 — 500~15,000kVA(내부고장·과전류), 15,000kVA 이상(내부고장·과전류·과전압)\n**개념**: 3장 보호장치 파트(발전기·특고압용 변압기·조상설비 보호장치) 중 조상설비 문제. 조상기는 회전기라서 15,000kVA 단일 기준.\n**함정 포인트**: 전력용 콘덴서·분로리액터의 500/15,000 구간과 혼동 주의. '조상기'가 뜨면 무조건 15,000."}, {"no": 16, "question": "발전소에서 계측장치를 시설하지 않아도 되는 것은?", "choices": ["① 발전기의 회전수 및 주파수", "② 발전기의 고정자 및 베어링 온도", "③ 주요 변압기의 전압 및 전류 또는 전력", "④ 특고압용 변압기의 온도"], "answerIndex": 0, "solution": "발전소의 계측장치 의무 대상은 발전기·주요 변압기의 전압·전류·전력, 발전기 **고정자·베어링의 온도**, 특고압용 변압기의 온도이다.\n**회전수·주파수·역률**은 법정 계측 대상이 아니므로 ①이 정답.", "timestampSec": 1682, "theory": "**핵심 수치**: 없음(항목 암기 문제)\n**개념**: 계측장치 = 발전기·주변압기의 V(전압)·I(전류)·P(전력) + 발전기 고정자·베어링 온도 + 특고압용 변압기 온도.\n**함정 포인트**: '고정자'를 '회전자'로 바꾸면 오답, '특고압용'을 저압·고압으로 바꾸면 오답, '역률·주파수·회전수'가 보이면 무조건 오답 처리."}, {"no": 17, "question": "전차선로의 직류방식에서 급전전압으로 알맞지 않은 것은?", "choices": ["① 최고 영구전압 900V, 1800V", "② 공칭전압 750V, 1500V", "③ 최저 영구전압 500V, 900V", "④ 장기과전압 950V, 1950V"], "answerIndex": 3, "solution": "직류 급전방식의 장기과전압은 950V, **1950V가 아니라** 규정값과 다르게 매칭되어 있어 ④가 틀렸다.\n요령: 낮은 값(750V 계열)에 ×2를 해서 1500V 계열과 비교하면 ①~③은 성립하지만 ④는 950×2=1900을 초과하는 1950으로 잘못 매칭되어 있다.", "timestampSec": 1838, "theory": "**핵심 수치**: 직류 공칭전압 750V/1500V, 최고 영구전압 900V/1800V, 최저 영구전압 500V/900V\n**개념**: 750V계와 1500V계는 대략 2배 관계이므로, 낮은 계열 값에 ×2를 해서 짝이 맞는지 검산하면 하나하나 외우지 않아도 풀 수 있다.\n**함정 포인트**: 장기과전압 등 낯선 항목에 숫자를 살짝 바꿔(1950) 매칭 오류를 만든다. ×2 검산법으로 초과하는 보기를 찍는다."}, {"no": 18, "question": "전기철도차량이 전차선로와 접촉한 상태에서 견인력을 끄고 보조전력을 가동한 상태로 정지해 있는 경우, 가공 전차선로의 유효전력이 200kW 이상일 경우 총 역률은 몇 보다는 작아서는 안 되는가?", "choices": ["① 0.9", "② 0.7", "③ 0.6", "④ 0.8"], "answerIndex": 3, "solution": "전기철도차량이 정차 중 보조전력 가동 상태에서 유효전력 200kW 이상인 경우 총 역률은 **0.8**보다 작아서는 안 된다.", "timestampSec": 1907, "theory": "**핵심 수치**: 정지 중 유효전력 200kW 이상 → 총 역률 0.8 이상\n**개념**: 전기철도 전기품질(역률) 규정. 역률의 표준값으로 cosθ=0.8(sinθ=0.6)이 가장 널리 쓰인다.\n**함정 포인트**: 법규에서 역률이 낯설게 느껴져도 전력공학의 표준 역률 0.8을 적용하면 된다."}, {"no": 19, "question": "전기저장장치의 시설 시 전기배선을 옥외에 시설하는 경우 사용 불가능한 공사 방법은?", "choices": ["① 합성수지관 공사", "② 금속관 공사", "③ 애자사용 공사", "④ 금속제 가요전선관 공사"], "answerIndex": 2, "solution": "전기저장장치의 전기배선 공사방법은 합성수지관·금속관·금속제 가요전선관·케이블 공사 등 튼튼한 관·케이블 공사만 가능하다. **애자사용 공사는 불가**하므로 ③이 정답.", "timestampSec": 1973, "theory": "**핵심 수치**: 없음(공사법 선택 문제)\n**개념**: 전기저장장치(ESS) 배선은 옥측·옥외 어디든 관공사 또는 케이블공사만 허용. 교량 위·아래 전선로 등 유사 유형도 같은 논리(관·케이블만 가능).\n**함정 포인트**: 보기에 케이블 공사가 있으면 답이 안 되고, 애자사용 공사가 보이면 그것이 정답이다."}, {"no": 20, "question": "22.9kV 특고압 가공전선로를 시가지에 경동연선으로 시설할 경우 단면적은 몇 mm² 이상을 사용하여야 하는가?", "choices": ["① 100", "② 55", "③ 200", "④ 150"], "answerIndex": 1, "solution": "특고압 시가지 가공전선 굵기는 사용전압 100kV 미만이면 **55mm² 이상**, 100kV 이상이면 150mm² 이상의 경동연선이다. 22.9kV는 100kV 미만이므로 55mm².", "timestampSec": 2042, "theory": "**핵심 수치**: 시가지 특고압 굵기 — 100kV 미만 55mm² / 100kV 이상 150mm². 시가지 높이 — 35kV 이하 기본 10m(절연전선 8m), 154kV급 11.44m\n**개념**: 시험에서는 66kV(→55), 154kV(→150) 공칭전압으로 잘 나오므로 '66은 55, 154는 150'으로 짝지어 두면 빠르다.\n**함정 포인트**: 170kV 초과 시가지 시설은 240mm² 예외 규정. 22.9kV·66kV처럼 100kV 미만이면 무조건 55."}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const marks = ['①','②','③','④'];
+let answered = 0, correct = 0;
+
+function updateScore(){
+  document.getElementById('score').textContent =
+    `정답 ${correct} / 푼 문제 ${answered} / 전체 ${DATA.questions.length}`;
+}
+
+function mdBold(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')
+          .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+}
+
+const app = document.getElementById('app');
+DATA.questions.forEach(q => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const ts = q.timestampSec;
+  card.innerHTML = `
+    <div class="qno">문제 ${q.no}</div>
+    <div class="qtext">${mdBold(q.question)}</div>
+    <div class="choices"></div>
+    <button class="toggle">해설 보기</button>
+    <div class="expl">
+      <div class="answer-line">정답: ${marks[q.answerIndex]}</div>
+      <div class="sol">${mdBold(q.solution)}</div>
+      <div class="theory">${mdBold(q.theory)}</div>
+      <a class="ytlink" href="https://youtu.be/${DATA.videoId}?t=${ts}" target="_blank" rel="noopener">▶ 영상 해설 바로가기 (${Math.floor(ts/60)}:${String(ts%60).padStart(2,'0')})</a>
+    </div>`;
+  const choicesBox = card.querySelector('.choices');
+  const expl = card.querySelector('.expl');
+  let done = false;
+  q.choices.forEach((c, i) => {
+    const b = document.createElement('button');
+    b.className = 'choice';
+    b.innerHTML = mdBold(c);
+    b.addEventListener('click', () => {
+      if (done) return;
+      done = true;
+      answered++;
+      const btns = choicesBox.querySelectorAll('.choice');
+      btns.forEach(x => x.disabled = true);
+      if (i === q.answerIndex) {
+        correct++;
+        b.classList.add('correct');
+        b.insertAdjacentHTML('beforeend','<span class="mark ok">✓</span>');
+      } else {
+        b.classList.add('wrong');
+        b.insertAdjacentHTML('beforeend','<span class="mark no">✗</span>');
+        btns[q.answerIndex].classList.add('correct');
+      }
+      expl.classList.add('open');
+      updateScore();
+    });
+    choicesBox.appendChild(b);
+  });
+  card.querySelector('.toggle').addEventListener('click', () => {
+    expl.classList.toggle('open');
+  });
+  app.appendChild(card);
+});
+updateScore();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tryRender = () => {
+    if (window.renderMathInElement) {
+      renderMathInElement(document.body, {
+        delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],
+        throwOnError: false
+      });
+    } else setTimeout(tryRender, 100);
+  };
+  tryRender();
+});
+</script>
+</body>
+</html>

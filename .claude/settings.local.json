@@ -111,7 +111,8 @@
       "Bash(python3 -c \"import json;d=json.load\\(open\\('content/kec.json'\\)\\);print\\(list\\(d.keys\\(\\)\\)\\);print\\(list\\(d['questions'][0].keys\\(\\)\\)\\)\")",
       "Bash(ffmpeg -loglevel error -ss 660 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y full/s07b.jpg)",
       "Bash(ffmpeg -loglevel error -ss 1544 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y full/q15b.jpg)",
-      "Bash(ffmpeg -loglevel error -ss 1565 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y full/s15b.jpg)"
+      "Bash(ffmpeg -loglevel error -ss 1565 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y full/s15b.jpg)",
+      "Bash(git commit -q -m 'fix: 페이지 제목·원본 강의 표기를 정식 과목명과 영상 제목 형식으로 통일 *)"
     ]
   }
 }

@@ -26,7 +26,17 @@ SANUP = [
     ("skec3.json", "skec3.html", "설비기술기준", "3회"),
 ]
 GROUPS = [("전기기사", KISA), ("산업기사", SANUP)]
-FULL_SUBJ = {"회로이론·제어": "회로이론및제어공학", "설비기술기준": "전기설비기술기준"}
+# 정식 과목명과 과목 번호 (실제 영상 제목 형식에 맞춤)
+OFFICIAL = {
+    ("전기기사", "전자기학"): ("제1과목", "전기자기학"),
+    ("전기기사", "전력공학"): ("제2과목", "전력공학"),
+    ("전기기사", "전기기기"): ("제3과목", "전기기기"),
+    ("전기기사", "회로이론·제어"): ("제4과목", "회로이론 및 제어공학"),
+    ("전기기사", "설비기술기준"): ("제5과목", "전기설비기술기준"),
+    ("산업기사", "전자기학"): ("제1과목", "전기자기학"),
+    ("산업기사", "회로이론"): ("제4과목", "회로이론"),
+    ("산업기사", "설비기술기준"): ("제5과목", "전기설비기술기준"),
+}
 
 def make_nav(current):
     rows = []
@@ -51,9 +61,11 @@ PAGES = []
 for gname, entries in GROUPS:
     exam = "전기기사" if gname == "전기기사" else "전기산업기사"
     for j, out, subj, r in entries:
+        no, full = OFFICIAL[(gname, subj)]
         PAGES.append({
             "json": j, "out": out,
-            "video_label": f"대산전기학원 — 2026년 {r} {exam} 필기 CBT 기출적중 핵심풀이 ({FULL_SUBJ.get(subj, subj)})",
+            "title": f"2026년 {r} {exam} 필기 {full} — 기출 핵심풀이",
+            "video_label": f"대산전기학원 — 2026년 {r} {exam} 필기 CBT 기출적중 핵심풀이 {no} {full}",
             "nav": make_nav(out),
         })
 
@@ -203,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
 for page in PAGES:
     data = json.loads((root / "content" / page["json"]).read_text(encoding="utf-8"))
     html = (TEMPLATE
-            .replace("__TITLE__", data["title"])
+            .replace("__TITLE__", page["title"])
             .replace("__VIDEOID__", data["videoId"])
             .replace("__VIDEOLABEL__", page["video_label"])
             .replace("__NAV__", page["nav"])

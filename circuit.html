@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 전기기사 회로이론및제어공학 2회 기출 핵심풀이</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+  :root { --green:#1a7f37; --red:#c62828; --blue:#1256a2; --bg:#f5f6f8; --card:#fff; --line:#e0e3e8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#222; line-height:1.65; }
+  .wrap { max-width:720px; margin:0 auto; padding:16px 14px 80px; }
+  header { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 18px; margin-bottom:18px; }
+  header h1 { font-size:1.25rem; margin:0 0 8px; }
+  header p { margin:4px 0; font-size:.9rem; color:#555; }
+  header a { color:var(--blue); }
+  #score { position:sticky; top:0; z-index:10; background:var(--blue); color:#fff; border-radius:0 0 10px 10px; padding:8px 14px; font-weight:700; text-align:center; margin:-16px -14px 16px; font-size:.95rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 16px; margin-bottom:16px; }
+  .qno { font-weight:800; color:var(--blue); margin-bottom:6px; }
+  .qtext { margin-bottom:12px; font-weight:600; }
+  .choice { display:block; width:100%; text-align:left; background:#fafbfc; border:1.5px solid var(--line); border-radius:9px; padding:10px 12px; margin:6px 0; font-size:.95rem; font-family:inherit; cursor:pointer; line-height:1.6; }
+  .choice:hover { border-color:var(--blue); }
+  .choice.correct { border-color:var(--green); background:#e8f5e9; font-weight:700; }
+  .choice.wrong { border-color:var(--red); background:#ffebee; }
+  .choice:disabled { cursor:default; opacity:1; color:inherit; }
+  .mark { float:right; font-weight:800; }
+  .mark.ok { color:var(--green); } .mark.no { color:var(--red); }
+  .toggle { margin-top:10px; background:none; border:1px solid var(--blue); color:var(--blue); border-radius:8px; padding:7px 14px; font-size:.88rem; cursor:pointer; font-family:inherit; }
+  .expl { display:none; margin-top:14px; border-top:1px dashed var(--line); padding-top:12px; font-size:.93rem; }
+  .expl.open { display:block; }
+  .answer-line { font-weight:800; color:var(--green); margin-bottom:8px; }
+  .sol { white-space:pre-wrap; margin-bottom:12px; }
+  .theory { background:#f2f7ff; border-left:4px solid var(--blue); border-radius:0 8px 8px 0; padding:10px 12px; white-space:pre-wrap; margin-bottom:12px; }
+  .ytlink { display:inline-block; background:#c4302b; color:#fff; text-decoration:none; border-radius:8px; padding:8px 14px; font-size:.88rem; font-weight:700; }
+  footer { text-align:center; color:#888; font-size:.8rem; margin-top:30px; }
+  @media (max-width:480px){ .wrap{padding:12px 10px 60px;} .card{padding:14px 12px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="score"></div>
+  <header>
+    <h1>2026 전기기사 회로이론및제어공학 2회 기출 핵심풀이</h1>
+    <p>보기를 클릭하면 채점되고 해설이 열립니다. 채점 없이 보려면 [해설 보기]를 누르세요.</p>
+    <p>원본 강의: <a href="https://www.youtube.com/watch?v=O4_9BfA-un0" target="_blank" rel="noopener">대산전기학원 — 2026년 2회 전기기사 필기 CBT 기출적중 핵심풀이 (회로이론및제어공학)</a></p>
+    <p>다른 과목: <a href="index.html">전기자기학 →</a> · <a href="power.html">전력공학 →</a> · <a href="kigi.html">전기기기 →</a> · <a href="kec.html">전기설비기술기준 →</a><br>전기산업기사 회로이론: <a href="sanup1.html">1회</a> · <a href="sanup2.html">2회</a></p>
+  </header>
+  <div id="app"></div>
+  <footer>출처: 대산전기학원 유튜브 강의 · 학습용 정리 자료</footer>
+</div>
+<script id="data" type="application/json">{"title": "2026 전기기사 회로이론및제어공학 2회 기출 핵심풀이", "videoId": "O4_9BfA-un0", "questions": [{"no": 1, "question": "$R-L-C$ 직렬회로에 $t=0$에서 교류전압 $v=V_m\\sin(\\omega t+\\theta)$를 가할 때 $R^2-4\\dfrac{L}{C}<0$이면 이 회로는?", "choices": ["① 임계", "② 진동", "③ 비진동", "④ 정현파 진동"], "answerIndex": 1, "solution": "RLC 직렬회로 과도현상의 판별식은 $R^2$과 $4\\dfrac{L}{C}$의 대소 관계로 결정된다.\n$R^2-4\\dfrac{L}{C}<0$ 즉 $R^2<4\\dfrac{L}{C}$이면 진동(부족제동),\n$R^2>4\\dfrac{L}{C}$이면 비진동(과제동), $R^2=4\\dfrac{L}{C}$이면 임계제동이다.\n문제 조건은 오른쪽이 큰 경우이므로 진동이다.", "timestampSec": 78, "theory": "**핵심 공식**: $R^2 \\gtrless 4L/C$ — 좌변 크면 비진동, 우변 크면 진동, 같으면 임계\n**개념**: 저항이 작을수록 에너지 소모가 적어 L·C 간 에너지 교환으로 진동이 발생한다\n**함정 포인트**: 부등호 방향을 이항한 뒤 다시 판단할 것. '정현파 진동'은 R=0인 무손실 경우로 오답이다"}, {"no": 2, "question": "대칭 3상 전압이 $a$상 $V_a$, $b$상 $V_b=a^2V_a$, $c$상 $V_c=aV_a$일 때 $a$상을 기준으로 한 대칭분 전압 중 정상분 $V_1[\\mathrm{V}]$은 어떻게 표시되는가?", "choices": ["① $\\dfrac{1}{3}V_a$", "② $V_a$", "③ $aV_a$", "④ $a^2V_a$"], "answerIndex": 1, "solution": "정상분 $V_1=\\dfrac{1}{3}(V_a+aV_b+a^2V_c)$\n$=\\dfrac{1}{3}(V_a+a\\cdot a^2V_a+a^2\\cdot aV_a)=\\dfrac{1}{3}(V_a+a^3V_a+a^3V_a)$\n$a^3=1$이므로 $V_1=\\dfrac{1}{3}\\cdot 3V_a=V_a$", "timestampSec": 225, "theory": "**핵심 공식**: $V_1=\\frac{1}{3}(V_a+aV_b+a^2V_c)$, $a^3=1$\n**개념**: 대칭 3상(정상순)에서는 영상분·역상분이 0이고 정상분만 존재하며 그 값은 $V_a$ 그대로다\n**함정 포인트**: 대칭 3상 + a상 기준 정상분이면 유도 없이 즉시 $V_a$(②) — ①의 1/3배와 혼동 금지"}, {"no": 3, "question": "그림과 같이 $R-C$ 병렬회로에서 전원전압이 $e(t)=3e^{-5t}$인 경우 이 회로의 임피던스는?", "choices": ["① $\\dfrac{j\\omega RC}{1+j\\omega RC}$", "② $\\dfrac{1+j\\omega RC}{R}$", "③ $\\dfrac{R}{1+RCs}$", "④ $\\dfrac{R}{1-5RC}$"], "answerIndex": 3, "solution": "병렬이므로 어드미턴스 $Y=\\dfrac{1}{R}+j\\omega C$, 임피던스 $Z=\\dfrac{1}{Y}=\\dfrac{1}{\\frac{1}{R}+j\\omega C}$\n분모·분자에 $R$을 곱하면 $Z=\\dfrac{R}{1+j\\omega RC}$\n전원전압 $e(t)=3e^{-5t}=Ae^{(j\\omega)t}$ 꼴에서 $j\\omega=-5$\n따라서 $Z=\\dfrac{R}{1+(-5)RC}=\\dfrac{R}{1-5RC}$", "timestampSec": 305, "theory": "**핵심 공식**: RC 병렬 $Z=\\dfrac{R}{1+j\\omega RC}$, 지수함수 전원 $e^{st}$에서 $s=j\\omega$가 지수의 계수\n**개념**: $e(t)=3e^{-5t}$는 $j\\omega=-5$를 숨겨 놓은 것 — 지수의 숫자를 $j\\omega$ 자리에 대입한다\n**함정 포인트**: 보기 중 유일하게 $-5$가 들어간 ④가 답. ③은 $s$ 표기만 바꾼 일반형으로 함정"}, {"no": 4, "question": "다음 중 왜형률을 표현한 식으로 올바른 것은?", "choices": ["① $\\dfrac{\\text{전고조파의 실효값}}{\\text{기본파의 실효값}}$", "② $\\dfrac{\\text{기본파의 실효값}}{\\text{고조파의 최대값}}$", "③ $\\dfrac{\\text{고조파의 최대값}}{\\text{기본파의 최대값}}$", "④ $\\dfrac{\\text{기본파의 실효값}}{\\text{고조파의 실효값}}$"], "answerIndex": 0, "solution": "왜형률(THD)은 기본파 실효값에 대한 전 고조파 실효값의 비이다.\n$D=\\dfrac{\\sqrt{V_2^2+V_3^2+\\cdots}}{V_1}=\\dfrac{\\text{전고조파의 실효값}}{\\text{기본파의 실효값}}$\n따라서 ①이 옳다.", "timestampSec": 705, "theory": "**핵심 공식**: 왜형률 $D=\\dfrac{\\sqrt{\\sum V_n^2}\\,(n\\ge2)}{V_1}$ (실효값 기준)\n**개념**: 파형이 정현파에서 얼마나 일그러졌는지를 고조파 성분의 비율로 나타낸 지표\n**함정 포인트**: 분자·분모가 뒤집힌 ④, '최대값'으로 바꾼 ②③이 단골 함정 — 반드시 '실효값' 기준이다"}, {"no": 5, "question": "그림과 같이 3상 평형의 순저항 부하에 단상 전력계를 연결하였을 때 전력계가 $W[\\mathrm{W}]$를 지시하였다. 이 3상 부하에서 소모하는 전체 전력$[\\mathrm{W}]$는?", "choices": ["① $2W$", "② $3W$", "③ $\\sqrt{2}\\,W$", "④ $\\sqrt{3}\\,W$"], "answerIndex": 0, "solution": "전력계는 전압코일에 선간전압 $V_{ab}$, 전류코일에 선전류 $I_a$가 걸리는 1전력계법 결선이다.\n순저항 부하에서 $V_{ab}$와 $I_a$의 위상차는 $30°$이므로\n$W=V_{ab}I_a\\cos30°=\\dfrac{\\sqrt{3}}{2}V_LI_L$\n3상 전체 전력 $P=\\sqrt{3}V_LI_L\\cos\\theta=\\sqrt{3}V_LI_L=2W$", "timestampSec": 785, "theory": "**핵심 공식**: 1전력계법 $P=2W$ (순저항 부하), $W=V_LI_L\\cos30°$\n**개념**: 선간전압과 선전류 사이에는 역률각 외에 $30°$의 위상차가 존재한다\n**함정 포인트**: $\\sqrt{3}W$(④)로 찍기 쉽다 — $\\cos30°=\\frac{\\sqrt3}{2}$를 반영하면 $P=\\sqrt3 V_LI_L=2W$"}, {"no": 6, "question": "아래 회로에서 $9[\\Omega]$ 저항에 흐르는 전류를 구하시오. (3[V] 전원과 직렬 $6[\\Omega]$, 병렬 $9[\\Omega]$, 전류원 $2[\\mathrm{A}]$)", "choices": ["① $0.5$", "② $-0.5$", "③ $1$", "④ $-1$"], "answerIndex": 2, "solution": "위 노드 전압을 $V$라 하고 KCL을 세우면\n$\\dfrac{3-V}{6}+2=\\dfrac{V}{9}$\n양변에 18을 곱하면 $3(3-V)+36=2V$\n$9-3V+36=2V \\Rightarrow 45=5V \\Rightarrow V=9[\\mathrm{V}]$\n$i_x=\\dfrac{V}{9}=\\dfrac{9}{9}=1[\\mathrm{A}]$", "timestampSec": 945, "theory": "**핵심 공식**: 노드 해석(KCL) — 유입전류 합 = 유출전류 합\n**개념**: 전압원+직렬저항과 전류원이 한 노드에 만나면 노드방정식 한 개로 끝난다\n**함정 포인트**: 전류원 방향(유입 +2A)과 전류 기준 방향을 놓치면 부호가 바뀌어 ②·④로 유도된다"}, {"no": 7, "question": "각 상의 임피던스가 $6+j8[\\Omega]$인 평형 $Y$부하에 선간전압 $220[\\mathrm{V}]$인 대칭 3상 전압을 가하였을 때 선전류$[\\mathrm{A}]$는?", "choices": ["① $10.7$", "② $11.7$", "③ $12.7$", "④ $13.7$"], "answerIndex": 2, "solution": "Y결선에서 선전류 = 상전류이고 상전압 $V_p=\\dfrac{V_L}{\\sqrt{3}}$\n$|Z|=\\sqrt{6^2+8^2}=10[\\Omega]$\n$I_L=I_p=\\dfrac{V_p}{|Z|}=\\dfrac{220}{\\sqrt{3}\\times10}\\approx12.7[\\mathrm{A}]$", "timestampSec": 1350, "theory": "**핵심 공식**: Y결선 $I_L=\\dfrac{V_L}{\\sqrt{3}\\,|Z|}$, $|Z|=\\sqrt{R^2+X^2}$\n**개념**: Y결선은 선전류=상전류, 선간전압=$\\sqrt3\\times$상전압\n**함정 포인트**: $220/10=22$처럼 $\\sqrt3$을 빠뜨리거나, 6+j8을 14로 산술합하면 오답"}, {"no": 8, "question": "아래 그림의 여파기의 차단주파수와 여파기의 종류는? ($C=0.1[\\mu\\mathrm{F}]$, $L=1[\\mathrm{mH}]$, 공칭 임피던스 $Z=100[\\Omega]$, 직렬 $2C$ · 병렬 $2L$ 구성)", "choices": ["① $7.95[\\mathrm{kHz}]$, 정 k형 고역 여파기", "② $7.95[\\mathrm{kHz}]$, 정 k형 저역 여파기", "③ $795[\\mathrm{kHz}]$, 정 k형 저역 여파기", "④ $795[\\mathrm{kHz}]$, 정 k형 고역 여파기"], "answerIndex": 0, "solution": "직렬에 콘덴서($2C$), 병렬에 인덕터($2L$)이므로 저주파를 차단하는 고역 여파기(HPF)이다.\n정 k형 고역 여파기의 차단주파수 $f_c=\\dfrac{1}{4\\pi\\sqrt{LC}}$ 또는 $f_c=\\dfrac{1}{4\\pi ZC}$\n$f_c=\\dfrac{1}{4\\pi\\times100\\times0.1\\times10^{-6}}\\approx7957[\\mathrm{Hz}]\\approx7.95[\\mathrm{kHz}]$", "timestampSec": 1425, "theory": "**핵심 공식**: 정 k형 HPF $f_c=\\dfrac{1}{4\\pi\\sqrt{LC}}=\\dfrac{1}{4\\pi ZC}$ (LPF는 $\\dfrac{1}{\\pi\\sqrt{LC}}$)\n**개념**: 직렬 C·병렬 L이면 고역통과, 직렬 L·병렬 C이면 저역통과\n**함정 포인트**: 단위 환산($\\mu$F, mH)에서 $10^3$ 오차가 나면 795kHz(③④)로 빠진다"}, {"no": 9, "question": "전송선로의 특성 임피던스가 $100[\\Omega]$이고, 부하저항이 $400[\\Omega]$일 때 전압 정재파비 $S$는 얼마인가?", "choices": ["① $0.25$", "② $0.6$", "③ $1.67$", "④ $4.0$"], "answerIndex": 3, "solution": "반사계수 $\\rho=\\dfrac{Z_R-Z_0}{Z_R+Z_0}=\\dfrac{400-100}{400+100}=\\dfrac{300}{500}=0.6$\n정재파비 $S=\\dfrac{1+\\rho}{1-\\rho}=\\dfrac{1.6}{0.4}=4.0$", "timestampSec": 1745, "theory": "**핵심 공식**: $\\rho=\\dfrac{Z_R-Z_0}{Z_R+Z_0}$, $S=\\dfrac{1+|\\rho|}{1-|\\rho|}$\n**개념**: 임피던스 부정합 정도를 나타내며 정합($Z_R=Z_0$)이면 $\\rho=0$, $S=1$\n**함정 포인트**: ②(0.6)는 반사계수 값 — 문제가 묻는 것은 정재파비다. 저항비 400/100=4로 바로 나오는 특수형도 기억"}, {"no": 10, "question": "$\\cos\\omega t$의 라플라스 변환은?", "choices": ["① $\\dfrac{s^2}{s^2+\\omega^2}$", "② $\\dfrac{s}{s^2+\\omega^2}$", "③ $\\dfrac{\\omega^2}{s^2+\\omega^2}$", "④ $\\dfrac{\\omega}{s^2+\\omega^2}$"], "answerIndex": 1, "solution": "$\\mathcal{L}[\\cos\\omega t]=\\dfrac{s}{s^2+\\omega^2}$\n(참고: $\\mathcal{L}[\\sin\\omega t]=\\dfrac{\\omega}{s^2+\\omega^2}$)", "timestampSec": 1955, "theory": "**핵심 공식**: $\\cos\\omega t\\to\\dfrac{s}{s^2+\\omega^2}$, $\\sin\\omega t\\to\\dfrac{\\omega}{s^2+\\omega^2}$\n**개념**: cos은 분자에 $s$, sin은 분자에 $\\omega$ — 암기 필수 기본 변환쌍\n**함정 포인트**: ④는 $\\sin\\omega t$의 변환 — cos/sin 분자를 바꿔치기한 보기에 주의"}, {"no": 11, "question": "다음의 개루프 전달함수에 대한 근궤적이 실수축에서 이탈하게 되는 분리점은 약 얼마인가?\n$$G(s)H(s)=\\dfrac{K}{s(s+3)(s+8)},\\ K\\ge0$$", "choices": ["① $-0.93$", "② $-5.74$", "③ $-6.0$", "④ $-1.33$"], "answerIndex": 3, "solution": "특성방정식 $s(s+3)(s+8)+K=0$에서 $K=-(s^3+11s^2+24s)$\n$\\dfrac{dK}{ds}=0 \\Rightarrow 3s^2+22s+24=0$\n$s=\\dfrac{-22\\pm\\sqrt{484-288}}{6}=\\dfrac{-22\\pm14}{6} \\Rightarrow s=-1.33,\\ -6$\n근궤적이 실수축에 존재하는 구간은 $0\\sim-3$과 $-8\\sim-\\infty$이므로 유효한 분리점은 $s=-1.33$", "timestampSec": 1985, "theory": "**핵심 공식**: 분리점은 $\\dfrac{dK}{ds}=0$의 근 중 근궤적 구간($0\\sim-3$) 안의 값\n**개념**: 극점 0, −3, −8 기준 홀수 구간에만 근궤적이 존재한다\n**함정 포인트**: $3s^2+22s+24=0$의 두 근 중 $-6$은 근궤적 구간(−3~−8) 밖이므로 버린다"}, {"no": 12, "question": "전달함수가 $\\dfrac{C(s)}{R(s)}=\\dfrac{25}{s^2+8s+25}$인 2차 제어시스템의 감쇠 진동 주파수는 몇 $[\\mathrm{rad/sec}]$인가?", "choices": ["① $3$", "② $4$", "③ $5$", "④ $6$"], "answerIndex": 0, "solution": "표준형 $\\dfrac{\\omega_n^2}{s^2+2\\delta\\omega_n s+\\omega_n^2}$과 비교하면\n$\\omega_n^2=25 \\Rightarrow \\omega_n=5$\n$2\\delta\\omega_n=8 \\Rightarrow \\delta=0.8$\n$\\omega_d=\\omega_n\\sqrt{1-\\delta^2}=5\\sqrt{1-0.64}=5\\times0.6=3[\\mathrm{rad/sec}]$", "timestampSec": 2225, "theory": "**핵심 공식**: $\\omega_d=\\omega_n\\sqrt{1-\\delta^2}$, 표준형 $s^2+2\\delta\\omega_n s+\\omega_n^2$\n**개념**: 감쇠비 δ가 클수록 실제 진동 주파수 $\\omega_d$는 고유주파수 $\\omega_n$보다 작아진다\n**함정 포인트**: $\\omega_n=5$(③)를 그대로 답하지 말 것 — 묻는 것은 감쇠 진동 주파수 $\\omega_d$"}, {"no": 13, "question": "그림과 같은 블록선도에서 $\\dfrac{C(s)}{R(s)}$는? (전향경로 $G_1\\to G_2\\to 1/G_2$, 상단 정귀환 루프와 $1/G_1$ 하단 루프)", "choices": ["① $\\dfrac{G_1}{1+G_1-G_1G_2}$", "② $\\dfrac{G_1}{1+G_1+G_1G_2}$", "③ $\\dfrac{G_1}{1+G_2-G_1G_2}$", "④ $\\dfrac{G_1}{1+G_2+G_1G_2}$"], "answerIndex": 2, "solution": "메이슨 공식 $\\dfrac{C}{R}=\\dfrac{P_1}{1-L_1-L_2}$\n전향경로 $P_1=G_1\\cdot G_2\\cdot\\dfrac{1}{G_2}=G_1$\n상단 루프(+) $L_1=+G_1G_2$, 하단 루프(−) $L_2=-G_2$\n$\\dfrac{C}{R}=\\dfrac{G_1}{1-G_1G_2+G_2}=\\dfrac{G_1}{1+G_2-G_1G_2}$", "timestampSec": 2385, "theory": "**핵심 공식**: 메이슨 공식 $\\dfrac{C}{R}=\\dfrac{\\sum P_k}{1-\\sum L}$\n**개념**: 루프이득은 부호 포함해서 계산 — 정귀환은 $+$, 부귀환은 $-$로 분모에 반영된다\n**함정 포인트**: $1/G_2$, $1/G_1$ 블록의 약분을 놓치거나 루프 부호를 반대로 하면 ①·④로 빠진다"}, {"no": 14, "question": "시스템행렬 $A=\\begin{bmatrix}0&1\\\\-2&-3\\end{bmatrix}$가 다음과 같을 때 상태천이행렬 $e^{At}$는?", "choices": ["① $\\begin{bmatrix}2e^t-e^{2t}&-e^t+e^{2t}\\\\2e^t-2e^{2t}&-e^t+2e^{2t}\\end{bmatrix}$", "② $\\begin{bmatrix}2e^{-t}-e^{-2t}&e^{-t}-e^{-2t}\\\\-e^{-t}+2e^{-2t}&-e^{-t}+2e^{2t}\\end{bmatrix}$", "③ $\\begin{bmatrix}2e^{-t}-e^{-2t}&e^{-t}+e^{-2t}\\\\2e^{-t}-2e^{-2t}&-e^{-t}-2e^{-2t}\\end{bmatrix}$", "④ $\\begin{bmatrix}2e^{-t}-e^{-2t}&e^{-t}-e^{-2t}\\\\-2e^{-t}+2e^{-2t}&-e^{-t}+2e^{-2t}\\end{bmatrix}$"], "answerIndex": 3, "solution": "$\\phi(t)=e^{At}=\\mathcal{L}^{-1}[(sI-A)^{-1}]$\n$(sI-A)^{-1}$의 분모는 $|sI-A|=s(s+3)+2=(s+1)(s+2)$\n특성근이 $-1,-2$이므로 원소는 $e^{-t}$, $e^{-2t}$의 조합 → 지수가 음수인 보기만 유효\n(1,2) 원소: $\\dfrac{1}{(s+1)(s+2)}=\\dfrac{1}{s+1}-\\dfrac{1}{s+2}\\to e^{-t}-e^{-2t}$\n각 원소를 역변환하면 ④의 행렬이 된다. 검산: $\\phi(0)=I$를 만족하는 것도 ④뿐이다.", "timestampSec": 2625, "theory": "**핵심 공식**: $e^{At}=\\mathcal{L}^{-1}[(sI-A)^{-1}]$, 부분분수 $\\frac{1}{(s+1)(s+2)}=\\frac{1}{s+1}-\\frac{1}{s+2}$\n**개념**: 특성근이 음수(−1, −2)이면 천이행렬은 $e^{-t},e^{-2t}$ 조합 — 양의 지수 보기는 즉시 제외\n**함정 포인트**: $\\phi(0)=I$ 검산으로 빠르게 소거 — 대각 1, 비대각 0이 안 되는 보기는 탈락"}, {"no": 15, "question": "다음 방정식으로 표기되는 식이 있다. 이 시스템을 상태방정식 $X(k+1)=AX(k)+Bu(k)$로 표현할 때 계수행렬 $A$는 어떻게 되는가?\n$$c(k+2)+3c(k+1)+5c(k)=u(k)$$", "choices": ["① $\\begin{bmatrix}0&1\\\\-3&-5\\end{bmatrix}$", "② $\\begin{bmatrix}1&0\\\\-3&-5\\end{bmatrix}$", "③ $\\begin{bmatrix}1&0\\\\-5&-3\\end{bmatrix}$", "④ $\\begin{bmatrix}0&1\\\\-5&-3\\end{bmatrix}$"], "answerIndex": 3, "solution": "$x_1(k)=c(k)$, $x_2(k)=c(k+1)$로 두면\n$x_1(k+1)=x_2(k)$\n$x_2(k+1)=c(k+2)=-5c(k)-3c(k+1)+u(k)=-5x_1-3x_2+u$\n$A=\\begin{bmatrix}0&1\\\\-5&-3\\end{bmatrix}$", "timestampSec": 3125, "theory": "**핵심 공식**: 가제어 표준형 — 1행은 $[0\\;1]$, 2행은 계수 부호 반전을 낮은 차수부터 $[-5\\;-3]$\n**개념**: 최고차 항을 좌변에 남기고 이항하면 마지막 행이 자동으로 결정된다\n**함정 포인트**: $-3,-5$의 배치 순서 — 상수항(5)이 첫 열, 1차항(3)이 둘째 열. ①과 혼동 주의"}, {"no": 16, "question": "안정된 제어계의 특성근이 2개의 공액 복소근을 가질 때, 이 근들이 허수축 가까이에 있는 경우 허수축에서 멀리 떨어져 있는 안정된 근에 비해 과도응답 영향은 어떻게 되는가?", "choices": ["① 과도응답이 같다.", "② 과도응답은 천천히 사라진다.", "③ 과도응답이 빨리 사라진다.", "④ 과도응답에는 영향을 미치지 않는다."], "answerIndex": 1, "solution": "시정수 $\\tau=-\\dfrac{1}{\\text{특성근의 실수부}}$\n허수축에 가까운 근은 실수부의 절대값이 작으므로 시정수가 크다.\n시정수가 크면 과도현상이 길어지므로 과도응답은 천천히 사라진다.", "timestampSec": 3425, "theory": "**핵심 공식**: $\\tau=-1/\\sigma$ (σ: 특성근 실수부), $e^{\\sigma t}$의 감쇠 속도가 응답 소멸 속도\n**개념**: 허수축에 가까운 극점 = 지배극점 — 응답이 가장 오래 남아 시스템 특성을 지배한다\n**함정 포인트**: 문제의 주어는 '허수축 가까이 있는 근' — 멀리 있는 근 기준으로 읽으면 ③으로 뒤집힌다"}, {"no": 17, "question": "그림과 같은 논리회로는? (입력 $A$, $B$에 각각 부정(버블)이 붙고 AND 게이트를 지나 출력에도 부정이 붙는 회로)", "choices": ["① NAND", "② NOR", "③ NOT", "④ OR"], "answerIndex": 3, "solution": "논리식 $Y=\\overline{\\bar{A}\\cdot\\bar{B}}$\n드모르간 정리에 의해 $Y=\\bar{\\bar{A}}+\\bar{\\bar{B}}=A+B$\n따라서 OR 게이트와 등가이다.\n(그림 풀이: 출력 버블을 없애면 몸통과 다리가 반대로 바뀜 → AND는 OR로, 입력 부정은 소멸 → OR)", "timestampSec": 3665, "theory": "**핵심 공식**: 드모르간 $\\overline{\\bar A\\cdot\\bar B}=A+B$, $\\overline{\\bar A+\\bar B}=A\\cdot B$\n**개념**: 버블을 소거하면 게이트 몸통(AND↔OR)과 입출력 부정이 반대로 바뀐다\n**함정 포인트**: 부정이 두 번이면 원래대로 — 버블 개수를 세지 않고 NAND(①)로 찍기 쉽다"}, {"no": 18, "question": "그림과 같은 블록선도에 대한 등가 종합 전달함수 $\\left(\\dfrac{C}{A}\\right)$는? (병렬 전향경로 $G_1$, $G_3$가 가합점에서 합쳐져 $G_2$를 지나고, $G_2$ 출력이 가합점으로 부귀환)", "choices": ["① $\\dfrac{G_2(G_1+G_3)}{1+G_2}$", "② $\\dfrac{G_2(G_1+G_3)}{1-G_2}$", "③ $\\dfrac{G_2(G_1-G_3)}{1+G_2}$", "④ $\\dfrac{G_2(G_1+G_3)}{1+G_3}$"], "answerIndex": 0, "solution": "전향경로 2개: $P_1=G_1G_2$, $P_2=G_3G_2$\n루프: 출력 $C$가 가합점에 $-$로 귀환 → $L_1=-G_2$\n$\\dfrac{C}{A}=\\dfrac{P_1+P_2}{1-L_1}=\\dfrac{G_1G_2+G_3G_2}{1+G_2}=\\dfrac{G_2(G_1+G_3)}{1+G_2}$", "timestampSec": 3825, "theory": "**핵심 공식**: 메이슨 공식 $\\dfrac{C}{A}=\\dfrac{P_1+P_2}{1-\\sum L}$\n**개념**: 병렬 전향경로는 더하고, 부귀환 루프는 분모에 $+$로 반영된다\n**함정 포인트**: 루프에 $G_1$, $G_3$는 포함되지 않는다 — 귀환 경로가 가합점으로 직접 들어가므로 분모는 $1+G_2$"}, {"no": 19, "question": "2차 지연요소의 특성방정식이 $s^2+3s+4=0$일 때 2차 지연요소의 감쇠율을 구하시오.", "choices": ["① $0.35$", "② $0.75$", "③ $0.95$", "④ $0.55$"], "answerIndex": 1, "solution": "표준형 $s^2+2\\delta\\omega_n s+\\omega_n^2$과 비교하면\n$\\omega_n^2=4 \\Rightarrow \\omega_n=2$\n$2\\delta\\omega_n=3 \\Rightarrow \\delta=\\dfrac{3}{2\\times2}=0.75$", "timestampSec": 3900, "theory": "**핵심 공식**: $\\delta=\\dfrac{s^1\\text{항 계수}}{2\\omega_n}$, $\\omega_n=\\sqrt{\\text{상수항}}$\n**개념**: 감쇠율(감쇠비) δ는 표준 2차형과의 계수 비교만으로 즉시 구한다\n**함정 포인트**: $\\omega_n=4$로 착각하면 $\\delta=0.375$ 근처(①)로 빠진다 — 상수항에 반드시 루트"}, {"no": 20, "question": "계단입력 신호를 인가한 직후, 제어량이 목표값에 가까운 일정한 값으로 안정될 때까지의 특성은?", "choices": ["① 낭비시간요소", "② 지연요소", "③ 정상특성", "④ 과도특성"], "answerIndex": 3, "solution": "입력 인가 직후부터 응답이 일정한 값으로 안정(정착)되기 전까지의 구간이 과도응답 구간이며, 이 구간의 특성이 과도특성이다.\n안정된 이후 목표값과의 편차(오차)를 다루는 것이 정상특성이다.", "timestampSec": 3988, "theory": "**핵심 공식**: 응답 = 과도응답(정착 전) + 정상응답(정착 후)\n**개념**: '안정될 때까지'라는 표현이 과도 구간을 가리키는 핵심 키워드다\n**함정 포인트**: 정착 후의 오차·편차를 물으면 정상특성(③) — 시점 구분이 관건"}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const marks = ['①','②','③','④'];
+let answered = 0, correct = 0;
+
+function updateScore(){
+  document.getElementById('score').textContent =
+    `정답 ${correct} / 푼 문제 ${answered} / 전체 ${DATA.questions.length}`;
+}
+
+function mdBold(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')
+          .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+}
+
+const app = document.getElementById('app');
+DATA.questions.forEach(q => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const ts = q.timestampSec;
+  card.innerHTML = `
+    <div class="qno">문제 ${q.no}</div>
+    <div class="qtext">${mdBold(q.question)}</div>
+    <div class="choices"></div>
+    <button class="toggle">해설 보기</button>
+    <div class="expl">
+      <div class="answer-line">정답: ${marks[q.answerIndex]}</div>
+      <div class="sol">${mdBold(q.solution)}</div>
+      <div class="theory">${mdBold(q.theory)}</div>
+      <a class="ytlink" href="https://youtu.be/${DATA.videoId}?t=${ts}" target="_blank" rel="noopener">▶ 영상 해설 바로가기 (${Math.floor(ts/60)}:${String(ts%60).padStart(2,'0')})</a>
+    </div>`;
+  const choicesBox = card.querySelector('.choices');
+  const expl = card.querySelector('.expl');
+  let done = false;
+  q.choices.forEach((c, i) => {
+    const b = document.createElement('button');
+    b.className = 'choice';
+    b.innerHTML = mdBold(c);
+    b.addEventListener('click', () => {
+      if (done) return;
+      done = true;
+      answered++;
+      const btns = choicesBox.querySelectorAll('.choice');
+      btns.forEach(x => x.disabled = true);
+      if (i === q.answerIndex) {
+        correct++;
+        b.classList.add('correct');
+        b.insertAdjacentHTML('beforeend','<span class="mark ok">✓</span>');
+      } else {
+        b.classList.add('wrong');
+        b.insertAdjacentHTML('beforeend','<span class="mark no">✗</span>');
+        btns[q.answerIndex].classList.add('correct');
+      }
+      expl.classList.add('open');
+      updateScore();
+    });
+    choicesBox.appendChild(b);
+  });
+  card.querySelector('.toggle').addEventListener('click', () => {
+    expl.classList.toggle('open');
+  });
+  app.appendChild(card);
+});
+updateScore();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tryRender = () => {
+    if (window.renderMathInElement) {
+      renderMathInElement(document.body, {
+        delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],
+        throwOnError: false
+      });
+    } else setTimeout(tryRender, 100);
+  };
+  tryRender();
+});
+</script>
+</body>
+</html>

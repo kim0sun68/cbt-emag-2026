@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 전기산업기사 회로이론 2회 기출 핵심풀이</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+  :root { --green:#1a7f37; --red:#c62828; --blue:#1256a2; --bg:#f5f6f8; --card:#fff; --line:#e0e3e8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#222; line-height:1.65; }
+  .wrap { max-width:720px; margin:0 auto; padding:16px 14px 80px; }
+  header { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 18px; margin-bottom:18px; }
+  header h1 { font-size:1.25rem; margin:0 0 8px; }
+  header p { margin:4px 0; font-size:.9rem; color:#555; }
+  header a { color:var(--blue); }
+  #score { position:sticky; top:0; z-index:10; background:var(--blue); color:#fff; border-radius:0 0 10px 10px; padding:8px 14px; font-weight:700; text-align:center; margin:-16px -14px 16px; font-size:.95rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 16px; margin-bottom:16px; }
+  .qno { font-weight:800; color:var(--blue); margin-bottom:6px; }
+  .qtext { margin-bottom:12px; font-weight:600; }
+  .choice { display:block; width:100%; text-align:left; background:#fafbfc; border:1.5px solid var(--line); border-radius:9px; padding:10px 12px; margin:6px 0; font-size:.95rem; font-family:inherit; cursor:pointer; line-height:1.6; }
+  .choice:hover { border-color:var(--blue); }
+  .choice.correct { border-color:var(--green); background:#e8f5e9; font-weight:700; }
+  .choice.wrong { border-color:var(--red); background:#ffebee; }
+  .choice:disabled { cursor:default; opacity:1; color:inherit; }
+  .mark { float:right; font-weight:800; }
+  .mark.ok { color:var(--green); } .mark.no { color:var(--red); }
+  .toggle { margin-top:10px; background:none; border:1px solid var(--blue); color:var(--blue); border-radius:8px; padding:7px 14px; font-size:.88rem; cursor:pointer; font-family:inherit; }
+  .expl { display:none; margin-top:14px; border-top:1px dashed var(--line); padding-top:12px; font-size:.93rem; }
+  .expl.open { display:block; }
+  .answer-line { font-weight:800; color:var(--green); margin-bottom:8px; }
+  .sol { white-space:pre-wrap; margin-bottom:12px; }
+  .theory { background:#f2f7ff; border-left:4px solid var(--blue); border-radius:0 8px 8px 0; padding:10px 12px; white-space:pre-wrap; margin-bottom:12px; }
+  .ytlink { display:inline-block; background:#c4302b; color:#fff; text-decoration:none; border-radius:8px; padding:8px 14px; font-size:.88rem; font-weight:700; }
+  footer { text-align:center; color:#888; font-size:.8rem; margin-top:30px; }
+  @media (max-width:480px){ .wrap{padding:12px 10px 60px;} .card{padding:14px 12px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="score"></div>
+  <header>
+    <h1>2026 전기산업기사 회로이론 2회 기출 핵심풀이</h1>
+    <p>보기를 클릭하면 채점되고 해설이 열립니다. 채점 없이 보려면 [해설 보기]를 누르세요.</p>
+    <p>원본 강의: <a href="https://www.youtube.com/watch?v=GCzLOrnkym4" target="_blank" rel="noopener">대산전기학원 — 2026년 2회 전기산업기사 필기 CBT 기출적중 핵심풀이 (회로이론)</a></p>
+    <p>전기산업기사 회로이론 회차: <a href="sanup1.html">1회</a> · <strong>2회(현재)</strong><br><a href="index.html">← 전기기사 페이지로</a></p>
+  </header>
+  <div id="app"></div>
+  <footer>출처: 대산전기학원 유튜브 강의 · 학습용 정리 자료</footer>
+</div>
+<script id="data" type="application/json">{"title": "2026 전기산업기사 회로이론 2회 기출 핵심풀이", "videoId": "GCzLOrnkym4", "questions": [{"no": 1, "question": "$10[\\Omega]$의 저항에 흐르는 전류가 $i = 5 + 14.14\\sin t + 7.07\\sin 2t$일 때 저항에서 소비되는 평균 전력$[\\mathrm{W}]$은?", "choices": ["① 2000", "② 1500", "③ 1000", "④ 750"], "answerIndex": 1, "solution": "비정현파의 실효값 제곱은 각 성분 실효값 제곱의 합이다.\n$I^2 = 5^2 + \\left(\\frac{14.14}{\\sqrt{2}}\\right)^2 + \\left(\\frac{7.07}{\\sqrt{2}}\\right)^2 = 25 + 100 + 25 = 150$\n$P = I^2 R = 150 \\times 10 = 1500[\\mathrm{W}]$", "timestampSec": 77, "theory": "**핵심 공식**: 비정현파 실효값 $I = \\sqrt{I_0^2 + I_1^2 + I_2^2 + \\cdots}$, 소비전력 $P = I^2 R$\n**개념**: 직류분은 그대로, 교류분은 최대값을 $\\sqrt{2}$로 나눠 실효값으로 환산 후 제곱합한다.\n**함정 포인트**: 최대값 14.14, 7.07을 실효값으로 바꾸지 않고 그대로 제곱하면 오답이 된다."}, {"no": 2, "question": "$R-L-C$ 직렬 회로에서 진동 조건은 어느 것인가?", "choices": ["① $R < 2\\sqrt{\\dfrac{C}{L}}$", "② $R < 2\\sqrt{\\dfrac{L}{C}}$", "③ $R < 2\\sqrt{LC}$", "④ $R < \\dfrac{1}{2\\sqrt{LC}}$"], "answerIndex": 1, "solution": "RLC 직렬회로 과도현상의 판별식에서\n비진동: $R^2 > 4\\dfrac{L}{C}$\n진동: $R^2 < 4\\dfrac{L}{C}$\n임계: $R^2 = 4\\dfrac{L}{C}$\n따라서 진동 조건은 양변에 루트를 취해 $R < 2\\sqrt{\\dfrac{L}{C}}$", "timestampSec": 247, "theory": "**핵심 공식**: 진동(부족제동) 조건 $R < 2\\sqrt{L/C}$\n**개념**: 특성방정식 $Ls^2 + Rs + 1/C = 0$의 판별식 부호로 진동 여부가 결정된다.\n**함정 포인트**: ①번처럼 L과 C가 뒤집힌 보기(C/L)와 혼동하기 쉽다."}, {"no": 3, "question": "그림에서 $10[\\Omega]$의 저항에 흐르는 전류는 몇 $[\\mathrm{A}]$인가? (전류원 $10[\\mathrm{A}]$, $2[\\mathrm{A}]$, $3[\\mathrm{A}]$가 $10[\\mathrm{V}]$ 전압원과 함께 병렬 연결, 부하 $10[\\Omega]$)", "choices": ["① 13", "② 14", "③ 15", "④ 16"], "answerIndex": 2, "solution": "전압원과 직렬로 연결된 전류원 가지는 전류원 값이 지배하므로 그 가지 전류는 2[A]이다.\n병렬 전류원을 모두 합성하면 $10 + 2 + 3 = 15[\\mathrm{A}]$\n합성된 15[A] 전류원이 그대로 10[Ω]으로 흐르므로 $I = 15[\\mathrm{A}]$", "timestampSec": 371, "theory": "**핵심 공식**: 병렬 전류원 합성 $I = I_1 + I_2 + I_3$\n**개념**: 전류원과 직렬인 전압원은 회로 해석에서 무시(단락 취급)할 수 있다.\n**함정 포인트**: 10[V] 전압원 때문에 옴의 법칙으로 별도 전류를 더하려 하면 틀린다."}, {"no": 4, "question": "$\\mathcal{L}^{-1}\\left[\\dfrac{\\omega}{s(s^2+\\omega^2)}\\right]$은?", "choices": ["① $\\dfrac{1}{\\omega}(1-\\sin\\omega t)$", "② $\\dfrac{1}{\\omega}(1-\\cos\\omega t)$", "③ $\\dfrac{1}{s}(1-\\sin\\omega t)$", "④ $\\dfrac{1}{s}(1-\\cos\\omega t)$"], "answerIndex": 1, "solution": "부분분수 전개: $\\dfrac{\\omega}{s(s^2+\\omega^2)} = \\dfrac{1}{\\omega}\\left(\\dfrac{1}{s} - \\dfrac{s}{s^2+\\omega^2}\\right)$\n역변환하면 $\\dfrac{1}{s} \\to 1$, $\\dfrac{s}{s^2+\\omega^2} \\to \\cos\\omega t$\n따라서 $f(t) = \\dfrac{1}{\\omega}(1-\\cos\\omega t)$", "timestampSec": 491, "theory": "**핵심 공식**: $\\mathcal{L}[\\cos\\omega t] = \\dfrac{s}{s^2+\\omega^2}$, $\\mathcal{L}[\\sin\\omega t] = \\dfrac{\\omega}{s^2+\\omega^2}$\n**개념**: 분모에 $s$가 곱해진 형태는 부분분수로 분리 후 각각 역변환한다.\n**함정 포인트**: ③④처럼 시간함수 답에 $s$가 남아 있는 보기는 무조건 오답이다."}, {"no": 5, "question": "2단자 회로 소자 중에서 인가한 전류파형과 동위상의 전압파형을 얻을 수 있는 것은?", "choices": ["① 저항", "② 콘덴서", "③ 인덕턴스", "④ 저항 + 콘덴서"], "answerIndex": 0, "solution": "저항은 위상차 $\\theta = 0°$로 전압과 전류가 동위상이다.\n콘덴서는 전류가 90° 앞서고, 인덕턴스는 전류가 90° 뒤진다.\n저항+콘덴서 조합도 위상차가 생기므로 답은 저항이다.", "timestampSec": 741, "theory": "**핵심 공식**: 저항 $v = Ri$ (동위상), $L$: 전압 90° 앞섬, $C$: 전류 90° 앞섬\n**개념**: 순저항 회로만 역률 1, 위상차 0이다.\n**함정 포인트**: RC 조합은 저항이 있어도 위상차가 존재한다."}, {"no": 6, "question": "3상 Y결선 전원에서 각 상전압이 $100[\\mathrm{V}]$일 때 선간전압$[\\mathrm{V}]$은?", "choices": ["① 150", "② 170", "③ 173", "④ 179"], "answerIndex": 2, "solution": "Y결선에서 선간전압은 상전압의 $\\sqrt{3}$배이다.\n$V_l = \\sqrt{3}\\,V_p = \\sqrt{3} \\times 100 \\approx 173[\\mathrm{V}]$", "timestampSec": 796, "theory": "**핵심 공식**: Y결선 $V_l = \\sqrt{3}V_p$ (위상 30° 앞섬), $I_l = I_p$\n**개념**: Δ결선은 반대로 $V_l = V_p$, $I_l = \\sqrt{3}I_p$이다.\n**함정 포인트**: $\\sqrt{3} \\approx 1.732$를 반올림한 173을 고른다."}, {"no": 7, "question": "3상 불평형 전압에서 역상전압이 $50[\\mathrm{V}]$, 정상전압이 $200[\\mathrm{V}]$, 영상전압이 $10[\\mathrm{V}]$라고 할 때 전압의 불평형률$[\\%]$은?", "choices": ["① 1", "② 5", "③ 25", "④ 50"], "answerIndex": 2, "solution": "불평형률 $= \\dfrac{\\text{역상분}}{\\text{정상분}} \\times 100 = \\dfrac{50}{200} \\times 100 = 25[\\%]$", "timestampSec": 889, "theory": "**핵심 공식**: 불평형률 $= \\dfrac{V_2(\\text{역상})}{V_1(\\text{정상})} \\times 100[\\%]$\n**개념**: 영상분은 불평형률 계산에 사용되지 않는다.\n**함정 포인트**: 영상전압 10[V]는 함정 숫자로, 식에 넣지 않는다."}, {"no": 8, "question": "어떤 회로의 단자전압이 $V = 100\\sin\\omega t + 40\\sin 2\\omega t + 30\\sin(3\\omega t + 60°)[\\mathrm{V}]$이고, 전압강하의 방향으로 흐르는 전류가 $I = 10\\sin(\\omega t - 60°) + 2\\sin(3\\omega t + 105°)[\\mathrm{A}]$일 때 회로에 공급되는 평균전력$[\\mathrm{W}]$은?", "choices": ["① 271.2", "② 371.2", "③ 530.2", "④ 630.2"], "answerIndex": 0, "solution": "같은 주파수 성분끼리만 전력이 발생한다.\n기본파: $P_1 = \\dfrac{1}{2} \\times 100 \\times 10 \\times \\cos 60° = 250[\\mathrm{W}]$\n제3고조파: $P_3 = \\dfrac{1}{2} \\times 30 \\times 2 \\times \\cos(105°-60°) = 30\\cos 45° \\approx 21.2[\\mathrm{W}]$\n제2고조파는 전류에 없으므로 0.\n$P = 250 + 21.2 = 271.2[\\mathrm{W}]$", "timestampSec": 934, "theory": "**핵심 공식**: $P = \\sum \\dfrac{1}{2}V_m I_m \\cos\\theta$ (동일 주파수 성분끼리만)\n**개념**: 주파수가 다른 전압·전류 곱의 평균은 0이다.\n**함정 포인트**: 40sin2ωt는 대응 전류가 없어 전력 기여가 없다."}, {"no": 9, "question": "그림과 같은 회로망에서 전류를 산출하는데 옳게 표시한 식은? (유입: $I_1, I_2, I_4$, 유출: $I_3$)", "choices": ["① $I_1 + I_2 - I_4 - I_3 = 0$", "② $I_1 + I_4 - I_2 - I_3 = 0$", "③ $I_1 + I_2 + I_3 + I_4 = 0$", "④ $I_1 + I_2 - I_3 + I_4 = 0$"], "answerIndex": 3, "solution": "키르히호프 전류법칙(KCL): 유입 전류의 합 = 유출 전류의 합\n$I_1 + I_2 + I_4 = I_3$\n이항하면 $I_1 + I_2 - I_3 + I_4 = 0$", "timestampSec": 1121, "theory": "**핵심 공식**: KCL $\\sum I_{in} = \\sum I_{out}$\n**개념**: 화살표 방향으로 절점에 들어오는 전류는 +, 나가는 전류는 −로 정리한다.\n**함정 포인트**: 그림의 화살표 방향을 정확히 읽어야 한다. $I_4$도 유입 방향이다."}, {"no": 10, "question": "$R = 1[\\mathrm{k}\\Omega]$, $C = 1[\\mu\\mathrm{F}]$가 직렬접속된 회로에 스텝(구형파)전압 $10[\\mathrm{V}]$를 인가하는 순간 커패시터 $C$에 걸리는 최대전압$[\\mathrm{V}]$은?", "choices": ["① 0", "② 3.72", "③ 6.32", "④ 10"], "answerIndex": 3, "solution": "$E_C(t) = E\\left(1 - e^{-\\frac{t}{RC}}\\right)$\n$t=0$에서 $E_C = 0$이고 시간이 지나면서 지수적으로 증가하여\n$t \\to \\infty$에서 최대값 $E_C = E = 10[\\mathrm{V}]$에 도달한다.", "timestampSec": 1184, "theory": "**핵심 공식**: RC 충전 $v_C(t) = E(1-e^{-t/RC})$\n**개념**: 정상상태에서 커패시터는 개방으로 취급되어 전원전압 전체가 걸린다.\n**함정 포인트**: 6.32[V]는 $t = RC$(시정수) 시점의 값(63.2%)이지 최대값이 아니다."}, {"no": 11, "question": "그림과 같은 회로의 영상 임피던스 $Z_{01}$, $Z_{02}[\\Omega]$은 각각 얼마인가? (직렬 $4[\\Omega]$, 병렬 $5[\\Omega]$의 L형 회로)", "choices": ["① $9,\\ 5$", "② $6,\\ \\dfrac{10}{3}$", "③ $4,\\ 5$", "④ $4,\\ \\dfrac{20}{9}$"], "answerIndex": 1, "solution": "4단자 정수: $A = 1 + \\dfrac{4}{5} = \\dfrac{9}{5}$, $B = 4$, $C = \\dfrac{1}{5}$, $D = 1$\n$Z_{01} = \\sqrt{\\dfrac{AB}{CD}} = \\sqrt{\\dfrac{\\frac{9}{5} \\times 4}{\\frac{1}{5} \\times 1}} = \\sqrt{36} = 6[\\Omega]$\n$Z_{02} = \\sqrt{\\dfrac{DB}{CA}} = \\sqrt{\\dfrac{1 \\times 4}{\\frac{1}{5} \\times \\frac{9}{5}}} = \\sqrt{\\dfrac{100}{9}} = \\dfrac{10}{3}[\\Omega]$", "timestampSec": 1433, "theory": "**핵심 공식**: $Z_{01} = \\sqrt{\\dfrac{AB}{CD}}$, $Z_{02} = \\sqrt{\\dfrac{DB}{CA}}$\n**개념**: 비대칭 회로($A \\neq D$)는 좌우 영상 임피던스가 다르다.\n**함정 포인트**: $Z_{01}$과 $Z_{02}$ 공식에서 $A$와 $D$의 위치가 서로 바뀐다."}, {"no": 12, "question": "$RC$회로에 비정현파 전압을 가하여 흐른 전류가 다음과 같을 때 이 회로의 역률은 약 $[\\%]$인가?\n$v = 20 + 220\\sqrt{2}\\sin 120\\pi t + 40\\sqrt{2}\\sin 360\\pi t[\\mathrm{V}]$\n$i = 2.2\\sqrt{2}\\sin(120\\pi t + 36.87°) + 0.49\\sqrt{2}\\sin(360\\pi t + 14.04°)[\\mathrm{A}]$", "choices": ["① 75.8", "② 80.4", "③ 86.3", "④ 89.7"], "answerIndex": 1, "solution": "유효전력: $P = 220 \\times 2.2 \\times \\cos 36.87° + 40 \\times 0.49 \\times \\cos 14.04°$\n$= 484 \\times 0.8 + 19.6 \\times 0.97 \\approx 387.2 + 19.0 = 406.2[\\mathrm{W}]$\n피상전력: $P_a = \\sqrt{20^2 + 220^2 + 40^2} \\times \\sqrt{2.2^2 + 0.49^2} \\approx 224.5 \\times 2.25 \\approx 505.6[\\mathrm{VA}]$\n역률 $= \\dfrac{406.2}{505.6} \\times 100 \\approx 80.4[\\%]$", "timestampSec": 1581, "theory": "**핵심 공식**: 비정현파 역률 $= \\dfrac{P}{P_a} \\times 100$, $P_a = V_{rms} \\cdot I_{rms}$\n**개념**: 실효값은 직류분 포함 전 성분의 제곱합 제곱근, 유효전력은 동일 주파수끼리만 계산한다.\n**함정 포인트**: 전압의 직류분 20[V]는 피상전력에는 포함되지만 전류에 직류분이 없어 유효전력에는 기여하지 않는다."}, {"no": 13, "question": "각 상의 전류가 $i_a = 30\\sin\\omega t[\\mathrm{A}]$, $i_b = 30\\sin(\\omega t - 90°)[\\mathrm{A}]$, $i_c = 30\\sin(\\omega t + 90°)[\\mathrm{A}]$일 때 영상분 전류$[\\mathrm{A}]$의 순시치는?", "choices": ["① $10\\sin\\omega t$", "② $10\\sin\\dfrac{\\omega t}{3}$", "③ $30\\sin\\omega t$", "④ $\\dfrac{30}{\\sqrt{3}}\\sin(\\omega t + 45°)$"], "answerIndex": 0, "solution": "영상분 $i_0 = \\dfrac{1}{3}(i_a + i_b + i_c)$\n$i_b$와 $i_c$는 크기가 같고 위상이 $\\pm 90°$로 대칭이므로 합이 상쇄된다: $i_b + i_c = 0$\n$i_0 = \\dfrac{1}{3} \\times 30\\sin\\omega t = 10\\sin\\omega t[\\mathrm{A}]$", "timestampSec": 1855, "theory": "**핵심 공식**: $i_0 = \\dfrac{1}{3}(i_a + i_b + i_c)$\n**개념**: 영상분은 세 상 순시값의 산술평균으로, 페이저 합 또는 순시치 합으로 계산한다.\n**함정 포인트**: −90°와 +90° 성분은 벡터적으로 정확히 상쇄됨을 눈치채면 빠르다."}, {"no": 14, "question": "파형의 파형률 값이 잘못된 것은?", "choices": ["① 정현파의 파형률은 1.414이다.", "② 톱니파의 파형률은 1.0이다.", "③ 전파 정류파의 파형률은 1.11이다.", "④ 반파 정류파의 파형률은 1.571이다."], "answerIndex": 0, "solution": "파형률 $= \\dfrac{\\text{실효값}}{\\text{평균값}}$\n정현파: $\\dfrac{V_m/\\sqrt{2}}{2V_m/\\pi} = \\dfrac{\\pi}{2\\sqrt{2}} = 1.11$\n1.414는 정현파의 파고율(최대값/실효값)이므로 ①이 잘못되었다.", "timestampSec": 2023, "theory": "**핵심 공식**: 파형률 = 실효값/평균값, 파고율 = 최대값/실효값\n**개념**: 정현파는 파형률 1.11, 파고율 1.414이다.\n**함정 포인트**: 파형률과 파고율을 바꿔치기한 보기가 단골로 출제된다."}, {"no": 15, "question": "그림과 같은 순저항으로 된 회로에 대칭 3상 전압을 가했을 때 각 선에 흐르는 전류가 같으려면 $R$의 값$[\\Omega]$은? (a상에 $R$ 직렬, $\\Delta$ 내부 $10, 10, 20[\\Omega]$)", "choices": ["① 2", "② 2.5", "③ 3", "④ 3.5"], "answerIndex": 1, "solution": "$\\Delta \\to Y$ 변환:\n$R_a = \\dfrac{10 \\times 10}{10+10+20} = \\dfrac{100}{40} = 2.5[\\Omega]$\n$R_b = R_c = \\dfrac{10 \\times 20}{40} = 5[\\Omega]$\n각 선전류가 같으려면 상별 저항이 같아야 하므로\n$R + 2.5 = 5 \\quad\\therefore R = 2.5[\\Omega]$", "timestampSec": 2131, "theory": "**핵심 공식**: $\\Delta \\to Y$ 변환 $R_a = \\dfrac{R_{ab}R_{ca}}{R_{ab}+R_{bc}+R_{ca}}$\n**개념**: 대칭 3상에서 선전류가 같으려면 각 상의 등가 저항이 동일해야 한다.\n**함정 포인트**: 변환 시 해당 단자에 인접한 두 저항의 곱을 사용한다."}, {"no": 16, "question": "보기의 그림 중에서 전구에 불이 들어오지 않는 경우는? (전지 2개 직렬 연결 극성 조합)", "choices": ["① $1.5[\\mathrm{V}]$와 $1.5[\\mathrm{V}]$ 서로 반대 극성 후 가극성", "② $1.5[\\mathrm{V}]$와 $1.5[\\mathrm{V}]$ 서로 반대 극성(감극성)", "③ $1.5[\\mathrm{V}]$와 $3[\\mathrm{V}]$ 가극성", "④ $1.5[\\mathrm{V}]$와 $3[\\mathrm{V}]$ 감극성"], "answerIndex": 1, "solution": "②는 같은 크기 1.5[V] 두 전지가 서로 반대 방향으로 연결되어\n$I = \\dfrac{1.5 - 1.5}{R} = \\dfrac{0}{R} = 0$\n전류가 흐르지 않아 전구에 불이 들어오지 않는다.\n④는 $\\dfrac{3-1.5}{R} \\neq 0$이므로 불이 켜진다.", "timestampSec": 2284, "theory": "**핵심 공식**: 직렬 전원 합성 $E = E_1 \\pm E_2$ (극성에 따라)\n**개념**: 기전력이 반대 방향이면 차가 되고, 크기가 같으면 합성 기전력이 0이다.\n**함정 포인트**: 반대 극성이라도 크기가 다르면(1.5 vs 3) 전류는 흐른다."}, {"no": 17, "question": "다음 회로의 단자 $a, b$에 나타나는 전압$[\\mathrm{V}]$은 얼마인가? ($3[\\Omega]$ 직렬 $9[\\mathrm{V}]$ 가지와 $6[\\Omega]$ 직렬 $12[\\mathrm{V}]$ 가지가 병렬)", "choices": ["① 9", "② 10", "③ 12", "④ 3"], "answerIndex": 1, "solution": "밀만의 정리:\n$V_{ab} = \\dfrac{\\dfrac{9}{3} + \\dfrac{12}{6}}{\\dfrac{1}{3} + \\dfrac{1}{6}} = \\dfrac{3+2}{\\dfrac{1}{2}} = 10[\\mathrm{V}]$", "timestampSec": 2392, "theory": "**핵심 공식**: 밀만의 정리 $V_{ab} = \\dfrac{\\sum E_i/R_i}{\\sum 1/R_i}$\n**개념**: 여러 전압원 가지가 병렬일 때 개방 단자전압을 한 번에 구한다.\n**함정 포인트**: 분자는 전압/저항(전류), 분모는 컨덕턴스 합이다."}, {"no": 18, "question": "라플라스변환 중 옳은 것은?", "choices": ["① $\\mathcal{L}[\\delta(t)] = \\dfrac{1}{s}$", "② $\\mathcal{L}[t^n] = \\dfrac{n!}{s^{n-1}}$", "③ $\\mathcal{L}[e^{-at}] = \\dfrac{1}{s+a}$", "④ $\\mathcal{L}[f(t-a)] = e^{as}F(s)$"], "answerIndex": 2, "solution": "① 단위임펄스 $\\mathcal{L}[\\delta(t)] = 1$ (오답)\n② $\\mathcal{L}[t^n] = \\dfrac{n!}{s^{n+1}}$ (오답)\n③ $\\mathcal{L}[e^{-at}] = \\dfrac{1}{s+a}$ (정답)\n④ 시간추이 정리 $\\mathcal{L}[f(t-a)] = e^{-as}F(s)$ (부호 오답)", "timestampSec": 2439, "theory": "**핵심 공식**: $\\mathcal{L}[e^{-at}] = \\dfrac{1}{s+a}$, $\\mathcal{L}[t^n] = \\dfrac{n!}{s^{n+1}}$, $\\mathcal{L}[\\delta(t)]=1$\n**개념**: 시간추이 정리는 $e^{-as}$(음의 지수)를 곱한다.\n**함정 포인트**: 지수부 부호와 $s$의 차수를 바꾼 보기들이 함정이다."}, {"no": 19, "question": "$R, L, C$ 직렬공진회로에서 $R = 100[\\Omega]$, $L = 314[\\mathrm{mH}]$, $C = 125.6[\\mathrm{pF}]$일 때, 선택도(전압 확대율) $Q$는?", "choices": ["① $2\\times 10^3$", "② $3\\times 10^3$", "③ $4\\times 10^2$", "④ $5\\times 10^2$"], "answerIndex": 3, "solution": "$Q = \\dfrac{1}{R}\\sqrt{\\dfrac{L}{C}} = \\dfrac{1}{100}\\sqrt{\\dfrac{314\\times 10^{-3}}{125.6\\times 10^{-12}}}$\n$= \\dfrac{1}{100}\\sqrt{2.5\\times 10^9} = \\dfrac{5\\times 10^4}{100} = 500 = 5\\times 10^2$", "timestampSec": 2504, "theory": "**핵심 공식**: 직렬공진 선택도 $Q = \\dfrac{\\omega_0 L}{R} = \\dfrac{1}{\\omega_0 CR} = \\dfrac{1}{R}\\sqrt{\\dfrac{L}{C}}$\n**개념**: 공진 주파수를 몰라도 $Q = \\frac{1}{R}\\sqrt{L/C}$로 바로 계산할 수 있다.\n**함정 포인트**: mH($10^{-3}$)와 pF($10^{-12}$)의 지수 처리 실수에 주의한다."}, {"no": 20, "question": "변압비 $\\dfrac{n_1}{n_2} = 30$인 단상 변압기 3대를 1차 $\\Delta$, 2차 Y로 결선하고 1차에 선간 전압 $3300[\\mathrm{V}]$를 가했을 때의 무부하 2차 선간 전압$[\\mathrm{V}]$은?", "choices": ["① $250[\\mathrm{V}]$", "② $220[\\mathrm{V}]$", "③ $210[\\mathrm{V}]$", "④ $190[\\mathrm{V}]$"], "answerIndex": 3, "solution": "1차 $\\Delta$결선이므로 1차 상전압 = 선간전압 = 3300[V]\n2차 상전압 $V_{2p} = \\dfrac{3300}{30} = 110[\\mathrm{V}]$\n2차 Y결선이므로 선간전압 $V_{2l} = \\sqrt{3} \\times 110 \\approx 190[\\mathrm{V}]$", "timestampSec": 2663, "theory": "**핵심 공식**: $\\Delta$: $V_p = V_l$, Y: $V_l = \\sqrt{3}V_p$, 권수비 $a = V_{1p}/V_{2p}$\n**개념**: 권수비는 상전압끼리의 비율이므로 결선 방식에 따라 선간전압 환산이 달라진다.\n**함정 포인트**: 110[V]에서 멈추거나 $\\sqrt{3}$를 빼먹으면 오답 보기에 걸린다."}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const marks = ['①','②','③','④'];
+let answered = 0, correct = 0;
+
+function updateScore(){
+  document.getElementById('score').textContent =
+    `정답 ${correct} / 푼 문제 ${answered} / 전체 ${DATA.questions.length}`;
+}
+
+function mdBold(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')
+          .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+}
+
+const app = document.getElementById('app');
+DATA.questions.forEach(q => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const ts = q.timestampSec;
+  card.innerHTML = `
+    <div class="qno">문제 ${q.no}</div>
+    <div class="qtext">${mdBold(q.question)}</div>
+    <div class="choices"></div>
+    <button class="toggle">해설 보기</button>
+    <div class="expl">
+      <div class="answer-line">정답: ${marks[q.answerIndex]}</div>
+      <div class="sol">${mdBold(q.solution)}</div>
+      <div class="theory">${mdBold(q.theory)}</div>
+      <a class="ytlink" href="https://youtu.be/${DATA.videoId}?t=${ts}" target="_blank" rel="noopener">▶ 영상 해설 바로가기 (${Math.floor(ts/60)}:${String(ts%60).padStart(2,'0')})</a>
+    </div>`;
+  const choicesBox = card.querySelector('.choices');
+  const expl = card.querySelector('.expl');
+  let done = false;
+  q.choices.forEach((c, i) => {
+    const b = document.createElement('button');
+    b.className = 'choice';
+    b.innerHTML = mdBold(c);
+    b.addEventListener('click', () => {
+      if (done) return;
+      done = true;
+      answered++;
+      const btns = choicesBox.querySelectorAll('.choice');
+      btns.forEach(x => x.disabled = true);
+      if (i === q.answerIndex) {
+        correct++;
+        b.classList.add('correct');
+        b.insertAdjacentHTML('beforeend','<span class="mark ok">✓</span>');
+      } else {
+        b.classList.add('wrong');
+        b.insertAdjacentHTML('beforeend','<span class="mark no">✗</span>');
+        btns[q.answerIndex].classList.add('correct');
+      }
+      expl.classList.add('open');
+      updateScore();
+    });
+    choicesBox.appendChild(b);
+  });
+  card.querySelector('.toggle').addEventListener('click', () => {
+    expl.classList.toggle('open');
+  });
+  app.appendChild(card);
+});
+updateScore();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tryRender = () => {
+    if (window.renderMathInElement) {
+      renderMathInElement(document.body, {
+        delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],
+        throwOnError: false
+      });
+    } else setTimeout(tryRender, 100);
+  };
+  tryRender();
+});
+</script>
+</body>
+</html>

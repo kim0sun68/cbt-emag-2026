@@ -8,8 +8,12 @@ SUBJECTS = [
     ("content.json", "index.html", "전기자기학"),
     ("power.json", "power.html", "전력공학"),
     ("kigi.json", "kigi.html", "전기기기"),
+    ("circuit.json", "circuit.html", "회로이론및제어공학"),
     ("kec.json", "kec.html", "전기설비기술기준"),
 ]
+SUBJECT_ROUND = {"circuit.html": "2회"}  # 과목별 영상 회차 (기본 3회)
+SANUP = [("sanup1.json", "sanup1.html", "1회"), ("sanup2.json", "sanup2.html", "2회")]
+SANUP_NAV = "전기산업기사 회로이론: " + " · ".join(f'<a href="{o}">{r}</a>' for _, o, r in SANUP)
 EMAG_ROUNDS = [("emag1.html", "1회"), ("emag2.html", "2회"), ("index.html", "3회")]
 
 def rounds_nav(current):
@@ -19,18 +23,31 @@ def rounds_nav(current):
 
 PAGES = [
     {"json": j, "out": out,
-     "video_label": f"대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 ({name})",
+     "video_label": f"대산전기학원 — 2026년 {SUBJECT_ROUND.get(out, '3회')} 전기기사 필기 CBT 기출적중 핵심풀이 ({name})",
      "nav": "다른 과목: " + " · ".join(
          f'<a href="{o}">{n} →</a>' for _, o, n in SUBJECTS if o != out)}
     for j, out, name in SUBJECTS
 ]
 PAGES[0]["nav"] = rounds_nav("index.html") + "<br>" + PAGES[0]["nav"]
+PAGES[0]["nav"] += "<br>" + SANUP_NAV
+for p in PAGES:
+    if p["out"] == "circuit.html":
+        p["nav"] += "<br>" + SANUP_NAV
 for j, out, r in [("emag1.json", "emag1.html", "1회"), ("emag2.json", "emag2.html", "2회")]:
     PAGES.append({
         "json": j, "out": out,
         "video_label": f"대산전기학원 — 2026년 {r} 전기기사 필기 CBT 기출적중 핵심풀이 (전기자기학)",
         "nav": rounds_nav(out) + "<br>다른 과목: " + " · ".join(
             f'<a href="{o}">{n} →</a>' for _, o, n in SUBJECTS[1:]),
+    })
+for j, out, r in SANUP:
+    parts = [f"<strong>{lab}(현재)</strong>" if o == out else f'<a href="{o}">{lab}</a>'
+             for _, o, lab in SANUP]
+    PAGES.append({
+        "json": j, "out": out,
+        "video_label": f"대산전기학원 — 2026년 {r} 전기산업기사 필기 CBT 기출적중 핵심풀이 (회로이론)",
+        "nav": "전기산업기사 회로이론 회차: " + " · ".join(parts)
+               + '<br><a href="index.html">← 전기기사 페이지로</a>',
     })
 
 TEMPLATE = r"""<!DOCTYPE html>

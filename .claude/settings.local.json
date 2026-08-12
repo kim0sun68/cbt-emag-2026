@@ -94,7 +94,17 @@
       "Bash(for *)",
       "Bash(tr *)",
       "Bash(ffmpeg -loglevel error -ss 1345 -i /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/frames/x14_1345.jpg)",
-      "Bash(ffmpeg -loglevel error -ss 852 -i /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/download/video.mp4 -frames:v 1 -vf crop=in_w/3:in_h/2:40:150,scale=800:-2 -y /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/frames/x08_zoom.jpg)"
+      "Bash(ffmpeg -loglevel error -ss 852 -i /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/download/video.mp4 -frames:v 1 -vf crop=in_w/3:in_h/2:40:150,scale=800:-2 -y /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/e1/frames/x08_zoom.jpg)",
+      "Bash(mkdir -p /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/ckt/download)",
+      "Bash(yt-dlp --skip-download --write-auto-subs --sub-langs ko --sub-format vtt -o ko \"https://www.youtube.com/watch?v=O4_9BfA-un0\")",
+      "Bash(yt-dlp --print \"%\\(title\\)s | %\\(duration\\)s\" --skip-download \"https://www.youtube.com/watch?v=O4_9BfA-un0\")",
+      "Bash(ffmpeg -loglevel error -ss 1800 -i video.mp4 -frames:v 1 -vf scale=1024:-2 -y ../q/q12b2.jpg)",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/sanup2.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 for q in d['questions']\\);print\\('OK', [q['answerIndex']+1 for q in d['questions']]\\)\")",
+      "Bash(awk '-F ' '{split\\($1,a,\":\"\\); t=a[1]*60+a[2]; if\\(t>=2035 && t<=2185\\) print}' /private/tmp/claude-501/-Users-kim-yeongseon-Desktop--------CBT2026-03/6251d49c-e3f6-4627-9c03-51435e8454e4/scratchpad/s1/download/transcript.txt)",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/circuit.json'\\)\\);assert len\\(d['questions']\\)==20;print\\([q['no'] for q in d['questions']]\\);print\\([q['answerIndex']+1 for q in d['questions']]\\)\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/sanup1.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 for q in d['questions']\\);print\\('OK',[q['answerIndex']+1 for q in d['questions']]\\)\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/sanup1.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('sanup1 OK', d['videoId']\\)\")",
+      "Bash(git commit -q -m 'feat: 기사 회로이론및제어공학 2회, 산업기사 회로이론 1·2회 페이지 추가 *)"
     ]
   }
 }

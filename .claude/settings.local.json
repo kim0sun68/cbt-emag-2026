@@ -108,7 +108,10 @@
       "Bash(python3 -c \"import json;d=json.load\\(open\\('kec.json'\\)\\);print\\(json.dumps\\(d['questions'][0],ensure_ascii=False,indent=1\\)[:1200]\\);print\\(list\\(d.keys\\(\\)\\)\\)\")",
       "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/skec1.json'\\)\\);print\\(len\\(d['questions']\\), [q['answerIndex']+1 for q in d['questions']]\\)\")",
       "Bash(python3 -c ' *)",
-      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/kec.json'\\)\\);print\\(list\\(d.keys\\(\\)\\)\\);print\\(list\\(d['questions'][0].keys\\(\\)\\)\\)\")"
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/kec.json'\\)\\);print\\(list\\(d.keys\\(\\)\\)\\);print\\(list\\(d['questions'][0].keys\\(\\)\\)\\)\")",
+      "Bash(ffmpeg -loglevel error -ss 660 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y full/s07b.jpg)",
+      "Bash(ffmpeg -loglevel error -ss 1544 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y full/q15b.jpg)",
+      "Bash(ffmpeg -loglevel error -ss 1565 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y full/s15b.jpg)"
     ]
   }
 }

@@ -16,6 +16,15 @@
   header h1 { font-size:1.25rem; margin:0 0 8px; }
   header p { margin:4px 0; font-size:.9rem; color:#555; }
   header a { color:var(--blue); }
+  .subnav { margin-top:12px; border-top:1px solid var(--line); padding-top:10px; }
+  .navrow { display:flex; align-items:flex-start; gap:8px; margin:6px 0; }
+  .navgroup { flex:0 0 auto; font-size:.78rem; font-weight:800; color:#fff; background:var(--blue); border-radius:6px; padding:3px 8px; margin-top:2px; }
+  .navitems { display:flex; flex-wrap:wrap; gap:6px 14px; }
+  .navsub { display:inline-flex; align-items:center; gap:4px; white-space:nowrap; }
+  .subj { font-size:.8rem; color:#666; margin-right:2px; }
+  .pill { display:inline-block; font-size:.8rem; padding:2px 9px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--blue); background:#fafbfc; }
+  .pill:hover { border-color:var(--blue); }
+  .pill.cur { background:var(--blue); color:#fff; border-color:var(--blue); font-weight:700; }
   #score { position:sticky; top:0; z-index:10; background:var(--blue); color:#fff; border-radius:0 0 10px 10px; padding:8px 14px; font-weight:700; text-align:center; margin:-16px -14px 16px; font-size:.95rem; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 16px; margin-bottom:16px; }
   .qno { font-weight:800; color:var(--blue); margin-bottom:6px; }
@@ -44,8 +53,8 @@
   <header>
     <h1>2026 전기기사 전자기학 3회 기출 핵심풀이</h1>
     <p>보기를 클릭하면 채점되고 해설이 열립니다. 채점 없이 보려면 [해설 보기]를 누르세요.</p>
-    <p>원본 강의: <a href="https://www.youtube.com/watch?v=BlGWW66ZRaY" target="_blank" rel="noopener">대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전기자기학)</a></p>
-    <p>전기자기학 회차: <a href="emag1.html">1회</a> · <a href="emag2.html">2회</a> · <strong>3회(현재)</strong><br>다른 과목: <a href="power.html">전력공학 →</a> · <a href="kigi.html">전기기기 →</a> · <a href="circuit.html">회로이론및제어공학 →</a> · <a href="kec.html">전기설비기술기준 →</a><br>전기산업기사 — 회로이론: <a href="sanup1.html">1회</a> · <a href="sanup2.html">2회</a> / 전기설비기술기준: <a href="skec1.html">1회</a> · <a href="skec2.html">2회</a> · <a href="skec3.html">3회</a></p>
+    <p>원본 강의: <a href="https://www.youtube.com/watch?v=BlGWW66ZRaY" target="_blank" rel="noopener">대산전기학원 — 2026년 3회 전기기사 필기 CBT 기출적중 핵심풀이 (전자기학)</a></p>
+    <nav class="subnav"><div class="navrow"><span class="navgroup">전기기사</span><div class="navitems"><span class="navsub"><span class="subj">전자기학</span><a class="pill" href="emag1.html">1회</a><a class="pill" href="emag2.html">2회</a><a class="pill cur" href="index.html">3회</a></span><span class="navsub"><span class="subj">전력공학</span><a class="pill" href="power1.html">1회</a><a class="pill" href="power.html">3회</a></span><span class="navsub"><span class="subj">전기기기</span><a class="pill" href="kigi.html">3회</a></span><span class="navsub"><span class="subj">회로이론·제어</span><a class="pill" href="circuit.html">2회</a></span><span class="navsub"><span class="subj">설비기술기준</span><a class="pill" href="kec1.html">1회</a><a class="pill" href="kec2.html">2회</a><a class="pill" href="kec.html">3회</a></span></div></div><div class="navrow"><span class="navgroup">산업기사</span><div class="navitems"><span class="navsub"><span class="subj">전자기학</span><a class="pill" href="semag3.html">3회</a></span><span class="navsub"><span class="subj">회로이론</span><a class="pill" href="sanup1.html">1회</a><a class="pill" href="sanup2.html">2회</a></span><span class="navsub"><span class="subj">설비기술기준</span><a class="pill" href="skec1.html">1회</a><a class="pill" href="skec2.html">2회</a><a class="pill" href="skec3.html">3회</a></span></div></div></nav>
   </header>
   <div id="app"></div>
   <footer>출처: 대산전기학원 유튜브 강의 · 학습용 정리 자료</footer>

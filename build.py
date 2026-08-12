@@ -4,72 +4,58 @@ import json, pathlib
 
 root = pathlib.Path(__file__).parent
 
-SUBJECTS = [
-    ("content.json", "index.html", "전기자기학"),
-    ("power.json", "power.html", "전력공학"),
-    ("kigi.json", "kigi.html", "전기기기"),
-    ("circuit.json", "circuit.html", "회로이론및제어공학"),
-    ("kec.json", "kec.html", "전기설비기술기준"),
+# (json, out, 과목명, 회차) — 그룹별 레지스트리
+KISA = [
+    ("emag1.json", "emag1.html", "전자기학", "1회"),
+    ("emag2.json", "emag2.html", "전자기학", "2회"),
+    ("content.json", "index.html", "전자기학", "3회"),
+    ("power1.json", "power1.html", "전력공학", "1회"),
+    ("power.json", "power.html", "전력공학", "3회"),
+    ("kigi.json", "kigi.html", "전기기기", "3회"),
+    ("circuit.json", "circuit.html", "회로이론·제어", "2회"),
+    ("kec1.json", "kec1.html", "설비기술기준", "1회"),
+    ("kec2.json", "kec2.html", "설비기술기준", "2회"),
+    ("kec.json", "kec.html", "설비기술기준", "3회"),
 ]
-SUBJECT_ROUND = {"circuit.html": "2회"}  # 과목별 영상 회차 (기본 3회)
-SANUP = [("sanup1.json", "sanup1.html", "1회"), ("sanup2.json", "sanup2.html", "2회")]
-SANUP_KEC = [("skec1.json", "skec1.html", "1회"), ("skec2.json", "skec2.html", "2회"),
-             ("skec3.json", "skec3.html", "3회")]
-SANUP_NAV = ("전기산업기사 — 회로이론: "
-             + " · ".join(f'<a href="{o}">{r}</a>' for _, o, r in SANUP)
-             + " / 전기설비기술기준: "
-             + " · ".join(f'<a href="{o}">{r}</a>' for _, o, r in SANUP_KEC))
-EMAG_ROUNDS = [("emag1.html", "1회"), ("emag2.html", "2회"), ("index.html", "3회")]
-KEC_ROUNDS = [("kec1.html", "1회"), ("kec2.html", "2회"), ("kec.html", "3회")]
-
-def rounds_nav(current, rounds=EMAG_ROUNDS, subject="전기자기학"):
-    parts = [f"<strong>{label}(현재)</strong>" if out == current
-             else f'<a href="{out}">{label}</a>' for out, label in rounds]
-    return f"{subject} 회차: " + " · ".join(parts)
-
-PAGES = [
-    {"json": j, "out": out,
-     "video_label": f"대산전기학원 — 2026년 {SUBJECT_ROUND.get(out, '3회')} 전기기사 필기 CBT 기출적중 핵심풀이 ({name})",
-     "nav": "다른 과목: " + " · ".join(
-         f'<a href="{o}">{n} →</a>' for _, o, n in SUBJECTS if o != out)}
-    for j, out, name in SUBJECTS
+SANUP = [
+    ("semag3.json", "semag3.html", "전자기학", "3회"),
+    ("sanup1.json", "sanup1.html", "회로이론", "1회"),
+    ("sanup2.json", "sanup2.html", "회로이론", "2회"),
+    ("skec1.json", "skec1.html", "설비기술기준", "1회"),
+    ("skec2.json", "skec2.html", "설비기술기준", "2회"),
+    ("skec3.json", "skec3.html", "설비기술기준", "3회"),
 ]
-PAGES[0]["nav"] = rounds_nav("index.html") + "<br>" + PAGES[0]["nav"]
-PAGES[0]["nav"] += "<br>" + SANUP_NAV
-for p in PAGES:
-    if p["out"] in ("circuit.html", "kec.html"):
-        p["nav"] += "<br>" + SANUP_NAV
-    if p["out"] == "kec.html":
-        p["nav"] = rounds_nav("kec.html", KEC_ROUNDS, "전기설비기술기준") + "<br>" + p["nav"]
-OTHER_SUBJ = lambda skip: " · ".join(
-    f'<a href="{o}">{n} →</a>' for _, o, n in SUBJECTS if o != skip)
-for j, out, r in [("emag1.json", "emag1.html", "1회"), ("emag2.json", "emag2.html", "2회")]:
-    PAGES.append({
-        "json": j, "out": out,
-        "video_label": f"대산전기학원 — 2026년 {r} 전기기사 필기 CBT 기출적중 핵심풀이 (전기자기학)",
-        "nav": rounds_nav(out) + "<br>다른 과목: " + OTHER_SUBJ("index.html"),
-    })
-for j, out, r in [("kec1.json", "kec1.html", "1회"), ("kec2.json", "kec2.html", "2회")]:
-    PAGES.append({
-        "json": j, "out": out,
-        "video_label": f"대산전기학원 — 2026년 {r} 전기기사 필기 CBT 기출적중 핵심풀이 (전기설비기술기준)",
-        "nav": rounds_nav(out, KEC_ROUNDS, "전기설비기술기준") + "<br>다른 과목: " + OTHER_SUBJ("kec.html"),
-    })
-def sanup_pages(group, subject):
-    for j, out, r in group:
-        parts = [f"<strong>{lab}(현재)</strong>" if o == out else f'<a href="{o}">{lab}</a>'
-                 for _, o, lab in group]
-        other = SANUP_KEC if group is SANUP else SANUP
-        other_name = "전기설비기술기준" if group is SANUP else "회로이론"
+GROUPS = [("전기기사", KISA), ("산업기사", SANUP)]
+FULL_SUBJ = {"회로이론·제어": "회로이론및제어공학", "설비기술기준": "전기설비기술기준"}
+
+def make_nav(current):
+    rows = []
+    for gname, entries in GROUPS:
+        subjects = []
+        seen = []
+        for _, out, subj, r in entries:
+            if subj not in seen:
+                seen.append(subj)
+        for subj in seen:
+            pills = []
+            for _, out, s, r in entries:
+                if s != subj:
+                    continue
+                cls = "pill cur" if out == current else "pill"
+                pills.append(f'<a class="{cls}" href="{out}">{r}</a>')
+            subjects.append(f'<span class="navsub"><span class="subj">{subj}</span>{"".join(pills)}</span>')
+        rows.append(f'<div class="navrow"><span class="navgroup">{gname}</span><div class="navitems">{"".join(subjects)}</div></div>')
+    return "".join(rows)
+
+PAGES = []
+for gname, entries in GROUPS:
+    exam = "전기기사" if gname == "전기기사" else "전기산업기사"
+    for j, out, subj, r in entries:
         PAGES.append({
             "json": j, "out": out,
-            "video_label": f"대산전기학원 — 2026년 {r} 전기산업기사 필기 CBT 기출적중 핵심풀이 ({subject})",
-            "nav": f"전기산업기사 {subject} 회차: " + " · ".join(parts)
-                   + f"<br>산업기사 {other_name}: " + " · ".join(f'<a href="{o}">{lab}</a>' for _, o, lab in other)
-                   + '<br><a href="index.html">← 전기기사 페이지로</a>',
+            "video_label": f"대산전기학원 — 2026년 {r} {exam} 필기 CBT 기출적중 핵심풀이 ({FULL_SUBJ.get(subj, subj)})",
+            "nav": make_nav(out),
         })
-sanup_pages(SANUP, "회로이론")
-sanup_pages(SANUP_KEC, "전기설비기술기준")
 
 TEMPLATE = r"""<!DOCTYPE html>
 <html lang="ko">
@@ -89,6 +75,15 @@ TEMPLATE = r"""<!DOCTYPE html>
   header h1 { font-size:1.25rem; margin:0 0 8px; }
   header p { margin:4px 0; font-size:.9rem; color:#555; }
   header a { color:var(--blue); }
+  .subnav { margin-top:12px; border-top:1px solid var(--line); padding-top:10px; }
+  .navrow { display:flex; align-items:flex-start; gap:8px; margin:6px 0; }
+  .navgroup { flex:0 0 auto; font-size:.78rem; font-weight:800; color:#fff; background:var(--blue); border-radius:6px; padding:3px 8px; margin-top:2px; }
+  .navitems { display:flex; flex-wrap:wrap; gap:6px 14px; }
+  .navsub { display:inline-flex; align-items:center; gap:4px; white-space:nowrap; }
+  .subj { font-size:.8rem; color:#666; margin-right:2px; }
+  .pill { display:inline-block; font-size:.8rem; padding:2px 9px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--blue); background:#fafbfc; }
+  .pill:hover { border-color:var(--blue); }
+  .pill.cur { background:var(--blue); color:#fff; border-color:var(--blue); font-weight:700; }
   #score { position:sticky; top:0; z-index:10; background:var(--blue); color:#fff; border-radius:0 0 10px 10px; padding:8px 14px; font-weight:700; text-align:center; margin:-16px -14px 16px; font-size:.95rem; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 16px; margin-bottom:16px; }
   .qno { font-weight:800; color:var(--blue); margin-bottom:6px; }
@@ -118,7 +113,7 @@ TEMPLATE = r"""<!DOCTYPE html>
     <h1>__TITLE__</h1>
     <p>보기를 클릭하면 채점되고 해설이 열립니다. 채점 없이 보려면 [해설 보기]를 누르세요.</p>
     <p>원본 강의: <a href="https://www.youtube.com/watch?v=__VIDEOID__" target="_blank" rel="noopener">__VIDEOLABEL__</a></p>
-    <p>__NAV__</p>
+    <nav class="subnav">__NAV__</nav>
   </header>
   <div id="app"></div>
   <footer>출처: 대산전기학원 유튜브 강의 · 학습용 정리 자료</footer>

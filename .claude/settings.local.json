@@ -146,7 +146,19 @@
       "Bash(ffmpeg -loglevel error -ss 3622 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y frames/s17.jpg)",
       "Bash(ffmpeg -loglevel error -ss 3972 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y frames/s19.jpg)",
       "Bash(python3 -c \"import json;d=json.load\\(open\\('content/circuit3.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('circuit3 OK',d['videoId']\\)\")",
-      "Bash(git commit -q -m 'feat: 기사 회로이론및제어공학 1회·3회 페이지 추가 *)"
+      "Bash(git commit -q -m 'feat: 기사 회로이론및제어공학 1회·3회 페이지 추가 *)",
+      "Bash(yt-dlp -f \"bv*[height<=1080]\" -o video.mp4 \"https://www.youtube.com/watch?v=nBbm4L7oMa4\")",
+      "Bash(yt-dlp -f \"bv*[height<=720]/bv*\" -o video.mp4 \"https://www.youtube.com/watch?v=nBbm4L7oMa4\")",
+      "Bash(ffmpeg -loglevel error -ss 41 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y frames/s1.jpg)",
+      "Bash(ffmpeg -loglevel error -ss 100 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y frames/q1.jpg)",
+      "Bash(ffmpeg -loglevel error -ss 74 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y frames/s2.jpg)",
+      "Bash(ffmpeg -loglevel error -ss 55 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y frames/q2.jpg)",
+      "Bash(ffmpeg -loglevel error -ss 193 -i download/video.mp4 -frames:v 1 -vf \"crop=in_w/2:in_h/8:60:30,scale=360:-2\" -y fine/y193.jpg)",
+      "Bash(rm -rf frames)",
+      "Bash(mkdir frames *)",
+      "Bash(ffmpeg -loglevel error -ss 405 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y frames/s6.jpg)",
+      "Bash(ffmpeg -loglevel error -ss 1380 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y frames/s13.jpg)",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/kigi2.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('kigi2 OK',d['videoId']\\)\")"
     ]
   }
 }

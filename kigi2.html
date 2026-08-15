@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026년 2회 전기기사 필기 전기기기 — 기출 핵심풀이</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+  :root { --green:#1a7f37; --red:#c62828; --blue:#1256a2; --bg:#f5f6f8; --card:#fff; --line:#e0e3e8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#222; line-height:1.65; }
+  .wrap { max-width:720px; margin:0 auto; padding:16px 14px 80px; }
+  header { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 18px; margin-bottom:18px; }
+  header h1 { font-size:1.25rem; margin:0 0 8px; }
+  header p { margin:4px 0; font-size:.9rem; color:#555; }
+  header a { color:var(--blue); }
+  .subnav { margin-top:12px; border-top:1px solid var(--line); padding-top:10px; }
+  .navrow { display:flex; align-items:flex-start; gap:8px; margin:6px 0; }
+  .navgroup { flex:0 0 auto; font-size:.78rem; font-weight:800; color:#fff; background:var(--blue); border-radius:6px; padding:3px 8px; margin-top:2px; }
+  .navitems { display:flex; flex-wrap:wrap; gap:6px 14px; }
+  .navsub { display:inline-flex; align-items:center; gap:4px; white-space:nowrap; }
+  .subj { font-size:.8rem; color:#666; margin-right:2px; }
+  .pill { display:inline-block; font-size:.8rem; padding:2px 9px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--blue); background:#fafbfc; }
+  .pill:hover { border-color:var(--blue); }
+  .pill.cur { background:var(--blue); color:#fff; border-color:var(--blue); font-weight:700; }
+  #score { position:sticky; top:0; z-index:10; background:var(--blue); color:#fff; border-radius:0 0 10px 10px; padding:8px 14px; font-weight:700; text-align:center; margin:-16px -14px 16px; font-size:.95rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 16px; margin-bottom:16px; }
+  .qno { font-weight:800; color:var(--blue); margin-bottom:6px; }
+  .qtext { margin-bottom:12px; font-weight:600; }
+  .choice { display:block; width:100%; text-align:left; background:#fafbfc; border:1.5px solid var(--line); border-radius:9px; padding:10px 12px; margin:6px 0; font-size:.95rem; font-family:inherit; cursor:pointer; line-height:1.6; }
+  .choice:hover { border-color:var(--blue); }
+  .choice.correct { border-color:var(--green); background:#e8f5e9; font-weight:700; }
+  .choice.wrong { border-color:var(--red); background:#ffebee; }
+  .choice:disabled { cursor:default; opacity:1; color:inherit; }
+  .mark { float:right; font-weight:800; }
+  .mark.ok { color:var(--green); } .mark.no { color:var(--red); }
+  .toggle { margin-top:10px; background:none; border:1px solid var(--blue); color:var(--blue); border-radius:8px; padding:7px 14px; font-size:.88rem; cursor:pointer; font-family:inherit; }
+  .expl { display:none; margin-top:14px; border-top:1px dashed var(--line); padding-top:12px; font-size:.93rem; }
+  .expl.open { display:block; }
+  .answer-line { font-weight:800; color:var(--green); margin-bottom:8px; }
+  .sol { white-space:pre-wrap; margin-bottom:12px; }
+  .theory { background:#f2f7ff; border-left:4px solid var(--blue); border-radius:0 8px 8px 0; padding:10px 12px; white-space:pre-wrap; margin-bottom:12px; }
+  .ytlink { display:inline-block; background:#c4302b; color:#fff; text-decoration:none; border-radius:8px; padding:8px 14px; font-size:.88rem; font-weight:700; }
+  footer { text-align:center; color:#888; font-size:.8rem; margin-top:30px; }
+  @media (max-width:480px){ .wrap{padding:12px 10px 60px;} .card{padding:14px 12px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="score"></div>
+  <header>
+    <h1>2026년 2회 전기기사 필기 전기기기 — 기출 핵심풀이</h1>
+    <p>보기를 클릭하면 채점되고 해설이 열립니다. 채점 없이 보려면 [해설 보기]를 누르세요.</p>
+    <p>원본 강의: <a href="https://www.youtube.com/watch?v=arSSocQi_x4" target="_blank" rel="noopener">대산전기학원 — 2026년 2회 전기기사 필기 CBT 기출적중 핵심풀이 제3과목 전기기기</a></p>
+    <nav class="subnav"><div class="navrow"><span class="navgroup">전기기사</span><div class="navitems"><span class="navsub"><span class="subj">전자기학</span><a class="pill" href="emag1.html">1회</a><a class="pill" href="emag2.html">2회</a><a class="pill" href="index.html">3회</a></span><span class="navsub"><span class="subj">전력공학</span><a class="pill" href="power1.html">1회</a><a class="pill" href="power.html">3회</a></span><span class="navsub"><span class="subj">전기기기</span><a class="pill" href="kigi1.html">1회</a><a class="pill cur" href="kigi2.html">2회</a><a class="pill" href="kigi.html">3회</a></span><span class="navsub"><span class="subj">회로이론·제어</span><a class="pill" href="circuit1.html">1회</a><a class="pill" href="circuit.html">2회</a><a class="pill" href="circuit3.html">3회</a></span><span class="navsub"><span class="subj">설비기술기준</span><a class="pill" href="kec1.html">1회</a><a class="pill" href="kec2.html">2회</a><a class="pill" href="kec.html">3회</a></span></div></div><div class="navrow"><span class="navgroup">산업기사</span><div class="navitems"><span class="navsub"><span class="subj">전자기학</span><a class="pill" href="semag3.html">3회</a></span><span class="navsub"><span class="subj">회로이론</span><a class="pill" href="sanup1.html">1회</a><a class="pill" href="sanup2.html">2회</a></span><span class="navsub"><span class="subj">설비기술기준</span><a class="pill" href="skec1.html">1회</a><a class="pill" href="skec2.html">2회</a><a class="pill" href="skec3.html">3회</a></span></div></div></nav>
+  </header>
+  <div id="app"></div>
+  <footer>출처: 대산전기학원 유튜브 강의 · 학습용 정리 자료</footer>
+</div>
+<script id="data" type="application/json">{"title": "2026 전기기사 전기기기 2회 기출 핵심풀이", "videoId": "arSSocQi_x4", "questions": [{"no": 1, "question": "보통 농형에 비하여 2중 농형 전동기의 특징인 것은?", "choices": ["① 최대 토크가 크다.", "② 손실이 적다.", "③ 기동 토크가 크다.", "④ 슬립이 크다."], "answerIndex": 2, "solution": "보통 농형은 **기동토크가 작고 기동전류가 크다**는 단점이 있다.\n2중 농형(딥슬롯 포함 특수 농형)은 외측 도체를 고저항으로 만들어 기동 시 표피효과를 이용 → **기동토크는 크게, 기동전류는 작게** 만든 전동기다.\n따라서 보통 농형 대비 특징은 ③ 기동토크가 크다.", "timestampSec": 76, "theory": "**핵심 분류**: 유도전동기 = 농형(보통 / 특수: 딥슬롯·2중농형) + 권선형(비례추이로 기동토크 조절)\n**개념**: 2중 농형은 외측 고저항 도체(기동용) + 내측 저저항 도체(운전용) → 기동토크 大, 기동전류 小.\n**함정 포인트**: '최대 토크가 크다'·'슬립이 크다'와 혼동 유도. 2중 농형의 키워드는 항상 '기동' 토크·전류."}, {"no": 2, "question": "직류기의 전기자 반작용 결과가 아닌 것은?", "choices": ["① 주자속이 감소한다.", "② 전기적 중성축이 이동한다.", "③ 주자속에 영향을 미치지 않는다.", "④ 정류자편 사이의 전압이 불균일하게 된다."], "answerIndex": 2, "solution": "전기자 전류에 의한 자속이 계자 자속을 왜곡시키는 현상이 전기자 반작용이다.\n결과: ① 주자속 감소(감자작용), ② 중성축 이동(교차자화작용), ④ 정류자편 간 전압 불균일 → 불꽃(섬락) 발생.\n따라서 '주자속에 영향을 미치지 않는다'는 ③이 틀린 설명이다.", "timestampSec": 135, "theory": "**핵심 개념**: 전기자 반작용 3대 결과 = 주자속 감소, 중성축 이동(발전기: 회전방향, 전동기: 반대방향), 정류자편 간 전압 불균일(불꽃).\n**개념**: 대책은 보상권선(가장 유효), 보극, 브러시 이동.\n**함정 포인트**: '아닌 것'을 묻는 부정형 — 나머지 셋이 모두 반작용의 결과임을 세트로 외워둘 것."}, {"no": 3, "question": "동기발전기의 단락비를 계산하는데 필요한 시험의 종류는 다음 어느 것인가?", "choices": ["① 동기화시험, 3상 단락시험", "② 부하 포화시험, 동기화시험", "③ 무부하 포화시험, 3상 단락시험", "④ 전기자 반작용시험, 3상 단락시험"], "answerIndex": 2, "solution": "단락비 $K_s = \\dfrac{I_{f0}}{I_{fs}}$ = (무부하 정격전압을 내는 계자전류) / (정격전류와 같은 3상 단락전류를 내는 계자전류)\n분자는 **무부하 포화시험**, 분모는 **3상 단락시험**에서 얻는다. 따라서 ③.", "timestampSec": 208, "theory": "**핵심 공식**: $K_s = \\dfrac{I_{f0}}{I_{fs}} = \\dfrac{I_s}{I_n} = \\dfrac{1}{Z_s'}$ (%동기임피던스의 역수)\n**개념**: 무부하 포화곡선(무부하 포화시험) + 3상 단락곡선(단락시험)에서 단락비 결정. 저항측정은 동기기에서 무시.\n**함정 포인트**: 유도전동기 원선도(무부하·구속·저항측정)와 시험 이름을 섞어 출제. '단락비 = 무부하 포화 + 3상 단락' 고정."}, {"no": 4, "question": "2[kW] 4극 200[V] 60[Hz] 정류자형 주파수 변환기가 회전자계와 방향과 반대방향으로 1750[rpm]으로 회전하고 있을 때 브러시의 전압과 주파수를 맞게 설명한 것은?", "choices": ["① 100[V], 1.67[Hz]", "② 200[V], 1.67[Hz]", "③ 100[V], 16.7[Hz]", "④ 200[V], 16.7[Hz]"], "answerIndex": 1, "solution": "동기속도 $N_s = \\dfrac{120f}{P} = \\dfrac{120\\times 60}{4} = 1800$[rpm]\n슬립 $s = \\dfrac{N_s - N}{N_s} = \\dfrac{1800-1750}{1800} = 0.0278$\n브러시(2차) 주파수 $f_2 = sf = 0.0278\\times 60 \\fallingdotseq 1.67$[Hz]\n정류자형 주파수 변환기는 인가전압 크기를 그대로 유지하므로 브러시 전압은 200[V]. 따라서 ②.\n(강의: '반대방향'이라는 조건에 현혹되지 말고 유도기와 달리 그대로 $N_s - N$으로 계산)", "timestampSec": 263, "theory": "**핵심 공식**: $N_s = \\dfrac{120f}{P}$, $s = \\dfrac{N_s-N}{N_s}$, $f_2 = sf$, 전압은 인가전압 그대로\n**개념**: 정류자형 주파수 변환기는 일정 전압을 유지하며 회전속도에 따라 주파수만 바꾸는 장치.\n**함정 포인트**: 1.67과 16.7(10배), 100V와 200V 조합으로 오답 구성. 소수점 자릿수 확인 필수. 이 문제는 그대로 재출제되는 유형이라 답(200V, 1.67Hz) 자체를 기억."}, {"no": 5, "question": "3상 동기발전기의 각 상의 유기기전력 중에서 제5고조파를 제거하려면 $\\beta = \\dfrac{\\text{코일간격}}{\\text{극간격}}$을 어떻게 하면 되는가?", "choices": ["① 0.8", "② 0.5", "③ 0.7", "④ 0.6"], "answerIndex": 0, "solution": "n차 고조파에 대한 단절권 계수 $K_{pn} = \\sin\\dfrac{n\\beta\\pi}{2}$\n제5고조파를 제거하려면 $\\sin\\dfrac{5\\beta\\pi}{2} = 0$ → $\\dfrac{5\\beta\\pi}{2} = \\pi, 2\\pi, \\cdots$ → $\\beta = \\dfrac{2}{5}, \\dfrac{4}{5}, \\cdots$\n단절권은 $\\beta<1$이면서 1에 가장 가까운 값을 택하므로 $\\beta = 0.8$. 따라서 ①.", "timestampSec": 382, "theory": "**핵심 공식**: $K_{pn} = \\sin\\dfrac{n\\beta\\pi}{2}$, n고조파 제거 조건 $\\beta = \\dfrac{2k}{n}$ 중 1보다 작고 1에 가장 가까운 값\n**개념**: 5고조파 → 0.8, 3고조파 → 0.667(2/3), 7고조파 → 0.857(6/7).\n**함정 포인트**: 0.4(=2/5)도 조건을 만족하지만 기전력 감소가 커서 실무상 0.8을 택함. 보기에 0.4가 없으니 0.8, 있어도 0.8."}, {"no": 6, "question": "리액터 기동방식에 리액터 대신에 저항기를 사용한 것으로서 전동기의 전원측에 직렬로 저항을 접속하고, 전원 전압을 낮게 감압하여 기동한 후 서서히 저항을 감소시켜 가속하고, 정격속도에 도달하면 이를 단락하는 방법에 해당되는 것은?", "choices": ["① 직입 기동방식", "② Y-△기동", "③ 1차 저항 기동 방식", "④ 기동 보상기에 의한 기동"], "answerIndex": 2, "solution": "농형 유도전동기의 전원측(1차측)에 리액터를 직렬로 넣어 기동전류를 줄이는 것이 리액터 기동법이고, 리액터 대신 **저항**을 넣으면 **1차 저항 기동법**이다.\n전동기 입력측 = 1차측이므로 ③.", "timestampSec": 528, "theory": "**핵심 분류**: 농형 기동법 = 전전압(직입) 기동(5kW 이하), Y-△ 기동(5~15kW, 기동전류·토크 1/3), 리액터 기동, 1차 저항 기동, 기동보상기(단권변압기, 15kW 이상)\n**개념**: 리액터·1차저항 기동은 모두 1차측 직렬 임피던스로 감압 기동, 가속 후 단락.\n**함정 포인트**: 권선형의 '2차 저항 기동(비례추이)'과 혼동 유도. 문제가 '전원측 직렬 저항' → 1차 저항 기동."}, {"no": 7, "question": "유도전동기의 원선도에 대한 설명으로 옳은 것은?", "choices": ["① 원선도의 지름은 전압에 비례하고 리액턴스에 반비례한다.", "② 원선도를 작성하기 위해서는 슬립을 측정하여야 한다.", "③ 원선도를 작성하기 위해서는 부하시험을 하여야 한다.", "④ 원선도상에서 직접 기계적 출력을 얻을 수 있다."], "answerIndex": 0, "solution": "원선도의 지름은 무효분(지상) 전류 성분으로 $\\dfrac{E_1}{x_1}$ → 전압에 비례, 1차 누설리액턴스에 반비례 → ① 옳음.\n원선도 작성에 필요한 시험은 **무부하시험, 구속시험, 저항측정** → 슬립 측정·부하시험 불필요(②·③ 틀림).\n원선도에서는 기계적 손실을 고려할 수 없어 기계적 출력을 직접 얻을 수 없다(④ 틀림).", "timestampSec": 593, "theory": "**핵심 공식**: 원선도 지름 $D \\propto \\dfrac{E}{x}$ (전압에 비례, 리액턴스에 반비례)\n**개념**: 원선도 3대 시험 = 무부하시험, 구속시험, 권선저항 측정. 원선도로 구할 수 있는 것: 1차 입력, 2차 입력(동기와트), 1차·2차 동손, 철손, 효율, 역률, 슬립.\n**함정 포인트**: '기계적 출력을 직접 얻을 수 있다'가 대표 오답(기계손은 원선도에 반영 안 됨). 동기기 단락비 시험(무부하 포화·3상 단락)과 이름 혼동 주의."}, {"no": 8, "question": "전부하에 있어서 2차 전압이 120[V]이고 전압 변동률이 2[%]인 단상 변압기가 있다. 1차 단자전압을 구하시오. (단, 1차 권선과 2차 권선의 권수비는 20 : 1이다.)", "choices": ["① 1457[V]", "② 1864[V]", "③ 2448[V]", "④ 2963[V]"], "answerIndex": 2, "solution": "전압변동률 $\\varepsilon = \\dfrac{V_{20}-V_{2n}}{V_{2n}}\\times 100$ → 무부하 2차 전압 $V_{20} = V_{2n}(1+\\varepsilon) = 120\\times 1.02 = 122.4$[V]\n1차 단자전압 $V_1 = a\\,V_{20} = 20\\times 122.4 = 2448$[V]. 따라서 ③.\n(강의: $20\\times120 = 2400$의 2%인 48V를 더한 값)", "timestampSec": 745, "theory": "**핵심 공식**: $V_1 = a(1+\\varepsilon)V_{2n}$, $\\varepsilon = \\dfrac{V_{20}-V_{2n}}{V_{2n}}\\times100 = p\\cos\\theta + q\\sin\\theta$\n**개념**: 1차 단자전압은 무부하 2차 전압에 권수비를 곱한 값. 무부하 시 2차 전압이 정격보다 올라간다.\n**함정 포인트**: 2400에서 48을 '빼면' 2352 — 무부하 전압은 항상 전부하보다 크므로 더해야 한다."}, {"no": 9, "question": "정격용량 100[kVA]인 단상 변압기 3대를 △-△결선하여 300[kVA]의 3상 출력을 얻고 있다. 한 상에 고장이 발생하여 결선을 V결선으로 하는 경우 각 변압기의 출력[kVA]은?", "choices": ["① 126.5", "② 100", "③ 86.6", "④ 75.6"], "answerIndex": 2, "solution": "V결선 출력 $P_V = \\sqrt{3}P = \\sqrt{3}\\times 100 = 173.2$[kVA]\n변압기 2대가 이를 나눠 부담하므로 각 변압기 출력 = $\\dfrac{P_V}{2} = \\dfrac{100\\sqrt{3}}{2} = 86.6$[kVA]. 따라서 ③.", "timestampSec": 878, "theory": "**핵심 공식**: $P_V = \\sqrt{3}P$, 이용률 $\\dfrac{\\sqrt3}{2} = 86.6\\%$, 출력비 $\\dfrac{P_V}{P_\\triangle} = \\dfrac{1}{\\sqrt3} = 57.7\\%$\n**개념**: '각 변압기의 출력' = V결선 총출력을 2로 나눈 값 = 정격 × 이용률 0.866.\n**함정 포인트**: 총출력(173.2)·이용률(86.6%)·출력비(57.7%)를 묻는 문제를 서로 바꿔 출제. '각 변압기' → 86.6."}, {"no": 10, "question": "외분권 차동 복권발전기의 단자전압 $V$는? ($\\phi_s$: 직권 계자 권선에 의한 자속, $\\phi_f$: 분권 계자의 자속, $R_a$: 전기자의 저항, $R_s$: 직권 계자저항, $I_a$: 전기자의 전류, $I$[A]: 부하전류, $n$[rps]: 속도, $k=PZ/a$이며, 자기회로의 포화현상과 전기자 반작용은 무시한다.)", "choices": ["① $V = k(\\phi_f+\\phi_s)n - I_aR_a - IR_s$[V]", "② $V = k(\\phi_f-\\phi_s)n - I_aR_a - IR_s$[V]", "③ $V = k(\\phi_f+\\phi_s)n - I_a(R_a+R_s)$[V]", "④ $V = k(\\phi_f-\\phi_s)n - I_a(R_a+R_s)$[V]"], "answerIndex": 3, "solution": "차동 복권 → 직권 자속이 분권 자속을 상쇄하므로 유기기전력 $E = k(\\phi_f - \\phi_s)n$.\n외분권 → 직권 계자권선은 전기자와 직렬이므로 전기자 전류 $I_a$가 $R_a$와 $R_s$를 모두 흐른다 → 전압강하 $I_a(R_a+R_s)$.\n$V = E - I_a(R_a+R_s) = k(\\phi_f-\\phi_s)n - I_a(R_a+R_s)$. 따라서 ④.", "timestampSec": 945, "theory": "**핵심 공식**: $E = k\\phi n$, 발전기 $V = E - I_aR_a$(복권은 $R_s$ 추가)\n**개념**: 가동복권 $\\phi_f+\\phi_s$, 차동복권 $\\phi_f-\\phi_s$. 외분권은 직권권선에 $I_a$, 내분권은 직권권선에 부하전류 $I$가 흐른다.\n**함정 포인트**: 부호(±)와 직권저항 전류($I_a$ vs $I$) 두 가지를 조합해 4보기 구성. '차동 = 빼기', '외분권 = $I_a$'."}, {"no": 11, "question": "직류 직권 전동기에서 벨트(belt)를 걸고 운전하면 안 되는 이유는?", "choices": ["① 손실이 많아진다.", "② 직결하지 않으면 속도 제어가 곤란하다.", "③ 벨트가 벗겨지면 위험 속도에 도달한다.", "④ 벨트가 마모하여 보수가 곤란하다."], "answerIndex": 2, "solution": "직권 전동기는 $N \\propto \\dfrac{V}{\\phi} \\propto \\dfrac{V}{I_a}$ 이므로 무부하가 되면 자속이 급감하여 속도가 무한대로 상승(위험속도)한다.\n벨트가 벗겨지면 무부하 상태가 되므로 벨트 운전을 금지하고 반드시 직결한다. 따라서 ③.", "timestampSec": 1145, "theory": "**핵심 공식**: $N = k\\dfrac{V - I_a(R_a+R_s)}{\\phi}$, 직권기는 $\\phi \\propto I_a$ → 무부하 시 $\\phi \\to 0$, $N \\to \\infty$\n**개념**: 직권 전동기는 무부하 운전 금지, 벨트 운전 금지, 기어·직결 사용. 기동토크가 커서 전차·크레인용.\n**함정 포인트**: 분권 전동기의 '계자 회로 개방 금지'와 짝으로 출제. 둘 다 원리는 자속 감소 → 위험속도."}, {"no": 12, "question": "A, B 2대의 동기 발전기를 병렬운전 중 계통 주파수를 바꾸지 않고 B기의 역률을 좋게 하는 것은?", "choices": ["① A기의 여자전류를 증대", "② A기의 원동기 출력을 증대", "③ B기의 여자전류를 증대", "④ B기의 원동기 출력을 증대"], "answerIndex": 0, "solution": "병렬운전 중 한 발전기의 여자를 증가시키면 그 발전기의 기전력이 커져 무효순환전류가 흐르고, 여자를 늘린 쪽은 역률이 저하, 상대 쪽은 역률이 향상된다.\nB기의 역률을 좋게 하려면 **A기의 여자전류를 증대**시키면 된다(주파수는 원동기 출력과 관계되므로 불변). 따라서 ①.", "timestampSec": 1195, "theory": "**핵심 개념**: 여자전류 조정 → 무효전력(역률) 분담 변경, 원동기 출력(조속기) 조정 → 유효전력·주파수 변경\n**개념**: 여자를 증대한 발전기 = 기전력 상승 = 지상 무효전류 부담 증가 = 역률 저하. 상대 발전기는 역률 향상.\n**함정 포인트**: 'B기의 역률을 좋게' → B기가 아니라 A기의 여자를 올린다. 원동기 출력 보기는 주파수를 바꾸므로 조건 위배."}, {"no": 13, "question": "단상 반파의 정류 효율은?", "choices": ["① $\\dfrac{4}{\\pi^2}\\times 100$[%]", "② $\\dfrac{\\pi^2}{4}\\times 100$[%]", "③ $\\dfrac{8}{\\pi^2}\\times 100$[%]", "④ $\\dfrac{\\pi^2}{8}\\times 100$[%]"], "answerIndex": 0, "solution": "단상 반파 정류효율 $\\eta = \\dfrac{4}{\\pi^2}\\times 100 = 40.53$[%]\n단상 전파 정류효율 $\\eta = \\dfrac{8}{\\pi^2}\\times 100 = 81.05$[%]\n반파를 물었으므로 ①.", "timestampSec": 1335, "theory": "**핵심 공식**: 반파 $\\dfrac{4}{\\pi^2}=40.5\\%$, 전파 $\\dfrac{8}{\\pi^2}=81.1\\%$ (전파 = 반파의 2배)\n**개념**: 정류효율 = 직류출력/교류입력. 맥동률은 반파 121%, 전파 48%.\n**함정 포인트**: 분자·분모를 뒤집은 $\\pi^2/4$, $\\pi^2/8$은 100%를 넘으므로 효율이 될 수 없다 — 즉시 배제."}, {"no": 14, "question": "변압기의 전일효율을 최대로 하기 위한 조건은?", "choices": ["① 전부하 시간이 짧을수록 무부하손을 적게 한다.", "② 전부하 시간이 짧을수록 철손을 크게 한다.", "③ 부하시간에 관계없이 전부하 동손과 철손을 같게 한다.", "④ 전부하 시간이 길수록 철손을 적게 한다."], "answerIndex": 0, "solution": "전일효율 최대 조건: $24P_i = \\sum h\\,P_c$ (하루 철손량 = 하루 동손량)\n전부하 시간이 짧으면 하루 동손량이 작으므로 철손(무부하손)도 그만큼 작게 설계해야 한다. 따라서 ①.\n②는 반대, ④는 시간이 길면 철손을 크게 해도 되므로 틀림, ③은 부하시간을 반드시 고려해야 하므로 틀림.", "timestampSec": 1405, "theory": "**핵심 공식**: 전일효율 최대 조건 $24P_i = \\sum h P_c$ (24시간 철손 = 사용시간 동손)\n**개념**: 철손은 24시간 발생, 동손은 부하 시간에만 발생. 사용시간이 짧을수록 철손을 작게(무부하손 小) 설계.\n**함정 포인트**: 일반 최대효율 조건 '철손 = 동손'을 부하시간과 무관하다고 착각하게 하는 ③이 대표 오답."}, {"no": 15, "question": "변압기 내부고장 보호에 사용되는 계전기가 아닌 것은?", "choices": ["① 과전압 계전기", "② 차동전류 계전기", "③ 부흐홀쯔 계전기", "④ 비율차동 계전기"], "answerIndex": 0, "solution": "변압기 내부고장 보호용 계전기: **차동(전류차동·비율차동) 계전기, 부흐홀쯔 계전기**(+ 압력·온도 계전기).\n과전압 계전기는 계통 전압 상승 감시용이지 변압기 내부고장 보호용이 아니다. 따라서 ①.", "timestampSec": 1505, "theory": "**핵심 규정**: 변압기 내부고장 보호 = 비율차동 계전기(주보호), 부흐홀쯔 계전기(유입식, 가스·유류 검출), 충격압력 계전기\n**개념**: '차동'이 붙거나 '부흐홀쯔'면 변압기 보호. 부흐홀쯔는 변압기 본체와 콘서베이터 사이에 설치.\n**함정 포인트**: 과전류·과전압·거리·지락 계전기를 섞어 넣는 부정형. 발전기 내부고장도 비율차동이 정답."}, {"no": 16, "question": "3권선 변압기에 대한 설명으로 틀린 것은?", "choices": ["① 3차 권선에서 발전소 내부의 전력을 다른 계통으로 공급할 수 있다.", "② Y-Y-△ 결선을 하여 제3고조파 전압에 의한 파형 변형을 방지한다.", "③ 3차 권선에 조상기를 접속하여 송전선의 전압조정과 역률을 개선한다.", "④ 고압 배전선의 승압을 목적으로 사용된다."], "answerIndex": 3, "solution": "3권선 변압기 3차 권선의 용도: (1) 소내 전력·별도 계통에 전력 공급, (2) Y-Y-△에서 △권선으로 제3고조파 제거, (3) 조상설비(콘덴서·리액터·조상기) 접속으로 전압조정·역률 개선.\n승압은 배전용 단권변압기 등의 역할이며 3권선 변압기(주로 변전소·초고압)의 목적이 아니다. 따라서 ④.", "timestampSec": 1565, "theory": "**핵심 개념**: 3권선 변압기 3차(△) 권선 3대 용도 = 전력공급 / 제3고조파 제거 / 조상설비 접속(역률 개선)\n**개념**: Y-Y 결선은 중성점 접지가 되지만 3고조파 통로가 없어 파형이 왜곡 → 3차 △권선으로 해결.\n**함정 포인트**: '승압', '배전선' 같은 단권변압기 키워드가 들어간 보기가 오답. 3권선은 변전소·송전 계통용."}, {"no": 17, "question": "반작용 전동기의 용도로 틀린 것은?", "choices": ["① 전기화학용 전지", "② 공업계기", "③ 수차발전기의 조속기", "④ 전기시계"], "answerIndex": 0, "solution": "반작용(릴럭턴스) 전동기는 동기전동기의 일종으로 **속도가 일정한(정속도)** 특성이 있어 전기시계, 공업계기(계측장비), 조속기 등 정속도가 필요한 곳에 쓰인다.\n전기화학용 전지는 전동기 용도와 무관하다. 따라서 ①.", "timestampSec": 1715, "theory": "**핵심 개념**: 반작용 전동기 = 돌극형 회전자의 릴럭턴스 토크로 동기속도 회전, 여자권선 없음, 정속도 특성\n**개념**: 소형 정속도 용도 — 전기시계, 공업계기, 조속기, 녹음기 등.\n**함정 포인트**: 자주 나오지 않는 유형이므로 '정속도 = 시계·계기·조속기' 세트로 기억. 전지·전기분해 같은 화학 용도는 무관."}, {"no": 18, "question": "100[HP], 600[V], 1200[rpm]의 직류 분권전동기가 있다. 분권계자저항 400[Ω], 전기자저항 0.22[Ω]이고 정격 부하에서의 효율이 90[%]일때 전부하시의 역기전력은 약 몇 [V]인가?", "choices": ["① 약 560[V]", "② 약 570[V]", "③ 약 580[V]", "④ 약 590[V]"], "answerIndex": 1, "solution": "출력 $P_{out} = 100\\times 746 = 74600$[W], 입력 $P_{in} = \\dfrac{P_{out}}{\\eta} = \\dfrac{74600}{0.9} = 82888.9$[W]\n전체 전류 $I = \\dfrac{P_{in}}{V} = \\dfrac{82888.9}{600} = 138.15$[A], 계자전류 $I_f = \\dfrac{600}{400} = 1.5$[A]\n전기자 전류 $I_a = I - I_f = 136.65$[A]\n역기전력 $E = V - I_aR_a = 600 - 136.65\\times 0.22 = 569.9$[V] → 약 570[V]. 따라서 ②.", "timestampSec": 1788, "theory": "**핵심 공식**: 전동기 $E = V - I_aR_a$, 분권 $I_a = I - I_f$, $I_f = V/R_f$, $P_{in} = P_{out}/\\eta$, 1[HP] = 746[W]\n**개념**: 효율이 주어지면 출력→입력→전류 순서로 거슬러 올라가 $I_a$를 구한 뒤 역기전력을 계산.\n**함정 포인트**: 계자전류(1.5A)를 빼지 않으면 $600-138.15\\times0.22 = 569.6$으로 답은 같지만, 문제가 바뀌면 틀릴 수 있다. HP→W 환산(746) 누락 주의. 이 유형은 답 570V로 반복 출제."}, {"no": 19, "question": "단상유도전압 조정기 2차 전압이 100±50[V] 이고, 직렬권선의 전류(2차 전류)가 50[A]인 경우의 정격 출력은 몇 [kVA]인가?", "choices": ["① 1.0", "② 1.5", "③ 2.5", "④ 3.5"], "answerIndex": 2, "solution": "$V_2 = V_1 \\pm E_2 = 100 \\pm 50$ → 조정전압 $E_2 = 50$[V]\n단상 유도전압조정기 정격출력 $P = E_2 I_2 \\times 10^{-3} = 50\\times 50\\times 10^{-3} = 2.5$[kVA]. 따라서 ③.", "timestampSec": 2015, "theory": "**핵심 공식**: 단상 $P = E_2 I_2$, 3상 $P = \\sqrt{3}E_2 I_2$ (조정전압 × 2차전류, 부하전압 100V가 아님)\n**개념**: $V_2 = V_1 \\pm E_2\\cos\\alpha$. 조정기 용량은 부하 용량이 아니라 조정분(±E₂)만큼의 용량.\n**함정 포인트**: 100V나 150V를 곱해 5kVA·7.5kVA로 계산하는 실수. '±' 뒤 숫자가 $E_2$."}, {"no": 20, "question": "사이리스터를 이용한 교류전압 제어 방식은?", "choices": ["① 위상제어방식", "② 정지레오나드방식", "③ 쵸퍼방식", "④ 일그너방식"], "answerIndex": 0, "solution": "정지 레오나드(반도체 정류기로 직류 얻음), 쵸퍼(직류 전압 제어), 일그너(발전기-전동기 방식)는 모두 **직류 전동기 속도제어(출력이 직류)** 방식이다.\n교류 출력을 그대로 제어하는 방식은 사이리스터(SCR)의 점호각을 조절하는 **위상제어**이다. 따라서 ①.", "timestampSec": 2095, "theory": "**핵심 분류**: 교류전압 제어 = 위상제어(SCR 점호각 α 조절), 온·오프(사이클) 제어 / 직류 = 쵸퍼(직류→직류), 정지 레오나드·워드 레오나드·일그너(직류기 전압제어)\n**개념**: 위상제어는 사이리스터의 도통 위상을 늦춰 실효전압을 줄이는 방식(조광기 등).\n**함정 포인트**: 레오나드·일그너·쵸퍼는 모두 '직류 전동기 속도제어' 3총사. '교류' 전압 제어를 물으면 위상제어 하나뿐."}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const marks = ['①','②','③','④'];
+let answered = 0, correct = 0;
+
+function updateScore(){
+  document.getElementById('score').textContent =
+    `정답 ${correct} / 푼 문제 ${answered} / 전체 ${DATA.questions.length}`;
+}
+
+function mdBold(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')
+          .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+}
+
+const app = document.getElementById('app');
+DATA.questions.forEach(q => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const ts = q.timestampSec;
+  card.innerHTML = `
+    <div class="qno">문제 ${q.no}</div>
+    <div class="qtext">${mdBold(q.question)}</div>
+    <div class="choices"></div>
+    <button class="toggle">해설 보기</button>
+    <div class="expl">
+      <div class="answer-line">정답: ${marks[q.answerIndex]}</div>
+      <div class="sol">${mdBold(q.solution)}</div>
+      <div class="theory">${mdBold(q.theory)}</div>
+      <a class="ytlink" href="https://youtu.be/${DATA.videoId}?t=${ts}" target="_blank" rel="noopener">▶ 영상 해설 바로가기 (${Math.floor(ts/60)}:${String(ts%60).padStart(2,'0')})</a>
+    </div>`;
+  const choicesBox = card.querySelector('.choices');
+  const expl = card.querySelector('.expl');
+  let done = false;
+  q.choices.forEach((c, i) => {
+    const b = document.createElement('button');
+    b.className = 'choice';
+    b.innerHTML = mdBold(c);
+    b.addEventListener('click', () => {
+      if (done) return;
+      done = true;
+      answered++;
+      const btns = choicesBox.querySelectorAll('.choice');
+      btns.forEach(x => x.disabled = true);
+      if (i === q.answerIndex) {
+        correct++;
+        b.classList.add('correct');
+        b.insertAdjacentHTML('beforeend','<span class="mark ok">✓</span>');
+      } else {
+        b.classList.add('wrong');
+        b.insertAdjacentHTML('beforeend','<span class="mark no">✗</span>');
+        btns[q.answerIndex].classList.add('correct');
+      }
+      expl.classList.add('open');
+      updateScore();
+    });
+    choicesBox.appendChild(b);
+  });
+  card.querySelector('.toggle').addEventListener('click', () => {
+    expl.classList.toggle('open');
+  });
+  app.appendChild(card);
+});
+updateScore();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tryRender = () => {
+    if (window.renderMathInElement) {
+      renderMathInElement(document.body, {
+        delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],
+        throwOnError: false
+      });
+    } else setTimeout(tryRender, 100);
+  };
+  tryRender();
+});
+</script>
+</body>
+</html>

@@ -54,6 +54,18 @@ OFFICIAL = {
     ("산업기사", "설비기술기준"): ("제5과목", "전기설비기술기준"),
 }
 
+from urllib.parse import quote as _q
+def pdf_nav():
+    subs = []
+    for exam, label in [("전기기사", "기사"), ("전기산업기사", "산업기사")]:
+        for rnd in ("1회", "2회", "3회"):
+            pills = "".join(
+                f'<a class="pill" href="pdf/{_q(f"2026_{exam}_{rnd}_{kind}.pdf")}">{kind}</a>'
+                for kind in ("문제집", "해설서"))
+            subs.append(f'<span class="navsub"><span class="subj">{label} {rnd}</span>{pills}</span>')
+    return ('<div class="navrow"><span class="navgroup">📄 PDF</span>'
+            f'<div class="navitems">{"".join(subs)}</div></div>')
+
 def make_nav(current):
     rows = []
     for gname, entries in GROUPS:
@@ -71,6 +83,7 @@ def make_nav(current):
                 pills.append(f'<a class="{cls}" href="{out}">{r}</a>')
             subjects.append(f'<span class="navsub"><span class="subj">{subj}</span>{"".join(pills)}</span>')
         rows.append(f'<div class="navrow"><span class="navgroup">{gname}</span><div class="navitems">{"".join(subjects)}</div></div>')
+    rows.append(pdf_nav())
     return "".join(rows)
 
 PAGES = []

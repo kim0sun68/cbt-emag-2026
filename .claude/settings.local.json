@@ -214,7 +214,12 @@
       "Bash(python3 -c \"import json;d=json.load\\(open\\('content/semag1.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('OK', d['videoId'], [q['answerIndex']+1 for q in d['questions']]\\)\")",
       "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/spower2.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('OK',[q['answerIndex']+1 for q in d['questions']]\\)\")",
       "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/sanup3.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('OK', d['videoId'], [q['answerIndex']+1 for q in d['questions']]\\)\")",
-      "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/spower3.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('OK', [q['answerIndex']+1 for q in d['questions']]\\)\")"
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('/Users/kim-yeongseon/Desktop/학습프로그램/CBT2026_03/content/spower3.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('OK', [q['answerIndex']+1 for q in d['questions']]\\)\")",
+      "Bash(python3 build_pdf.py 산업기사)",
+      "Bash(git commit -q -m 'feat: 산업기사 회차별 문제집·해설서 PDF 6권 추가 *)",
+      "Bash(git ls-tree *)",
+      "Bash(xxd)",
+      "Bash(git commit -q -m 'fix: 산출물 pdf/는 커밋되도록 .gitignore 수정 \\(루트 교재 PDF만 제외\\) *)"
     ]
   }
 }

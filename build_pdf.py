@@ -10,7 +10,18 @@ import json, pathlib, subprocess, sys, base64, io, shutil
 root = pathlib.Path(__file__).parent
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
-# 회차 → [(json, 과목번호, 정식 과목명)] — 순서 고정. 없는 과목은 None.
+# 시험 → 회차 → [(json, 과목번호, 정식 과목명)] — 순서 고정. 없는 과목은 None.
+SANUP_ROUNDS = {
+    "1회": [("semag1", "제1과목", "전기자기학"), ("spower1", "제2과목", "전력공학"),
+            ("skigi1", "제3과목", "전기기기"), ("sanup1", "제4과목", "회로이론"),
+            ("skec1", "제5과목", "전기설비기술기준")],
+    "2회": [("semag2", "제1과목", "전기자기학"), ("spower2", "제2과목", "전력공학"),
+            ("skigi2", "제3과목", "전기기기"), ("sanup2", "제4과목", "회로이론"),
+            ("skec2", "제5과목", "전기설비기술기준")],
+    "3회": [("semag3", "제1과목", "전기자기학"), ("spower3", "제2과목", "전력공학"),
+            ("skigi3", "제3과목", "전기기기"), ("sanup3", "제4과목", "회로이론"),
+            ("skec3", "제5과목", "전기설비기술기준")],
+}
 ROUNDS = {
     "1회": [("emag1", "제1과목", "전기자기학"), ("power1", "제2과목", "전력공학"),
             ("kigi1", "제3과목", "전기기기"), ("circuit1", "제4과목", "회로이론 및 제어공학"),
@@ -93,9 +104,9 @@ def bold(s):
 def mmss(sec):
     return f"{sec//60}:{sec%60:02d}"
 
-def load_round(rnd):
+def load_round(rnd, rounds=None):
     subs = []
-    for entry in ROUNDS[rnd]:
+    for entry in (rounds or ROUNDS)[rnd]:
         if entry is None:
             continue
         f, no, name = entry
@@ -103,15 +114,15 @@ def load_round(rnd):
         subs.append({"no": no, "name": name, "vid": d["videoId"], "qs": d["questions"]})
     return subs
 
-def cover(rnd, kind, subs):
+def cover(rnd, kind, subs, exam="전기기사"):
     rows = "".join(f"<div>{s['no']} {s['name']} — 20문제</div>" for s in subs)
     note = "" if len(subs) == 5 else "<div style='color:#a00'>※ 제2과목 전력공학은 자료 확보 후 추가 예정</div>"
-    return f"""<div class="cover"><div class="sub">2026년 {rnd} 전기기사 필기 CBT 기출</div>
+    return f"""<div class="cover"><div class="sub">2026년 {rnd} {exam} 필기 CBT 기출</div>
 <h1>{kind}</h1><div class="sub">총 {len(subs)}과목 · {20*len(subs)}문제</div>
 <div class="box">{rows}{note}<div style="margin-top:4mm;color:#555">출처: 대산전기학원 유튜브 기출 해설 강의 · 학습용 정리 자료</div></div></div>"""
 
-def build_exam(rnd, subs):
-    body = [cover(rnd, "문제집", subs)]
+def build_exam(rnd, subs, exam="전기기사"):
+    body = [cover(rnd, "문제집", subs, exam)]
     for s in subs:
         body.append(f'<div class="subject-head"><h2>{s["no"]} {s["name"]}</h2><div class="meta">20문제</div></div><div class="qwrap">')
         for q in s["qs"]:
@@ -128,8 +139,8 @@ def build_exam(rnd, subs):
                 f'<footer-note>채점은 별권 「해설서」의 정답 일람표를 사용하세요.</footer-note></div>')
     return f'<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">{KATEX}<style>{EXAM_CSS}</style></head><body>{"".join(body)}</body></html>'
 
-def build_sol(rnd, subs):
-    body = [cover(rnd, "해설서", subs)]
+def build_sol(rnd, subs, exam="전기기사"):
+    body = [cover(rnd, "해설서", subs, exam)]
     # 정답 일람표
     rows = []
     for i in range(20):
@@ -155,17 +166,27 @@ def to_pdf(html_path, pdf_path):
                     html_path.as_uri()], check=True, capture_output=True)
 
 def main():
-    targets = sys.argv[1:] or list(ROUNDS)
+    # 인자: 회차("1회") 또는 "산업기사"/"기사"로 필터. 없으면 전체.
+    args = sys.argv[1:]
     out = root / "pdf"; tmp = root / "print_tmp"
     out.mkdir(exist_ok=True); tmp.mkdir(exist_ok=True)
-    for rnd in targets:
-        subs = load_round(rnd)
-        for kind, builder in [("문제집", build_exam), ("해설서", build_sol)]:
-            h = tmp / f"{rnd}_{kind}.html"
-            h.write_text(builder(rnd, subs), encoding="utf-8")
-            p = out / f"2026_전기기사_{rnd}_{kind}.pdf"
-            to_pdf(h, p)
-            print(p.name, f"{p.stat().st_size//1024}KB")
+    jobs = [("전기기사", ROUNDS), ("전기산업기사", SANUP_ROUNDS)]
+    for exam, rounds in jobs:
+        if args and any(a in ("기사", "산업기사") for a in args):
+            if "산업기사" in args and exam != "전기산업기사":
+                continue
+            if "기사" in args and "산업기사" not in args and exam != "전기기사":
+                continue
+        for rnd in rounds:
+            if args and not any(a == rnd for a in args) and any(a.endswith("회") for a in args):
+                continue
+            subs = load_round(rnd, rounds)
+            for kind, builder in [("문제집", build_exam), ("해설서", build_sol)]:
+                h = tmp / f"{exam}_{rnd}_{kind}.html"
+                h.write_text(builder(rnd, subs, exam), encoding="utf-8")
+                p = out / f"2026_{exam}_{rnd}_{kind}.pdf"
+                to_pdf(h, p)
+                print(p.name, f"{p.stat().st_size//1024}KB")
     shutil.rmtree(tmp)
 
 if __name__ == "__main__":

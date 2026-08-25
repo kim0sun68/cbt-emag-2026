@@ -32,6 +32,8 @@
 ## 검증 명령
 
 ```bash
+# PDF 재생성 (회차별 문제집·해설서 → pdf/, build_pdf.py의 ROUNDS에 회차·과목 등록)
+python3 build_pdf.py        # 전체, 또는: python3 build_pdf.py 2회
 # JSON 검증 (모든 회차 공통)
 python3 -c "import json;d=json.load(open('content/<파일>.json'));assert len(d['questions'])==20 and all(len(q['choices'])==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip() for q in d['questions']);print('OK')"
 # 빌드

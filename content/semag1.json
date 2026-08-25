@@ -1,0 +1,286 @@
+{
+  "title": "2026 전기산업기사 전기자기학 1회 기출 핵심풀이",
+  "videoId": "SE3SV7NFS_E",
+  "questions": [
+    {
+      "no": 1,
+      "question": "진공중에 $2\\times10^{-5}[\\mathrm{C}]$과 $1\\times10^{-6}[\\mathrm{C}]$인 두 개의 점전하가 $50[\\mathrm{cm}]$ 떨어져 있을 때 두 전하 사이에 작용하는 힘은 몇 $[\\mathrm{N}]$인가?",
+      "choices": [
+        "① $0.72$",
+        "② $0.92$",
+        "③ $1.82$",
+        "④ $2.02$"
+      ],
+      "answerIndex": 0,
+      "solution": "쿨롱의 법칙 $F = \\dfrac{Q_1 Q_2}{4\\pi\\varepsilon_0 r^2} = 9\\times10^9\\times\\dfrac{Q_1 Q_2}{r^2}[\\mathrm{N}]$\n$r = 50[\\mathrm{cm}] = 0.5[\\mathrm{m}]$로 환산하여 대입하면\n$F = 9\\times10^9\\times\\dfrac{2\\times10^{-5}\\times1\\times10^{-6}}{0.5^2} = 0.72[\\mathrm{N}]$",
+      "timestampSec": 15,
+      "theory": "**핵심 공식**: 쿨롱의 법칙 $F = \\dfrac{Q_1 Q_2}{4\\pi\\varepsilon_0 r^2} = 9\\times10^9\\times\\dfrac{Q_1 Q_2}{r^2}[\\mathrm{N}]$\n**개념**: 두 점전하 사이에 작용하는 힘은 전하량의 곱에 비례하고 거리의 제곱에 반비례한다.\n**함정 포인트**: 거리가 $[\\mathrm{cm}]$로 주어지면 반드시 $[\\mathrm{m}]$로 환산할 것. $50[\\mathrm{cm}]=0.5[\\mathrm{m}]$를 그대로 50으로 대입하면 오답이 된다."
+    },
+    {
+      "no": 2,
+      "question": "진공 중에서 대전도체의 표면 전하밀도가 $\\sigma[\\mathrm{C/m^2}]$이라면 표면의 전계 $[\\mathrm{V/m}]$는?",
+      "choices": [
+        "① $E = \\dfrac{\\sigma}{\\varepsilon_0}$",
+        "② $E = \\dfrac{\\sigma}{2\\varepsilon_0}$",
+        "③ $E = \\dfrac{\\sigma}{2\\pi\\varepsilon_0}$",
+        "④ $E = \\dfrac{\\sigma}{4\\pi r^2}$"
+      ],
+      "answerIndex": 0,
+      "solution": "대전도체 표면의 전계의 세기는 면전하밀도 $\\sigma = \\dfrac{Q}{S}$를 이용하여\n$E = \\dfrac{\\sigma}{\\varepsilon_0}[\\mathrm{V/m}]$",
+      "timestampSec": 75,
+      "theory": "**핵심 공식**: 대전도체 표면의 전계 $E = \\dfrac{\\sigma}{\\varepsilon_0}[\\mathrm{V/m}]$\n**개념**: 도체 표면 바로 밖의 전계는 표면 전하밀도를 진공의 유전율로 나눈 값이며, 표면에 수직이다.\n**함정 포인트**: 무한 평면(판) 전하의 전계 $\\dfrac{\\sigma}{2\\varepsilon_0}$와 혼동하기 쉽다. '대전도체 표면'이면 $\\dfrac{\\sigma}{\\varepsilon_0}$, '무한 평면전하'면 $\\dfrac{\\sigma}{2\\varepsilon_0}$이다."
+    },
+    {
+      "no": 3,
+      "question": "축이 무한히 길고 반지름이 $a[\\mathrm{m}]$인 원주 내에 전하가 축대칭이며, 축방향으로 균일하게 분포되어 있을 경우, 반지름 $r(>a)[\\mathrm{m}]$ 되는 동심 원통면상의 한 점 P의 전계의 세기는 몇 $[\\mathrm{V/m}]$인가? (단, 단위길이당 전하량은 $\\lambda[\\mathrm{C/m}]$이다.)",
+      "choices": [
+        "① $\\dfrac{\\lambda}{\\varepsilon_0}$",
+        "② $\\dfrac{\\lambda}{2\\pi\\varepsilon_0}$",
+        "③ $\\dfrac{\\lambda}{\\pi a}$",
+        "④ $\\dfrac{\\lambda}{2\\pi\\varepsilon_0 r}$"
+      ],
+      "answerIndex": 3,
+      "solution": "원주(원통) 밖의 점($r>a$)에서는 원주 내 전하가 축에 집중된 무한장 직선전하와 같게 보인다.\n무한장 직선전하에 의한 전계의 세기는\n$E = \\dfrac{\\lambda}{2\\pi\\varepsilon_0 r}[\\mathrm{V/m}]$",
+      "timestampSec": 155,
+      "theory": "**핵심 공식**: 무한장 직선전하(원통 외부)의 전계 $E = \\dfrac{\\lambda}{2\\pi\\varepsilon_0 r}[\\mathrm{V/m}]$\n**개념**: 가우스 법칙에 의해 원통 외부에서는 내부 전하 전체가 축상의 선전하처럼 작용한다. 전계는 거리 $r$에 반비례한다.\n**함정 포인트**: 점전하의 $\\dfrac{1}{r^2}$ 반비례와 혼동하지 말 것. 직선전하는 $\\dfrac{1}{r}$에 반비례하며, 분모에 $4\\pi$가 아닌 $2\\pi$가 붙는다."
+    },
+    {
+      "no": 4,
+      "question": "유전율이 서로 다른 두 종류의 경계면에 전속과 전기력선이 수직으로 도달할 때 다음 설명 중 옳지 않은 것은?",
+      "choices": [
+        "① 전계의 세기는 연속이다.",
+        "② 전속밀도는 불변이다.",
+        "③ 전속과 전기력선은 굴절하지 않는다.",
+        "④ 전속선은 유전율이 큰 유전체 중으로 모이려는 성질이 있다."
+      ],
+      "answerIndex": 0,
+      "solution": "경계면에 수직 입사하는 경우 전속밀도의 법선성분은 연속($D_{1}=D_{2}$)이므로 전속밀도는 불변이고 굴절도 없다.\n그러나 전계는 $E = \\dfrac{D}{\\varepsilon}$이므로 유전율이 다르면 $E_1 \\neq E_2$가 되어 전계의 세기는 불연속이다.\n따라서 옳지 않은 것은 ①이다.\n전속선은 유전율이 큰 쪽으로, 전기력선은 유전율이 작은 쪽으로 모이는 성질이 있다.",
+      "timestampSec": 235,
+      "theory": "**핵심 공식**: 유전체 경계조건 $D_{1n}=D_{2n}$, $E_{1t}=E_{2t}$\n**개념**: 수직 입사 시 전속밀도는 연속(불변)이고 굴절하지 않지만, 전계의 세기는 $E=D/\\varepsilon$이라 유전율이 다르면 크기가 달라진다.\n**함정 포인트**: '전속선은 유전율이 큰 쪽으로, 전기력선은 유전율이 작은 쪽으로 모인다'는 성질을 반대로 바꿔 출제하는 경향이 있다."
+    },
+    {
+      "no": 5,
+      "question": "전기저항 $R$과 정전용량 $C$, 고유저항 $\\rho$ 및 유전율 $\\varepsilon$ 사이의 관계로 옳은 것은?",
+      "choices": [
+        "① $RC = \\rho\\varepsilon$",
+        "② $R\\rho = C\\varepsilon$",
+        "③ $C = R\\rho\\varepsilon$",
+        "④ $R = \\varepsilon\\rho C$"
+      ],
+      "answerIndex": 0,
+      "solution": "저항과 정전용량의 관계식은 $RC = \\rho\\varepsilon$이다.\n이로부터 접지저항 $R = \\dfrac{\\rho\\varepsilon}{C}[\\Omega]$, 누설전류 $I = \\dfrac{V}{R} = \\dfrac{CV}{\\rho\\varepsilon}[\\mathrm{A}]$를 유도할 수 있다.",
+      "timestampSec": 380,
+      "theory": "**핵심 공식**: $RC = \\rho\\varepsilon$, 접지저항 $R = \\dfrac{\\rho\\varepsilon}{C}[\\Omega]$, 누설전류 $I = \\dfrac{CV}{\\rho\\varepsilon}[\\mathrm{A}]$\n**개념**: 같은 전극 배치에서 저항과 정전용량의 곱은 매질 상수(고유저항×유전율)로 일정하다.\n**함정 포인트**: $RC=\\rho\\varepsilon$의 좌우 조합을 바꾼 보기(②③④)로 혼동을 유도한다. 누설전류·접지저항 계산형으로도 자주 출제된다."
+    },
+    {
+      "no": 6,
+      "question": "그림과 같이 진공 중에 자극 면적이 $2[\\mathrm{cm^2}]$, 간격이 $0.1[\\mathrm{cm}]$인 자성체 내에서 포화자속밀도가 $2[\\mathrm{Wb/m^2}]$일 때 두 자극면 사이에 작용하는 힘의 크기는 약 몇 $[\\mathrm{N}]$인가?",
+      "choices": [
+        "① $53$",
+        "② $106$",
+        "③ $159$",
+        "④ $318$"
+      ],
+      "answerIndex": 3,
+      "solution": "단위 면적당 자석의 흡인력 $f = \\dfrac{F}{S} = \\dfrac{B^2}{2\\mu_0}[\\mathrm{N/m^2}]$\n자석의 총 흡인력 $F = f\\cdot S = \\dfrac{B^2}{2\\mu_0}S = \\dfrac{2^2}{2\\times4\\pi\\times10^{-7}}\\times2\\times10^{-4} \\fallingdotseq 318[\\mathrm{N}]$\n(면적 $2[\\mathrm{cm^2}]=2\\times10^{-4}[\\mathrm{m^2}]$ 환산)\n원본 영상에는 N·S 자극이 간격 $d$를 두고 마주 보는 그림이 제시되며, 보기 숫자는 화면에 표시되지 않아 강의 육성 정답(318 N, 4번)을 기준으로 구성하였다.",
+      "timestampSec": 457,
+      "theory": "**핵심 공식**: 단위 면적당 흡인력 $f = \\dfrac{B^2}{2\\mu_0} = \\dfrac{1}{2}\\mu_0 H^2[\\mathrm{N/m^2}]$, 총 흡인력 $F = \\dfrac{B^2}{2\\mu_0}S[\\mathrm{N}]$\n**개념**: 자극면 사이 흡인력은 자속밀도 제곱에 비례한다. 전체 힘을 구할 때는 단위 면적당 힘에 면적 $S$를 곱한다.\n**함정 포인트**: $[\\mathrm{cm^2}]\\to[\\mathrm{m^2}]$ 환산 시 $10^{-4}$를 곱해야 한다. 단위 면적당 힘 $[\\mathrm{N/m^2}]$과 전체 힘 $[\\mathrm{N}]$ 중 무엇을 묻는지 확인할 것."
+    },
+    {
+      "no": 7,
+      "question": "단면적 $4[\\mathrm{cm^2}]$의 철심에 $6\\times10^{-4}[\\mathrm{Wb}]$의 자속을 통하게 하려면 $2800[\\mathrm{AT/m}]$의 자계가 필요하다. 철심의 비투자율은 약 얼마인가?",
+      "choices": [
+        "① $12$",
+        "② $43$",
+        "③ $75$",
+        "④ $426$"
+      ],
+      "answerIndex": 3,
+      "solution": "자속밀도 $B = \\dfrac{\\phi}{S} = \\mu_0\\mu_s H[\\mathrm{Wb/m^2}]$에서\n$\\mu_s = \\dfrac{\\phi}{\\mu_0 HS} = \\dfrac{6\\times10^{-4}}{4\\pi\\times10^{-7}\\times2800\\times4\\times10^{-4}} \\fallingdotseq 426$",
+      "timestampSec": 592,
+      "theory": "**핵심 공식**: $B = \\dfrac{\\phi}{S} = \\mu_0\\mu_s H$, 비투자율 $\\mu_s = \\dfrac{\\phi}{\\mu_0 HS}$\n**개념**: 자속밀도는 자속을 단면적으로 나눈 값이며, 동시에 투자율과 자계의 곱과 같다. 두 식을 연립해 비투자율을 구한다.\n**함정 포인트**: 단면적 $4[\\mathrm{cm^2}]=4\\times10^{-4}[\\mathrm{m^2}]$ 환산을 빠뜨리면 자릿수가 틀어진다. $\\mu_0=4\\pi\\times10^{-7}$을 정확히 대입할 것."
+    },
+    {
+      "no": 8,
+      "question": "$\\phi = \\phi_m\\sin\\omega t[\\mathrm{Wb}]$의 정현파로 변화하는 자속이 권선수 $n$인 코일과 쇄교할 때의 유도기전력의 위상을 자속에 비교하면?",
+      "choices": [
+        "① $\\dfrac{\\pi}{2}$만큼 빠르다.",
+        "② $\\dfrac{\\pi}{2}$만큼 늦다.",
+        "③ $\\pi$만큼 빠르다.",
+        "④ $\\pi$만큼 늦다."
+      ],
+      "answerIndex": 1,
+      "solution": "$e = -N\\dfrac{d\\phi}{dt} = -N\\dfrac{d}{dt}(\\phi_m\\sin\\omega t) = -\\omega N\\phi_m\\cos\\omega t$\n$= \\omega N\\phi_m\\sin\\left(\\omega t - \\dfrac{\\pi}{2}\\right)[\\mathrm{V}]$\n따라서 유도기전력은 자속보다 위상이 $\\dfrac{\\pi}{2}$만큼 늦다.",
+      "timestampSec": 680,
+      "theory": "**핵심 공식**: $e = -N\\dfrac{d\\phi}{dt} = \\omega N\\phi_m\\sin\\left(\\omega t-\\dfrac{\\pi}{2}\\right)[\\mathrm{V}]$\n**개념**: 정현파 자속을 미분하면 $\\cos$이 되고, 음의 부호까지 정리하면 $\\sin(\\omega t-\\pi/2)$ 형태가 되어 자속보다 $90°$ 뒤진다.\n**함정 포인트**: 미분으로 $\\cos$이 되었다고 '$\\pi/2$ 빠르다'로 착각하기 쉽다. 앞의 $(-)$ 부호까지 반영해야 '$\\pi/2$ 늦다'가 나온다."
+    },
+    {
+      "no": 9,
+      "question": "환상 솔레노이드 코일에 흐르는 전류가 $2[\\mathrm{A}]$일 때, 자로의 자속이 $3\\times10^{-2}[\\mathrm{Wb}]$이었다고 한다. 코일의 권수를 500회라 하면, 이 코일의 자기 인덕턴스는 몇 $[\\mathrm{H}]$인가? (단, 코일의 전류와 자로의 자속과는 정비례한다고 한다.)",
+      "choices": [
+        "① $3.0$",
+        "② $5.5$",
+        "③ $6.0$",
+        "④ $7.5$"
+      ],
+      "answerIndex": 3,
+      "solution": "자기 인덕턴스 $L = \\dfrac{N\\phi}{I}[\\mathrm{H}]$\n$L = \\dfrac{500\\times3\\times10^{-2}}{2} = 7.5[\\mathrm{H}]$",
+      "timestampSec": 791,
+      "theory": "**핵심 공식**: 자기 인덕턴스 $L = \\dfrac{N\\phi}{I}[\\mathrm{H}]$\n**개념**: 인덕턴스는 전류에 따라 쇄교자속($N\\phi$)이 발생하는 비율이다.\n**함정 포인트**: 권수 $N$을 곱하지 않고 $\\phi/I$만 계산하면 오답 보기에 걸린다. 쇄교자속 $N\\phi$ 기준임을 기억할 것."
+    },
+    {
+      "no": 10,
+      "question": "정전용량이 $1[\\mu\\mathrm{F}]$, $2[\\mu\\mathrm{F}]$인 콘덴서에 각각 $2\\times10^{-4}[\\mathrm{C}]$ 및 $3\\times10^{-4}[\\mathrm{C}]$의 전하를 주고 극성을 같게 하여 병렬로 접속할 때 콘덴서에 축적된 에너지는 약 몇 $[\\mathrm{J}]$인가?",
+      "choices": [
+        "① $0.042$",
+        "② $0.063$",
+        "③ $0.084$",
+        "④ $0.126$"
+      ],
+      "answerIndex": 0,
+      "solution": "병렬 접속 시 전하량은 합해지고 정전용량도 합해지므로\n$W = \\dfrac{Q_0^2}{2C_0} = \\dfrac{(Q_1+Q_2)^2}{2(C_1+C_2)} = \\dfrac{(2\\times10^{-4}+3\\times10^{-4})^2}{2\\times(1+2)\\times10^{-6}}$\n$= \\dfrac{(5\\times10^{-4})^2}{6\\times10^{-6}} \\fallingdotseq 0.042[\\mathrm{J}]$",
+      "timestampSec": 846,
+      "theory": "**핵심 공식**: 정전에너지 $W = \\dfrac{Q^2}{2C} = \\dfrac{1}{2}CV^2 = \\dfrac{1}{2}QV[\\mathrm{J}]$\n**개념**: 극성을 같게 병렬 접속하면 총 전하는 $Q_1+Q_2$, 합성 정전용량은 $C_1+C_2$가 되어 $W = \\dfrac{(Q_1+Q_2)^2}{2(C_1+C_2)}$로 계산한다.\n**함정 포인트**: 전하가 주어졌으므로 $\\dfrac{Q^2}{2C}$ 형태를 쓸 것. 극성을 반대로 접속하는 유형이면 $Q_1-Q_2$로 바뀐다."
+    },
+    {
+      "no": 11,
+      "question": "비유전율이 4이고, 전계의 세기가 $20[\\mathrm{kV/m}]$인 유전체 내의 전속밀도는 약 몇 $[\\mu\\mathrm{C/m^2}]$인가?",
+      "choices": [
+        "① $0.71$",
+        "② $1.42$",
+        "③ $2.83$",
+        "④ $5.28$"
+      ],
+      "answerIndex": 0,
+      "solution": "전속밀도 $D = \\varepsilon E = \\varepsilon_0\\varepsilon_s E[\\mathrm{C/m^2}]$\n$D = 8.855\\times10^{-12}\\times4\\times20\\times10^3 \\fallingdotseq 7.1\\times10^{-7}[\\mathrm{C/m^2}] = 0.71[\\mu\\mathrm{C/m^2}]$",
+      "timestampSec": 946,
+      "theory": "**핵심 공식**: 전속밀도 $D = \\varepsilon E = \\varepsilon_0\\varepsilon_s E[\\mathrm{C/m^2}]$\n**개념**: 전속밀도는 단위 면적당 전속이며, 유전체 내에서는 진공의 유전율에 비유전율을 곱해 계산한다.\n**함정 포인트**: $[\\mathrm{kV/m}]\\to[\\mathrm{V/m}]$($\\times10^3$) 환산과 최종 답의 $[\\mu\\mathrm{C/m^2}]$ 단위 환산($\\times10^6$)을 모두 챙겨야 한다. 비유전율 4를 빠뜨리면 다른 보기에 걸린다."
+    },
+    {
+      "no": 12,
+      "question": "전류가 흐르는 도선을 자계 내에 놓으면 이 도선에 힘이 작용한다. 평등자계의 진공 중에 놓여 있는 직선 전류 도선이 받는 힘에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "① 도선의 길이에 비례한다.",
+        "② 전류의 세기에 반비례한다.",
+        "③ 자계의 세기에 반비례한다.",
+        "④ 전류와 자계 사이의 각에 대한 정현(sine)에 반비례한다."
+      ],
+      "answerIndex": 0,
+      "solution": "플레밍의 왼손 법칙에 의한 전자력은\n$F = BIl\\sin\\theta = \\mu_0 HIl\\sin\\theta = (I\\times B)l[\\mathrm{N}]$\n힘은 도선의 길이 $l$, 전류 $I$, 자계(자속밀도) $B$, $\\sin\\theta$ 모두에 비례하므로 옳은 것은 ①이다.",
+      "timestampSec": 1058,
+      "theory": "**핵심 공식**: 전자력 $F = BIl\\sin\\theta[\\mathrm{N}]$ (플레밍의 왼손 법칙)\n**개념**: 자계 내 전류 도선이 받는 힘은 자속밀도·전류·도선 길이·사잇각의 사인값 모두에 비례한다.\n**함정 포인트**: 보기에서 '비례'를 '반비례'로 바꿔 출제한다. $F=BIl\\sin\\theta$의 네 요소 전부 비례 관계임을 기억할 것."
+    },
+    {
+      "no": 13,
+      "question": "다음 중 강자성체가 아닌 것은?",
+      "choices": [
+        "① 철",
+        "② 니켈",
+        "③ 코발트",
+        "④ 백금"
+      ],
+      "answerIndex": 3,
+      "solution": "강자성체($\\mu_s \\gg 1$)의 종류는 철, 니켈, 코발트이다.\n백금은 상자성체이므로 강자성체가 아니다.",
+      "timestampSec": 1105,
+      "theory": "**핵심 개념**: 강자성체($\\mu_s \\gg 1$) = 철, 니켈, 코발트\n**개념**: 자성체는 자계 내에 놓였을 때 자화되는 물체이며, 그중 강하게 자화되는 것이 강자성체이다. 백금·알루미늄은 상자성체이다.\n**함정 포인트**: '철·니켈·코발트' 3종을 암기하고, 보기에 백금·구리·비스무트 등이 섞여 나오면 강자성체가 아닌 쪽으로 골라낼 것."
+    },
+    {
+      "no": 14,
+      "question": "유도기전력의 크기는 폐회로에 쇄교하는 자속의 시간적 변화율에 비례한다는 법칙은?",
+      "choices": [
+        "① 쿨롱의 법칙",
+        "② 패러데이 법칙",
+        "③ 플레밍의 오른손 법칙",
+        "④ 암페어의 주회적분 법칙"
+      ],
+      "answerIndex": 1,
+      "solution": "유도기전력의 크기가 쇄교자속의 시간적 변화율에 비례한다는 것은 패러데이 법칙이다.\n$e = -N\\dfrac{d\\phi}{dt}[\\mathrm{V}]$\n(렌츠 법칙은 유도기전력의 방향, 패러데이 법칙은 크기를 나타낸다.)",
+      "timestampSec": 1146,
+      "theory": "**핵심 공식**: 패러데이 법칙 $e = -N\\dfrac{d\\phi}{dt}[\\mathrm{V}]$\n**개념**: 패러데이 법칙은 유도기전력의 '크기', 렌츠 법칙은 '방향'(자속 변화를 방해하는 방향)을 나타낸다. 암페어 주회적분 법칙은 폐회로를 따라 자계를 선적분한 값이 폐회로 내 전류의 총합과 같다는 법칙이다.\n**함정 포인트**: '크기'면 패러데이, '방해/방향'이면 렌츠로 구분한다. 두 법칙을 바꿔 묻는 유형이 단골이다."
+    },
+    {
+      "no": 15,
+      "question": "무한평면도체로부터 $a[\\mathrm{m}]$의 거리에 점전하 $Q[\\mathrm{C}]$가 있을 때 이 점전하와 평면도체간의 작용력은 몇 $[\\mathrm{N}]$인가?",
+      "choices": [
+        "① $\\dfrac{Q^2}{2\\pi\\varepsilon a^2}$",
+        "② $-\\dfrac{Q^2}{4\\pi\\varepsilon a^2}$",
+        "③ $\\dfrac{Q^2}{8\\pi\\varepsilon a^2}$",
+        "④ $-\\dfrac{Q^2}{16\\pi\\varepsilon a^2}$"
+      ],
+      "answerIndex": 3,
+      "solution": "전기영상법에 의해 평면도체 반대편 $a[\\mathrm{m}]$ 위치에 영상전하 $-Q$가 있는 것과 같으므로 두 전하 사이 거리는 $2a$이다.\n$F = \\dfrac{Q_1 Q_2}{4\\pi\\varepsilon_0 r^2} = \\dfrac{Q(-Q)}{4\\pi\\varepsilon_0(2a)^2} = -\\dfrac{Q^2}{16\\pi\\varepsilon_0 a^2}[\\mathrm{N}]$\n(음의 부호는 흡인력을 의미한다.)",
+      "timestampSec": 1282,
+      "theory": "**핵심 공식**: 무한평면도체와 점전하 사이 힘 $F = -\\dfrac{Q^2}{16\\pi\\varepsilon_0 a^2}[\\mathrm{N}]$ (흡인력)\n**개념**: 영상전하 $-Q$가 거리 $2a$에 있는 것으로 등가화하여 쿨롱의 법칙을 적용한다.\n**함정 포인트**: 거리를 $a$가 아닌 $2a$로 대입해야 하므로 분모가 $4\\pi\\to16\\pi$가 된다. 접지 구도체의 영상전하 $-\\dfrac{a}{r}Q$ 문제와 혼동하지 말 것."
+    },
+    {
+      "no": 16,
+      "question": "그림과 같은 정전용량이 $C_0[\\mathrm{F}]$되는 평행판 공기콘덴서의 판면적의 $\\dfrac{2}{3}$되는 공간에 비유전율 $\\varepsilon_s$인 유전체를 채우면 공기콘덴서의 정전용량은 몇 $[\\mathrm{F}]$인가?",
+      "choices": [
+        "① $\\dfrac{2\\varepsilon_s}{3}C_0$",
+        "② $\\dfrac{3}{1+2\\varepsilon_s}C_0$",
+        "③ $\\dfrac{1+\\varepsilon_s}{3}C_0$",
+        "④ $\\dfrac{1+2\\varepsilon_s}{3}C_0$"
+      ],
+      "answerIndex": 3,
+      "solution": "극판과 수직으로 유전체를 채우면 두 콘덴서의 병렬 접속이 된다.\n$C = \\dfrac{\\varepsilon_1 S_1 + \\varepsilon_2 S_2}{d} = \\dfrac{\\varepsilon_0\\times\\frac{1}{3}S + \\varepsilon_0\\varepsilon_s\\times\\frac{2}{3}S}{d} = \\dfrac{\\varepsilon_0 S}{d}\\cdot\\dfrac{1+2\\varepsilon_s}{3} = \\dfrac{1+2\\varepsilon_s}{3}C_0[\\mathrm{F}]$\n원본 영상의 보기는 극판 면적의 $\\frac{1}{3}$은 공기($\\varepsilon_0$), $\\frac{2}{3}$는 유전체($\\varepsilon_s$)로 나뉜 그림으로 제시된다.",
+      "timestampSec": 1436,
+      "theory": "**핵심 공식**: 극판과 수직으로 채운 경우(면적 분할, 병렬) $C = \\dfrac{\\varepsilon_1 S_1+\\varepsilon_2 S_2}{d}$\n**개념**: 유전체를 극판과 수직으로 채우면 병렬 합성, 극판과 평행하게(두께 방향) 채우면 직렬 합성으로 계산한다.\n**함정 포인트**: 채우는 방향(수직=병렬, 평행=직렬)을 반드시 구분할 것. 면적 비율 $\\frac{1}{3}$, $\\frac{2}{3}$을 바꿔 대입하면 다른 보기가 나온다."
+    },
+    {
+      "no": 17,
+      "question": "자유공간에서 전자파의 전계 $E$와 자계 $H$의 위상은?",
+      "choices": [
+        "① 동상이다.",
+        "② $90°$ 차이가 난다.",
+        "③ $180°$ 차이가 난다.",
+        "④ 전계가 자계보다 앞선다."
+      ],
+      "answerIndex": 0,
+      "solution": "전자파에서 전계와 자계는 서로 수직이며 위상은 동상이다.\n진행방향은 $E\\times H$ 방향이고, 전계·자계는 진행방향과도 수직(횡파)이다.",
+      "timestampSec": 1535,
+      "theory": "**핵심 개념**: 전자파의 전계 $E$와 자계 $H$는 동상(위상차 0)\n**개념**: 전자파는 $E$와 $H$가 서로 수직으로 진동하며 $E\\times H$ 방향으로 진행하는 횡파(TEM파)이다.\n**함정 포인트**: '서로 수직'이라는 공간적 관계를 '위상 90° 차이'로 착각하기 쉽다. 방향은 수직이지만 시간적 위상은 동상이다."
+    },
+    {
+      "no": 18,
+      "question": "자유공간(진공)에서의 고유 임피던스 $[\\Omega]$는?",
+      "choices": [
+        "① $144$",
+        "② $277$",
+        "③ $377$",
+        "④ $544$"
+      ],
+      "answerIndex": 2,
+      "solution": "고유 임피던스(파동 임피던스)\n$\\eta = \\dfrac{E}{H} = \\sqrt{\\dfrac{\\mu}{\\varepsilon}} = 120\\pi\\sqrt{\\dfrac{\\mu_s}{\\varepsilon_s}}[\\Omega]$\n진공(공기)에서는 $\\varepsilon_s = 1$, $\\mu_s = 1$이므로\n$\\eta = 120\\pi = 377[\\Omega]$",
+      "timestampSec": 1675,
+      "theory": "**핵심 공식**: 고유 임피던스 $\\eta = \\dfrac{E}{H} = \\sqrt{\\dfrac{\\mu}{\\varepsilon}} = 377\\sqrt{\\dfrac{\\mu_s}{\\varepsilon_s}}[\\Omega]$\n**개념**: 매질의 고유 임피던스는 전계와 자계의 비이며, 진공에서는 $120\\pi \\fallingdotseq 377[\\Omega]$이다.\n**함정 포인트**: $120\\pi = 377$은 암기 수치. 매질 문제로 바뀌면 $\\sqrt{\\mu_s/\\varepsilon_s}$ 배를 곱해야 한다(분자·분모 위치 주의)."
+    },
+    {
+      "no": 19,
+      "question": "유전율 $\\varepsilon$, 투자율 $\\mu$인 매질 내에서 전자파의 전파속도는 몇 $[\\mathrm{m/sec}]$인가?",
+      "choices": [
+        "① $\\sqrt{\\dfrac{\\mu}{\\varepsilon}}$",
+        "② $\\sqrt{\\dfrac{\\varepsilon}{\\mu}}$",
+        "③ $\\sqrt{\\varepsilon\\mu}$",
+        "④ $\\sqrt{\\dfrac{1}{\\varepsilon\\mu}}$"
+      ],
+      "answerIndex": 3,
+      "solution": "전자파의 전파속도\n$v = \\lambda f = \\dfrac{1}{\\sqrt{\\varepsilon\\mu}} = \\dfrac{3\\times10^8}{\\sqrt{\\varepsilon_s\\mu_s}}[\\mathrm{m/s}]$",
+      "timestampSec": 1761,
+      "theory": "**핵심 공식**: 전파속도 $v = \\dfrac{1}{\\sqrt{\\varepsilon\\mu}} = \\dfrac{3\\times10^8}{\\sqrt{\\varepsilon_s\\mu_s}}[\\mathrm{m/s}]$\n**개념**: 전자파의 속도는 매질의 유전율과 투자율 곱의 제곱근에 반비례한다. 진공에서는 광속 $3\\times10^8[\\mathrm{m/s}]$이다.\n**함정 포인트**: 고유 임피던스 $\\sqrt{\\mu/\\varepsilon}$(①)과 혼동하기 쉽다. 속도는 $\\dfrac{1}{\\sqrt{\\varepsilon\\mu}}$, 임피던스는 $\\sqrt{\\dfrac{\\mu}{\\varepsilon}}$이다."
+    },
+    {
+      "no": 20,
+      "question": "직선 전류에 의해서 그 주위에 생기는 환상의 자계 방향은?",
+      "choices": [
+        "① 전류의 방향",
+        "② 전류와 반대방향",
+        "③ 오른나사의 진행방향",
+        "④ 오른나사의 회전방향"
+      ],
+      "answerIndex": 3,
+      "solution": "암페어의 오른나사 법칙에 의해 전류가 오른나사의 진행방향이면, 그 주위에 생기는 자계는 오른나사의 회전방향이다.",
+      "timestampSec": 1819,
+      "theory": "**핵심 개념**: 암페어의 오른나사 법칙 — 전류 = 나사의 진행방향, 자계 = 나사의 회전방향\n**개념**: 직선 전류 주위에는 전류를 축으로 하는 동심원(환상) 형태의 자계가 생기며, 그 회전 방향은 오른나사를 돌리는 방향과 같다.\n**함정 포인트**: '진행방향'(③)과 '회전방향'(④)을 바꿔 출제한다. 자계를 물으면 회전방향, 전류를 물으면 진행방향이다."
+    }
+  ]
+}

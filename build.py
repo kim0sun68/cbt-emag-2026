@@ -23,9 +23,18 @@ KISA = [
     ("kec.json", "kec.html", "설비기술기준", "3회"),
 ]
 SANUP = [
+    ("semag1.json", "semag1.html", "전자기학", "1회"),
+    ("semag2.json", "semag2.html", "전자기학", "2회"),
     ("semag3.json", "semag3.html", "전자기학", "3회"),
+    ("spower1.json", "spower1.html", "전력공학", "1회"),
+    ("spower2.json", "spower2.html", "전력공학", "2회"),
+    ("spower3.json", "spower3.html", "전력공학", "3회"),
+    ("skigi1.json", "skigi1.html", "전기기기", "1회"),
+    ("skigi2.json", "skigi2.html", "전기기기", "2회"),
+    ("skigi3.json", "skigi3.html", "전기기기", "3회"),
     ("sanup1.json", "sanup1.html", "회로이론", "1회"),
     ("sanup2.json", "sanup2.html", "회로이론", "2회"),
+    ("sanup3.json", "sanup3.html", "회로이론", "3회"),
     ("skec1.json", "skec1.html", "설비기술기준", "1회"),
     ("skec2.json", "skec2.html", "설비기술기준", "2회"),
     ("skec3.json", "skec3.html", "설비기술기준", "3회"),
@@ -39,6 +48,8 @@ OFFICIAL = {
     ("전기기사", "회로이론·제어"): ("제4과목", "회로이론 및 제어공학"),
     ("전기기사", "설비기술기준"): ("제5과목", "전기설비기술기준"),
     ("산업기사", "전자기학"): ("제1과목", "전기자기학"),
+    ("산업기사", "전력공학"): ("제2과목", "전력공학"),
+    ("산업기사", "전기기기"): ("제3과목", "전기기기"),
     ("산업기사", "회로이론"): ("제4과목", "회로이론"),
     ("산업기사", "설비기술기준"): ("제5과목", "전기설비기술기준"),
 }

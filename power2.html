@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026년 2회 전기기사 필기 전력공학 — 기출 핵심풀이</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+  :root { --green:#1a7f37; --red:#c62828; --blue:#1256a2; --bg:#f5f6f8; --card:#fff; --line:#e0e3e8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#222; line-height:1.65; }
+  .wrap { max-width:720px; margin:0 auto; padding:16px 14px 80px; }
+  header { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 18px; margin-bottom:18px; }
+  header h1 { font-size:1.25rem; margin:0 0 8px; }
+  header p { margin:4px 0; font-size:.9rem; color:#555; }
+  header a { color:var(--blue); }
+  .subnav { margin-top:12px; border-top:1px solid var(--line); padding-top:10px; }
+  .navrow { display:flex; align-items:flex-start; gap:8px; margin:6px 0; }
+  .navgroup { flex:0 0 auto; font-size:.78rem; font-weight:800; color:#fff; background:var(--blue); border-radius:6px; padding:3px 8px; margin-top:2px; }
+  .navitems { display:flex; flex-wrap:wrap; gap:6px 14px; }
+  .navsub { display:inline-flex; align-items:center; gap:4px; white-space:nowrap; }
+  .subj { font-size:.8rem; color:#666; margin-right:2px; }
+  .pill { display:inline-block; font-size:.8rem; padding:2px 9px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--blue); background:#fafbfc; }
+  .pill:hover { border-color:var(--blue); }
+  .pill.cur { background:var(--blue); color:#fff; border-color:var(--blue); font-weight:700; }
+  #score { position:sticky; top:0; z-index:10; background:var(--blue); color:#fff; border-radius:0 0 10px 10px; padding:8px 14px; font-weight:700; text-align:center; margin:-16px -14px 16px; font-size:.95rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 16px; margin-bottom:16px; }
+  .qno { font-weight:800; color:var(--blue); margin-bottom:6px; }
+  .qtext { margin-bottom:12px; font-weight:600; }
+  .choice { display:block; width:100%; text-align:left; background:#fafbfc; border:1.5px solid var(--line); border-radius:9px; padding:10px 12px; margin:6px 0; font-size:.95rem; font-family:inherit; cursor:pointer; line-height:1.6; }
+  .choice:hover { border-color:var(--blue); }
+  .choice.correct { border-color:var(--green); background:#e8f5e9; font-weight:700; }
+  .choice.wrong { border-color:var(--red); background:#ffebee; }
+  .choice:disabled { cursor:default; opacity:1; color:inherit; }
+  .mark { float:right; font-weight:800; }
+  .mark.ok { color:var(--green); } .mark.no { color:var(--red); }
+  .toggle { margin-top:10px; background:none; border:1px solid var(--blue); color:var(--blue); border-radius:8px; padding:7px 14px; font-size:.88rem; cursor:pointer; font-family:inherit; }
+  .expl { display:none; margin-top:14px; border-top:1px dashed var(--line); padding-top:12px; font-size:.93rem; }
+  .expl.open { display:block; }
+  .answer-line { font-weight:800; color:var(--green); margin-bottom:8px; }
+  .sol { white-space:pre-wrap; margin-bottom:12px; }
+  .theory { background:#f2f7ff; border-left:4px solid var(--blue); border-radius:0 8px 8px 0; padding:10px 12px; white-space:pre-wrap; margin-bottom:12px; }
+  .ytlink { display:inline-block; background:#c4302b; color:#fff; text-decoration:none; border-radius:8px; padding:8px 14px; font-size:.88rem; font-weight:700; }
+  footer { text-align:center; color:#888; font-size:.8rem; margin-top:30px; }
+  @media (max-width:480px){ .wrap{padding:12px 10px 60px;} .card{padding:14px 12px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="score"></div>
+  <header>
+    <h1>2026년 2회 전기기사 필기 전력공학 — 기출 핵심풀이</h1>
+    <p>보기를 클릭하면 채점되고 해설이 열립니다. 채점 없이 보려면 [해설 보기]를 누르세요.</p>
+    <p>원본 강의: <a href="https://www.youtube.com/watch?v=vAxCbIG5rTw" target="_blank" rel="noopener">대산전기학원 — 2026년 2회 전기기사 필기 CBT 기출적중 핵심풀이 제2과목 전력공학</a></p>
+    <nav class="subnav"><div class="navrow"><span class="navgroup">전기기사</span><div class="navitems"><span class="navsub"><span class="subj">전자기학</span><a class="pill" href="emag1.html">1회</a><a class="pill" href="emag2.html">2회</a><a class="pill" href="index.html">3회</a></span><span class="navsub"><span class="subj">전력공학</span><a class="pill" href="power1.html">1회</a><a class="pill cur" href="power2.html">2회</a><a class="pill" href="power.html">3회</a></span><span class="navsub"><span class="subj">전기기기</span><a class="pill" href="kigi1.html">1회</a><a class="pill" href="kigi2.html">2회</a><a class="pill" href="kigi.html">3회</a></span><span class="navsub"><span class="subj">회로이론·제어</span><a class="pill" href="circuit1.html">1회</a><a class="pill" href="circuit.html">2회</a><a class="pill" href="circuit3.html">3회</a></span><span class="navsub"><span class="subj">설비기술기준</span><a class="pill" href="kec1.html">1회</a><a class="pill" href="kec2.html">2회</a><a class="pill" href="kec.html">3회</a></span></div></div><div class="navrow"><span class="navgroup">산업기사</span><div class="navitems"><span class="navsub"><span class="subj">전자기학</span><a class="pill" href="semag3.html">3회</a></span><span class="navsub"><span class="subj">회로이론</span><a class="pill" href="sanup1.html">1회</a><a class="pill" href="sanup2.html">2회</a></span><span class="navsub"><span class="subj">설비기술기준</span><a class="pill" href="skec1.html">1회</a><a class="pill" href="skec2.html">2회</a><a class="pill" href="skec3.html">3회</a></span></div></div></nav>
+  </header>
+  <div id="app"></div>
+  <footer>출처: 대산전기학원 유튜브 강의 · 학습용 정리 자료</footer>
+</div>
+<script id="data" type="application/json">{"title": "2026 전기기사 전력공학 2회 기출 핵심풀이", "videoId": "vAxCbIG5rTw", "questions": [{"no": 1, "question": "케이블의 전력 손실과 관계가 없는 것은?", "choices": ["① 철손", "② 유전체손", "③ 시스손", "④ 도체의 저항손"], "answerIndex": 0, "solution": "케이블에서 발생하는 손실은 심선(도체)의 **저항손**, 절연체의 누설전류에 의한 **유전체손**, 시스에 유도되는 전압에 의한 **시스손(연피손)** 세 가지다.\n철손은 변압기·전동기 등 철심이 있는 기기에서 발생하는 손실로 케이블과 무관하다.", "timestampSec": 80, "theory": "**핵심 분류**: 케이블 3대 손실 — 저항손(도체), 유전체손(절연체), 시스손=연피손(금속 시스)\n**개념**: 시스손은 심선 자속의 전자유도로 시스에 전압이 유도되어 생기는 손실이며 '연피손'으로도 출제된다.\n**함정 포인트**: 철손·히스테리시스손이 보기로 나오면 케이블과 무관한 손실이다."}, {"no": 2, "question": "전력계통 설비인 차단기와 단로기는 전기적 및 기계적으로 인터록(interlock)을 설치·연계하여 운전하고 있다. 인터록의 설명으로 옳은 것은?", "choices": ["① 부하 통전 시 단로기를 열 수 있다.", "② 차단기가 열려 있어야 단로기를 닫을 수 있다.", "③ 차단기가 닫혀 있어야 단로기를 열 수 있다.", "④ 부하 투입 시에는 차단기를 우선 투입한 후 단로기를 투입한다."], "answerIndex": 1, "solution": "단로기(DS)는 소호 능력이 없어 **무부하 시에만** 개폐할 수 있다. 차단기가 투입(닫힘)된 상태는 부하가 연결된 상태이므로 단로기를 조작할 수 없다.\n따라서 인터록은 **차단기가 열려 있을 때만** 단로기를 닫거나 열 수 있게 하는 안전장치다.", "timestampSec": 206, "theory": "**핵심 규칙**: 인터록 = 차단기가 개방(열림) 상태일 때만 단로기 조작 가능\n**개념**: 단로기는 아크 소호 능력이 없어 무부하에서만 개폐 가능. 투입 순서는 단로기 → 차단기, 차단 순서는 차단기 → 단로기.\n**함정 포인트**: '차단기가 닫혀 있어야 단로기 조작 가능'(③), '차단기 먼저 투입'(④)은 순서를 뒤집은 오답."}, {"no": 3, "question": "증기터빈 내에서 팽창 도중에 있는 증기를 일부 추기하여 그것이 갖는 열을 급수가열에 이용하는 열사이클은?", "choices": ["① 랭킨사이클", "② 카르노사이클", "③ 재생사이클", "④ 재열사이클"], "answerIndex": 2, "solution": "터빈에서 팽창 중인 증기 일부를 **추기(抽氣)**하여 보일러 급수 가열에 쓰는 방식이 **재생사이클**이다.\n랭킨사이클은 가장 기본, 카르노사이클은 가장 이상적인 사이클이고, 터빈을 두 번 돌리도록 증기를 다시 가열하는 방식이 재열사이클이다.", "timestampSec": 322, "theory": "**핵심 키워드**: 추기+급수가열 → 재생사이클 / 재가열+터빈 2개 → 재열사이클 / 기본 → 랭킨 / 이상적 → 카르노\n**개념**: 재생사이클은 복수기에서 버려지는 열손실을 줄이기 위해 추기 증기로 급수를 예열하는 방식이다.\n**함정 포인트**: '추기'라는 단어가 보이면 재생, 터빈이 2개 그려져 있으면 재열로 구분한다."}, {"no": 4, "question": "전력용 콘덴서에 비해 동기조상기의 이점으로 옳은 것은?", "choices": ["① 소음이 적다.", "② 진상전류 이외에 지상전류를 취할 수 있다.", "③ 전력손실이 적다.", "④ 유지보수가 쉽다."], "answerIndex": 1, "solution": "동기조상기는 여자 조정으로 **진상·지상 무효전력을 모두** 공급할 수 있고, 전압 조정이 연속적이며 시충전이 가능하다.\n반면 회전기이므로 가격이 비싸고 손실이 크며 유지보수가 어렵다. ①③④는 오히려 콘덴서의 장점이다.", "timestampSec": 724, "theory": "**핵심 비교**: 동기조상기 — 진상·지상 모두 가능, 연속 조정, 시충전 가능 / 콘덴서(진상)·리액터(지상) — 한 방향만, 불연속, 시충전 불가\n**개념**: 동기조상기는 무부하 운전 동기전동기로 계자 전류를 조절해 무효전력을 연속 제어한다.\n**함정 포인트**: 손실·소음·유지보수는 콘덴서가 유리하다. 동기조상기의 장점과 단점을 뒤바꾼 보기에 주의."}, {"no": 5, "question": "복도체에서 2본의 전선이 서로 충돌하는 것을 방지하기 위하여 2본의 전선 사이에 적당한 간격을 두어 설치하는 것은?", "choices": ["① 아모로드", "② 댐퍼", "③ 아킹혼", "④ 스페이서"], "answerIndex": 3, "solution": "복도체의 두 전선에는 같은 방향의 전류가 흘러 **흡인력**이 작용하므로 서로 충돌할 수 있다.\n이를 막기 위해 전선 사이에 간격을 유지시키는 금구가 **스페이서**다.", "timestampSec": 831, "theory": "**핵심 분류**: 스페이서(복도체 간격 유지·충돌 방지), 댐퍼(진동 방지), 아모로드(지지점 보강), 아킹혼(애자련 보호)\n**개념**: 평행 도체에 동일 방향 전류가 흐르면 흡인력이 발생한다 — 복도체 충돌의 원인.\n**함정 포인트**: 진동 방지(댐퍼)와 충돌 방지(스페이서)를 바꿔 묻는 유형이 흔하다."}, {"no": 6, "question": "송전전력, 선간전압, 부하역률, 전력손실 및 송전거리를 동일하게 하였을 경우 단상 2선식에 대한 3상 3선식의 총 전선량(중량)비는 얼마인가? (단, 전선은 동일한 전선이다.)", "choices": ["① 0.75", "② 0.94", "③ 1.15", "④ 1.33"], "answerIndex": 0, "solution": "전기방식별 전선 소요량비(단상 2선식 = 1 기준): 단상 3선식 $\\dfrac{3}{8}$, 3상 3선식 $\\dfrac{3}{4}$, 3상 4선식 $\\dfrac{1}{3}$\n따라서 3상 3선식의 전선량비는 $\\dfrac{3}{4} = 0.75$이다.", "timestampSec": 874, "theory": "**핵심 공식**: 전선 소요량비(1φ2W 기준) — 1φ3W: 3/8, 3φ3W: 3/4, 3φ4W: 1/3\n**개념**: 같은 전력·전압·손실·거리 조건에서 방식별 전선 중량을 비교한 표준 결과다.\n**함정 포인트**: '1선당 전력비'(1.33, 1.15, 1.5)와 '전선량비'를 혼동하지 말 것 — 묻는 항목부터 확인."}, {"no": 7, "question": "다음 중 송전선로의 역섬락을 방지하기 위한 대책으로 가장 알맞은 방법은?", "choices": ["① 가공지선 설치", "② 피뢰기 설치", "③ 매설지선 설치", "④ 소호각 설치"], "answerIndex": 2, "solution": "역섬락은 낙뢰 시 **철탑의 접지(탑각)저항이 커서** 뇌전류가 대지로 빠지지 못하고 애자를 파괴하며 송전선으로 거꾸로 침입하는 현상이다.\n**매설지선**을 설치해 탑각 접지저항을 줄이면 역섬락을 방지할 수 있다.", "timestampSec": 1116, "theory": "**핵심 연결**: 역섬락 방지 = 탑각 접지저항 저감 = 매설지선\n**개념**: 가공지선은 직격뢰·유도뢰로부터 선로를 보호하는 것이고, 역섬락은 접지저항 문제라 매설지선이 답이다.\n**함정 포인트**: '역섬락'과 '섬락(뇌해) 방지'를 구분 — 섬락 방지는 가공지선, 역섬락 방지는 매설지선."}, {"no": 8, "question": "송전선로에 단도체 대신 복도체를 사용하는 경우에 나타나는 현상으로 틀린 것은?", "choices": ["① 전선의 작용인덕턴스를 감소시킨다.", "② 선로의 작용정전용량을 증가시킨다.", "③ 전선 표면의 전위경도를 저감시킨다.", "④ 전선의 코로나 임계전압을 저감시킨다."], "answerIndex": 3, "solution": "복도체는 등가 반지름이 커져 **코로나 임계전압이 상승**하고 코로나가 방지된다. '저감시킨다'는 ④가 틀린 설명이다.\n인덕턴스 감소(①), 정전용량 증가(②), 전위경도 저감(③)은 모두 복도체의 올바른 특징이다.", "timestampSec": 1213, "theory": "**핵심 특징**: 복도체 — L 감소, C 증가, 전위경도 저감(↓), 코로나 임계전압 상승(↑), 송전용량 증가\n**개념**: 임계전압이 높아질수록 코로나가 발생하지 않는다 — 복도체 사용의 최대 목적이 코로나 방지다.\n**함정 포인트**: 전위경도는 '저감'이 맞고 임계전압은 '상승'이 맞다. 두 방향을 바꿔치기한 보기가 정답(틀린 것)이 된다."}, {"no": 9, "question": "다음 중 송전계통의 절연협조에 있어서 절연레벨이 가장 낮은 기기는?", "choices": ["① 피뢰기", "② 단로기", "③ 변압기", "④ 차단기"], "answerIndex": 0, "solution": "절연협조에서 절연레벨은 **애자 > 차단기(부싱) > 변압기 > 피뢰기** 순이다.\n피뢰기는 이상전압을 가장 먼저 방전시켜 다른 기기를 보호해야 하므로 절연레벨을 가장 낮게 잡는다.", "timestampSec": 1336, "theory": "**핵심 순서**: 절연레벨 — 애자(최고) > 차단기 > 변압기 > 피뢰기(최저)\n**개념**: 피뢰기가 제일 먼저 동작해 이상전압을 대지로 방전해야 하므로 기준충격절연강도(BIL)를 가장 낮게 설계한다.\n**함정 포인트**: '가장 높은 것'을 물으면 애자, '가장 낮은 것'을 물으면 피뢰기 — 질문 방향을 확인."}, {"no": 10, "question": "옥내배선을 단상 2선식에서 단상 3선식으로 변경하였을 때, 전선 1선당 공급전력은 약 몇 배 증가하는가? (단, 선간전압(단상 3선식의 경우는 중성선과 타선 간의 전압), 선로전류(중성선의 전류 제외) 및 역률은 같다.)", "choices": ["① 0.71", "② 1.33", "③ 1.41", "④ 1.73"], "answerIndex": 1, "solution": "1선당 전력비(단상 2선식 = 1 기준): 단상 3선식 $\\dfrac{2}{3} \\div \\dfrac{1}{2} = \\dfrac{4}{3} \\approx 1.33$배\n단상 2선식은 전력 1을 2선으로(1선당 1/2), 단상 3선식은 전력 2를 3선으로(1선당 2/3) 공급하기 때문이다.", "timestampSec": 1378, "theory": "**핵심 공식**: 1선당 전력비(1φ2W 기준) — 1φ3W: 1.33배, 3φ3W: 1.15배, 3φ4W: 1.5배\n**개념**: 공급전력 비 1 : 2 : √3 : 3을 각 전선수로 나누면 1선당 전력이 된다.\n**함정 포인트**: 6번의 전선량비(0.75 등)와 같은 표에서 나오는 다른 열이다 — 한 표로 두 문제가 출제됐다."}, {"no": 11, "question": "400[kVA] 단상변압기 3대를 $\\Delta-\\Delta$결선으로 사용하다가 1대의 고장으로 V-V결선을 하여 사용하면 약 몇 [kVA] 부하까지 걸 수 있겠는가?", "choices": ["① 400", "② 566", "③ 693", "④ 800"], "answerIndex": 2, "solution": "V결선 출력 $P_V = \\sqrt{3}\\,P_1 = \\sqrt{3} \\times 400 \\approx 693[\\mathrm{kVA}]$", "timestampSec": 1439, "theory": "**핵심 공식**: V결선 3총사 — 출력 $P_V=\\sqrt{3}P_1$, 출력비 $\\dfrac{1}{\\sqrt{3}}=57.7\\%$, 이용률 $\\dfrac{\\sqrt{3}}{2}=86.6\\%$\n**개념**: △결선 중 1대 고장 시 남은 2대로 3상을 공급하는 것이 V결선이며, 최대 부하는 변압기 1대 용량의 √3배다.\n**함정 포인트**: 2대 합계 800(④)이나 2대×0.707=566(②)을 고르지 않도록 √3배 공식을 정확히 적용."}, {"no": 12, "question": "송전선로에서 가공지선을 설치하는 목적이 아닌 것은?", "choices": ["① 뇌(雷)의 직격을 받을 경우 송전선 보호", "② 유도뢰에 의한 송전선의 고전위 방지", "③ 통신선에 대한 전자유도장해 경감", "④ 철탑의 접지저항 경감"], "answerIndex": 3, "solution": "가공지선은 직격뢰·유도뢰로부터 송전선을 보호하고, 통신선 유도장해를 경감시킨다(①②③).\n**철탑의 접지저항 경감**은 가공지선이 아니라 **매설지선**의 역할이다.", "timestampSec": 1555, "theory": "**핵심 분류**: 가공지선 — 직격뢰 차폐, 유도뢰 방지, 통신선 유도장해 경감 / 매설지선 — 탑각 접지저항 저감(역섬락 방지)\n**개념**: 가공지선은 철탑 최상부에 설치된 접지된 전선으로 뇌를 대신 맞아 대지로 흘려보낸다.\n**함정 포인트**: '접지저항 경감'이라는 말이 나오면 무조건 매설지선 — 7번과 세트로 출제되는 단골 구분."}, {"no": 13, "question": "선로정수를 평형되게 하고, 근접 통신선에 대한 유도장해를 줄일 수 있는 방법은?", "choices": ["① 연가를 시행한다.", "② 전선으로 복도체를 사용한다.", "③ 전선로의 이도를 충분하게 한다.", "④ 소호리액터 접지를 하여 중성점 전위를 줄여준다."], "answerIndex": 0, "solution": "**연가**는 선로 전체 길이를 3등분하여 각 상 전선의 위치를 바꿔주는 것으로, 선로정수(L, C)를 평형시키고 통신선 유도장해와 직렬공진을 방지한다.", "timestampSec": 1671, "theory": "**핵심 키워드**: 선로정수 평형 → 연가 (효과: 유도장해 감소, 직렬공진에 의한 이상전압 방지)\n**개념**: 3상 전선의 배치가 비대칭이면 각 상의 인덕턴스·정전용량이 달라지므로 위치를 순환 교체해 평균화한다.\n**함정 포인트**: '평형'·'선로정수'라는 단어가 보이면 복도체·이도가 아니라 연가다."}, {"no": 14, "question": "기준 선간전압 23[kV], 기준 3상 용량 5000[kVA], 1선의 유도 리액턴스가 15$[\\Omega]$일 때 %리액턴스는?", "choices": ["① 3.55[%]", "② 7.09[%]", "③ 14.18[%]", "④ 28.36[%]"], "answerIndex": 2, "solution": "$\\%X = \\dfrac{P[\\mathrm{kVA}] \\cdot X}{10V^2} = \\dfrac{5000 \\times 15}{10 \\times 23^2} = \\dfrac{75000}{5290} \\approx 14.18[\\%]$ ($V$: 선간전압[kV])", "timestampSec": 1686, "theory": "**핵심 공식**: $\\%Z = \\dfrac{P[\\mathrm{kVA}]\\cdot Z}{10V^2}$ ($V$: 선간전압[kV]) — $Z$ 자리에 $X$를 넣으면 %리액턴스\n**개념**: %임피던스는 기준 용량·전압에 대한 임피던스 강하의 백분율이다.\n**함정 포인트**: $V$는 kV 단위 선간전압이며 분모의 10 계수를 빠뜨리면 자릿수가 틀린 보기(①·②·④)에 걸린다."}, {"no": 15, "question": "저압뱅킹 배전방식에서 캐스케이딩현상을 방지하기 위하여 인접 변압기를 연락하는 저압선의 중간에 설치하는 것으로 알맞은 것은?", "choices": ["① 구분퓨즈", "② 리클로저", "③ 섹셔널라이저", "④ 구분개폐기"], "answerIndex": 0, "solution": "캐스케이딩은 저압뱅킹 방식에서 한 곳의 사고가 인접 변압기들로 파급되어 연쇄 차단되는 현상이다.\n이를 막기 위해 변압기 간 연락 저압선 중간에 **구분퓨즈**를 설치해 사고 구간을 빠르게 분리한다.", "timestampSec": 1746, "theory": "**핵심 연결**: 캐스케이딩 방지 = 구분퓨즈 (저압 연락선 중간 설치)\n**개념**: 저압뱅킹은 인접 변압기 2차측을 병렬 연결해 공급 신뢰도를 높이지만, 사고 파급(캐스케이딩) 위험이 생긴다.\n**함정 포인트**: 리클로저·섹셔널라이저는 고압 배전선로 보호기기다. '퓨즈'가 들어간 보기를 찾으면 된다."}, {"no": 16, "question": "설비용량이 360[kW], 수용률 0.8, 부등률 1.2일 때 최대수용전력은 몇 [kW]인가?", "choices": ["① 120", "② 240", "③ 360", "④ 480"], "answerIndex": 1, "solution": "합성 최대수용전력 $= \\dfrac{\\text{설비용량} \\times \\text{수용률}}{\\text{부등률}} = \\dfrac{360 \\times 0.8}{1.2} = 240[\\mathrm{kW}]$", "timestampSec": 1839, "theory": "**핵심 공식**: 합성 최대전력 $= \\dfrac{\\text{설비용량} \\times \\text{수용률}}{\\text{부등률}}$\n**개념**: 수용률은 설비용량 중 실제 최대수요의 비율, 부등률(≥1)은 개별 최대수요 합과 합성 최대수요의 비다.\n**함정 포인트**: 부등률로 나누는 것을 잊으면 288, 수용률을 안 곱하면 300 — 두 계수를 모두 적용해야 240."}, {"no": 17, "question": "송전단 전압이 345[kV], 수전단 전압이 330[kV], 송수전 양단의 변압기 리액턴스는 각각 10$[\\Omega]$과 15$[\\Omega]$이고, 선로의 리액턴스는 85$[\\Omega]$인 계통이 있다. 이 선로에서 전달할 수 있는 최대 유효전력[MW]은?", "choices": ["① 1035.0", "② 1138.5", "③ 1198.4", "④ 1463.7"], "answerIndex": 0, "solution": "$P = \\dfrac{V_s V_r}{X}\\sin\\delta$에서 최대전력은 $\\delta = 90°$($\\sin\\delta = 1$)일 때이다.\n$X = 10 + 15 + 85 = 110[\\Omega]$\n$P_{max} = \\dfrac{345 \\times 330}{110} = 1035[\\mathrm{MW}]$", "timestampSec": 1889, "theory": "**핵심 공식**: 송전전력 $P = \\dfrac{V_s V_r}{X}\\sin\\delta$[MW] ($V$: kV, $X$: Ω), 최대전력은 상차각 90°에서 $P_{max}=\\dfrac{V_s V_r}{X}$\n**개념**: 직렬로 연결된 변압기·선로 리액턴스는 모두 합산해 하나의 $X$로 본다.\n**함정 포인트**: 선로 리액턴스 85만 쓰면 1339로 오답 — 양단 변압기 10, 15까지 반드시 합산(110)."}, {"no": 18, "question": "어느 화력발전소에서 40000[kWh]를 발전하는데 발열량 860[kcal/kg]의 석탄이 60톤 사용된다. 이 발전소의 열효율(%)은 약 얼마인가?", "choices": ["① 56.7", "② 66.7", "③ 76.7", "④ 86.7"], "answerIndex": 1, "solution": "$\\eta = \\dfrac{860\\,W}{mH} \\times 100 = \\dfrac{860 \\times 40000}{60 \\times 10^3 \\times 860} \\times 100 = \\dfrac{40000}{60000} \\times 100 \\approx 66.7[\\%]$\n(1[kWh] = 860[kcal], $m$: 연료 kg, $H$: 발열량[kcal/kg])", "timestampSec": 2018, "theory": "**핵심 공식**: 발전소 열효율 $\\eta = \\dfrac{860W}{mH} \\times 100[\\%]$ ($W$: 전력량[kWh], $m$: 연료량[kg], $H$: 발열량[kcal/kg])\n**개념**: 출력(전기에너지)을 kcal로 환산(×860)해 입력(연료 열량 $mH$)과 비교한 값이다.\n**함정 포인트**: 연료량 톤 → kg 환산(×10³)을 빠뜨리거나 860 환산계수를 잊으면 오답. 이 문제는 발열량 860이 환산계수와 약분되도록 설계됐다."}, {"no": 19, "question": "직류 송전방식이 교류 송전방식에 비하여 유리한 점을 설명한 것으로 틀린 것은?", "choices": ["① 절연계급을 낮출 수 있다.", "② 계통 간 비동기 연계가 가능하다.", "③ 표피효과에 의한 송전손실이 없다.", "④ 정류가 필요 없고 승압 및 강압이 쉽다."], "answerIndex": 3, "solution": "전압의 승압·강압이 쉬운 것은 변압기를 쓰는 **교류**의 장점이다. 직류 송전은 교직 변환(정류·역변환) 설비가 필요하고 변압이 어렵다. 따라서 ④가 틀렸다.\n절연계급 저감, 비동기 연계, 표피효과 없음은 직류 송전의 올바른 장점이다.", "timestampSec": 2215, "theory": "**핵심 비교**: 직류 장점 — 절연계급 저감, 비동기 연계, 표피효과·유전체손 없음, 안정도 우수 / 교류 장점 — 변압(승압·강압) 용이\n**개념**: 직류는 주파수가 0이므로 리액턴스 강하·표피효과가 없고 계통 주파수가 달라도 연계할 수 있다.\n**함정 포인트**: '승압·강압이 쉽다'는 교류의 장점을 직류 보기에 섞어 넣는 것이 단골 출제 패턴."}, {"no": 20, "question": "모선 보호에 사용되는 계전방식이 아닌 것은?", "choices": ["① 위상비교 계전방식", "② 선택접지 계전방식", "③ 방향비교 계전방식", "④ 전류차동 계전방식"], "answerIndex": 1, "solution": "모선 보호 계전방식에는 **전압차동, 전류차동, 위상비교, 방향비교** 계전방식이 있다.\n**선택접지 계전방식**은 비접지 계통의 지락 회선 선택에 쓰는 것으로 모선 보호와 무관하다.", "timestampSec": 2252, "theory": "**핵심 분류**: 모선 보호 — 전압차동, 전류차동, 위상비교, 방향비교 계전방식\n**개념**: 모선에 출입하는 전류의 차동(합)이나 위상·방향을 비교해 모선 내부 고장을 판별한다.\n**함정 포인트**: 선택접지(SGR)는 지락 보호용이다 — '차동·비교' 계열이 아닌 보기를 고르면 된다."}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const marks = ['①','②','③','④'];
+let answered = 0, correct = 0;
+
+function updateScore(){
+  document.getElementById('score').textContent =
+    `정답 ${correct} / 푼 문제 ${answered} / 전체 ${DATA.questions.length}`;
+}
+
+function mdBold(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')
+          .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+}
+
+const app = document.getElementById('app');
+DATA.questions.forEach(q => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const ts = q.timestampSec;
+  card.innerHTML = `
+    <div class="qno">문제 ${q.no}</div>
+    <div class="qtext">${mdBold(q.question)}</div>
+    <div class="choices"></div>
+    <button class="toggle">해설 보기</button>
+    <div class="expl">
+      <div class="answer-line">정답: ${marks[q.answerIndex]}</div>
+      <div class="sol">${mdBold(q.solution)}</div>
+      <div class="theory">${mdBold(q.theory)}</div>
+      <a class="ytlink" href="https://youtu.be/${DATA.videoId}?t=${ts}" target="_blank" rel="noopener">▶ 영상 해설 바로가기 (${Math.floor(ts/60)}:${String(ts%60).padStart(2,'0')})</a>
+    </div>`;
+  const choicesBox = card.querySelector('.choices');
+  const expl = card.querySelector('.expl');
+  let done = false;
+  q.choices.forEach((c, i) => {
+    const b = document.createElement('button');
+    b.className = 'choice';
+    b.innerHTML = mdBold(c);
+    b.addEventListener('click', () => {
+      if (done) return;
+      done = true;
+      answered++;
+      const btns = choicesBox.querySelectorAll('.choice');
+      btns.forEach(x => x.disabled = true);
+      if (i === q.answerIndex) {
+        correct++;
+        b.classList.add('correct');
+        b.insertAdjacentHTML('beforeend','<span class="mark ok">✓</span>');
+      } else {
+        b.classList.add('wrong');
+        b.insertAdjacentHTML('beforeend','<span class="mark no">✗</span>');
+        btns[q.answerIndex].classList.add('correct');
+      }
+      expl.classList.add('open');
+      updateScore();
+    });
+    choicesBox.appendChild(b);
+  });
+  card.querySelector('.toggle').addEventListener('click', () => {
+    expl.classList.toggle('open');
+  });
+  app.appendChild(card);
+});
+updateScore();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tryRender = () => {
+    if (window.renderMathInElement) {
+      renderMathInElement(document.body, {
+        delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],
+        throwOnError: false
+      });
+    } else setTimeout(tryRender, 100);
+  };
+  tryRender();
+});
+</script>
+</body>
+</html>

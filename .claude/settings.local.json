@@ -158,7 +158,25 @@
       "Bash(mkdir frames *)",
       "Bash(ffmpeg -loglevel error -ss 405 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y frames/s6.jpg)",
       "Bash(ffmpeg -loglevel error -ss 1380 -i download/video.mp4 -frames:v 1 -vf scale=1024:-2 -y frames/s13.jpg)",
-      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/kigi2.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('kigi2 OK',d['videoId']\\)\")"
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/kigi2.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('kigi2 OK',d['videoId']\\)\")",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Bash(python3 -c \"import segno; print\\('segno OK'\\)\")",
+      "Bash(python3 -m pip install --user segno --quiet)",
+      "Bash(python3 -c \"import segno; print\\('segno installed'\\)\")",
+      "Bash(python3 build_pdf.py 1회)",
+      "Bash(python3 build_pdf.py 2회 3회)",
+      "Bash(git commit -q -m 'feat: 회차별 문제집·해설서 PDF 생성 스크립트 및 6권 산출물 *)",
+      "Bash(git commit -q -m 'docs: PDF 재생성 명령을 지침에 추가 *)",
+      "Bash(yt-dlp -f \"bv*[height<=720]/bv*\" -o video.mp4 \"https://www.youtube.com/watch?v=vAxCbIG5rTw\")",
+      "Bash(yt-dlp --extractor-args \"youtube:player_client=ios\" -f \"bv*[height<=1080]/b\" -o video.mp4 \"https://www.youtube.com/watch?v=vAxCbIG5rTw\")",
+      "Bash(yt-dlp --extractor-args \"youtube:player_client=ios\" -F \"https://www.youtube.com/watch?v=vAxCbIG5rTw\")",
+      "Bash(yt-dlp --version)",
+      "Bash(brew upgrade *)",
+      "Bash(yt-dlp -f \"bv*[height<=1080]\" -o video.mp4 \"https://www.youtube.com/watch?v=vAxCbIG5rTw\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/power2.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('OK', [q['answerIndex']+1 for q in d['questions']]\\)\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('content/power2.json'\\)\\);assert len\\(d['questions']\\)==20 and all\\(len\\(q['choices']\\)==4 and 0<=q['answerIndex']<=3 and q['timestampSec']>0 and q['theory'].strip\\(\\) for q in d['questions']\\);print\\('power2 OK',d['videoId']\\)\")",
+      "Bash(python3 build_pdf.py 2회)",
+      "Bash(git commit -q -m 'feat: 기사 전력공학 2회 추가 — 기사 5과목×3회차 완성, 2회 PDF 100문제판 재생성 *)"
     ]
   }
 }

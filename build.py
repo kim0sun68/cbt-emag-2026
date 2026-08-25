@@ -10,6 +10,7 @@ KISA = [
     ("emag2.json", "emag2.html", "전자기학", "2회"),
     ("content.json", "index.html", "전자기학", "3회"),
     ("power1.json", "power1.html", "전력공학", "1회"),
+    ("power2.json", "power2.html", "전력공학", "2회"),
     ("power.json", "power.html", "전력공학", "3회"),
     ("kigi1.json", "kigi1.html", "전기기기", "1회"),
     ("kigi2.json", "kigi2.html", "전기기기", "2회"),
